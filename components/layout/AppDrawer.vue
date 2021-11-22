@@ -50,7 +50,7 @@ export default {
         {
           icon: 'mdi-chart-bubble',
           title: '关于我们',
-          to: '/inspire'
+          to: '/about'
         }
       ],
       miniVariant: false,

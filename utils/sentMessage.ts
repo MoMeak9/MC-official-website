@@ -14,7 +14,7 @@ export default {
     })
     setTimeout(() => {
       $store.commit('popMessage')
-    }, data.time)
+    }, data.time ? data.time : 2000)
   },
   // 错误提示
   error($store: any, data: dataType) {
@@ -25,7 +25,7 @@ export default {
     })
     setTimeout(() => {
       $store.commit('popMessage')
-    }, data.time)
+    }, data.time ? data.time : 2000)
   },
   // 消息提示
   info($store: any, data: dataType) {
@@ -36,7 +36,7 @@ export default {
     })
     setTimeout(() => {
       $store.commit('popMessage')
-    }, data.time)
+    }, data.time ? data.time : 2000)
   },
 
   // 警告提示
@@ -48,6 +48,6 @@ export default {
     })
     setTimeout(() => {
       $store.commit('popMessage')
-    }, data.time)
+    }, data.time ? data.time : 2000)
   }
 }
