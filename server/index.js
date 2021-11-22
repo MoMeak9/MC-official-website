@@ -5,7 +5,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser');
 const routers = require('./routes');
 
-let port = 3000;
+let port = 3001;
 
 if (process.env.NODE_ENV === 'development') {
   console.log('当前环境是开发环境');
