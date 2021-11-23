@@ -1,4 +1,6 @@
-const querySql = require('../db/index')
+const { PrismaClient } = require('@prisma/client')
+
+const prisma = new PrismaClient()
 
 async function addReadTime(req, res, next) {
     try {
