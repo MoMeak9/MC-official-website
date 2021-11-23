@@ -45,15 +45,10 @@
 
         <v-card>
           <v-card-title class="text-h5 grey lighten-2">
-            Privacy Policy
+            友情提示：
           </v-card-title>
-
           <v-card-text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            认真填写将增加通过概率，请不要在一天内重复多次填写此问卷，否则会被纳入黑名单哦！
           </v-card-text>
 
           <v-divider></v-divider>
