@@ -3,7 +3,7 @@ const expressJWT = require("express-jwt");
 const createError = require("http-errors");
 const {PRIVATE_KEY, whitelist} = require('../utils/constant')
 // Routes
-const usersRouter = require('../routes/users');
+// const usersRouter = require('../routes/users');
 const websiteRouter = require('../routes/website');
 
 const router = express.Router();
@@ -15,7 +15,6 @@ router.use(expressJWT({
   path: whitelist // ⽩名单,除了这⾥写的地址，其他的URL都需要验证
 }));
 
-router.use('/api/user', usersRouter);
 router.use('/api/website', websiteRouter);
 
 // catch 404 and forward to error handler

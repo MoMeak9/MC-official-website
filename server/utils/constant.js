@@ -9,7 +9,7 @@ module.exports = {
   whitelist: [
     '/api/user/register',
     '/api/user/login',
-    '/api/article/allArticle',
+    '/api/website/getArticle',
     '/api/article/detail',
     '/api/article/classify',
     /^\/api\/api-docs.*/,
