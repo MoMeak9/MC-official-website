@@ -1,10 +1,10 @@
 <template>
   <v-container id="question">
     <h1>白名单审核问卷</h1>
-    <v-content
+    <v-main
       align="center">
       本次白名单考核问卷将是你入服的唯一参照
-    </v-content>
+    </v-main>
     <div v-for="(item,index) in questionList" :key="item.title">
       <Input v-if="item.type==='input'"
              :item="item"
@@ -14,6 +14,11 @@
               :item="item"
               :index="index"
               @change="updateData"></Select>
+    </div>
+    <div style="text-align: center">
+      <h2>考试结束啦！</h2>
+      <br>
+      <v-btn>提交</v-btn>
     </div>
   </v-container>
 </template>
@@ -33,9 +38,13 @@ export default {
     return {
       questionList
     }
-  }, methods: {
+  },
+  methods: {
     updateData(value, index) {
       this.questionList[index].content = value
+    },
+    submitAnswer() {
+
     }
   }
 }

@@ -1,11 +1,28 @@
 <template>
   <div>
     <v-row style="background-color: #FAFAFA;height: 100vh">
-      <v-btn>
-        加入我们
-      </v-btn>
+      <v-parallax
+        dark
+        style="width: 100%;height: 100%"
+        src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+      >
+        <v-row justify="center" align="center">
+          <div style="text-align: center">
+            <h1>LightWorld 辉光世界公益服</h1>
+            <h2>静待1.18 ing......</h2>
+            <h3>LightWorld Public Welfare Community</h3>
+            <v-btn
+              @click="toJoinUs"
+              color="white"
+              outlined
+              large>
+              加入我们
+            </v-btn>
+          </div>
+        </v-row>
+      </v-parallax>
     </v-row>
-    <v-container>
+    <v-container style="margin-top: 20px">
       <v-row justify="center" align="center">
         <v-col cols="24">
           <v-carousel v-model="model">
@@ -49,7 +66,8 @@
             简介
           </v-card-text>
           <v-card-actions>
-            <v-btn>
+            <v-btn
+              outlined>
               Learn more
             </v-btn>
             <v-spacer></v-spacer>
@@ -115,5 +133,10 @@ export default {
       },
     ],
   }),
+  methods: {
+    toJoinUs() {
+      this.$router.push('/join')
+    }
+  }
 }
 </script>

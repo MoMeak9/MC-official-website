@@ -36,12 +36,6 @@ export default {
     }
   },
   mounted() {
-    sentMessage.success(this.$store, {
-      type: 'info',
-      message: 'Hello World!',
-      light: false,
-      time: 3000
-    })
   },
   methods: {
     changeDrawer() {

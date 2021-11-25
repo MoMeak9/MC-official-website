@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-carousel v-model="model"
-                cycle
                 height="500"
+                cycle
                 hide-delimiter-background
                 show-arrows-on-hover>
       <v-carousel-item
@@ -10,8 +10,8 @@
         :key="color"
       >
         <v-sheet
-          :color="color"
           height="100%"
+          :color="color"
           tile
         >
           <v-row
@@ -32,14 +32,26 @@
         v-model="dialog"
         width="500"
       >
-        <template v-slot:activator="{ on, attrs }">
+        <template #activator="{ on, attrs }">
           <v-btn
-            color="red lighten-2"
+            v-if="$store.state.token"
+            color="blue"
             dark
             v-bind="attrs"
             v-on="on"
           >
-            Click Me
+            <v-icon left>
+              mdi-pencil
+            </v-icon>
+            开始进行白名单申请
+          </v-btn>
+          <v-btn
+            v-else
+            disabled>
+            <v-icon left>
+              mdi-pencil
+            </v-icon>
+            请先登入后填写
           </v-btn>
         </template>
 

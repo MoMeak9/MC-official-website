@@ -148,3 +148,6 @@ app.get('/feed', async (req, res) => {
   res.json(posts)
 })
 
+// npx prisma db pull
+// npm install @prisma/client
+// npx prisma generate

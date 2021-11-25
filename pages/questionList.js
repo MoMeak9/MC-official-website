@@ -32,58 +32,69 @@ export default [
   {
     type: 'select',
     isMultiple: false,
-    title: '1+2+3+4+5+6.......+71=？',
-    subtitle: '等比数列求和',
+    title: '是否加入过其他正版公益类服务器？',
+    subtitle: '',
     content: '',
+    solution: 'A',
+    score: 10,
     subItem: [
       {
-        value: '2',
-        label: '123',
+        value: 'A',
+        label: '是',
       },
       {
-        value: '123',
-        label: '1',
-      }, {
-        value: '3',
-        label: '123',
+        value: 'B',
+        label: '否',
       }
     ]
-  }, {
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '1+2+3+4+5+6.......+71=？',
     subtitle: '等比数列求和',
     content: '',
+    solution: 'B',
+    score: 10,
     subItem: [
       {
-        value: '2',
-        label: '123',
+        value: 'A',
+        label: '216556',
       },
       {
-        value: '123',
-        label: '1',
+        value: 'B',
+        label: '916454',
       }, {
-        value: '3',
-        label: '123',
+        value: 'C',
+        label: '5648',
+      }, {
+        value: 'D',
+        label: '老子不会',
       }
     ]
-  }, {
+  },
+  {
     type: 'select',
     isMultiple: false,
-    title: '1+2+3+4+5+6.......+71=？',
-    subtitle: '等比数列求和',
+    title: 'i的87次方等于？',
+    subtitle: '高中数学，虚数计算',
     content: '',
+    solution: 'B',
+    score: 10,
     subItem: [
       {
-        value: '2',
-        label: '123',
+        value: 'A',
+        label: '216556',
       },
       {
-        value: '123',
-        label: '1',
+        value: 'B',
+        label: '916454',
       }, {
-        value: '3',
-        label: '123',
+        value: 'C',
+        label: '5648',
+      }, {
+        value: 'D',
+        label: '老子不会',
       }
     ]
   }
