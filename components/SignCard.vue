@@ -12,7 +12,7 @@
       lazy-validation
     >
       <v-text-field
-        v-model="registerForm.ID"
+        v-model="registerForm.user_name"
         :counter="10"
         :rules="nameRules"
         label="绑定正版ID"
@@ -83,13 +83,15 @@
 </template>
 
 <script>
+import {register} from "../api/user";
+
 export default {
   name: "Sign",
   data: () => ({
     valid: true,
     registerForm: {
-      ID: '',
-      QQ:'',
+      user_name: '',
+      QQ: '',
       email: '',
       password: '',
       checkPassword: ''
@@ -105,7 +107,11 @@ export default {
   }),
   methods: {
     validate() {
-      this.$refs.form.validate()
+      if (this.$refs.form.validate()) {
+        register(this.registerForm).then(res => {
+          console.log(res)
+        })
+      }
     },
     reset() {
       this.$refs.form.reset()
@@ -122,7 +128,7 @@ export default {
       } else {
         return true
       }
-    },sentEmail(){
+    }, sentEmail() {
 
     }
   },

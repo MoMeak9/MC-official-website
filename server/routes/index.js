@@ -4,7 +4,8 @@ const createError = require("http-errors");
 const {PRIVATE_KEY, whitelist} = require('../utils/constant')
 // Routes
 // const usersRouter = require('../routes/users');
-const websiteRouter = require('../routes/website');
+const websiteRouter = require('./website');
+const userRouter = require('./users')
 
 const router = express.Router();
 
@@ -16,6 +17,7 @@ router.use(expressJWT({
 }));
 
 router.use('/api/website', websiteRouter);
+router.use('/api/user', userRouter)
 
 // catch 404 and forward to error handler
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

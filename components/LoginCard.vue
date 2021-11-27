@@ -12,14 +12,6 @@
       lazy-validation
     >
       <v-text-field
-        v-model="name"
-        :counter="10"
-        :rules="nameRules"
-        label="正版ID"
-        required
-      ></v-text-field>
-
-      <v-text-field
         v-model="email"
         :rules="emailRules"
         label="邮箱"
@@ -27,7 +19,7 @@
       ></v-text-field>
 
       <v-text-field
-        v-model="email"
+        v-model="password"
         type="password"
         label="密码"
         required
@@ -62,16 +54,18 @@
 </template>
 
 <script>
+import {login} from "../api/user";
+
 export default {
   name: "LoginCard",
   data: () => ({
     valid: true,
-    name: '',
     nameRules: [
       v => !!v || 'Name is required',
       v => (v && v.length <= 10) || 'Name must be less than 10 characters',
     ],
     email: '',
+    password: '',
     emailRules: [
       v => !!v || 'E-mail is required',
       v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
@@ -79,7 +73,14 @@ export default {
   }),
   methods: {
     validate() {
-      this.$refs.form.validate()
+      if (this.$refs.form.validate()) {
+        login({
+          user_email: this.email,
+          user_password: this.password
+        }).then(res => {
+          console.log(res)
+        })
+      }
     },
     reset() {
       this.$refs.form.reset()
@@ -87,8 +88,8 @@ export default {
     resetValidation() {
       this.$refs.form.resetValidation()
     },
-    changeType(){
-      this.$emit('change-type','sign')
+    changeType() {
+      this.$emit('change-type', 'sign')
     }
   },
 }
