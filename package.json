@@ -11,14 +11,10 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
-    "@prisma/client": "^3.5.0",
     "animate.css": "^4.1.1",
     "axios": "^0.24.0",
-    "cookie-parser": "^1.4.6",
     "core-js": "^3.15.1",
-    "jsonwebtoken": "^8.5.1",
     "nuxt": "^2.15.7",
-    "prisma": "^3.5.0",
     "vue-particles": "^1.0.9",
     "vuetify": "^2.5.5"
   },
@@ -29,18 +25,10 @@
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/vuetify": "^1.12.1",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "express": "^4.17.1",
-    "express-jwt": "^6.1.0",
-    "http-errors": "^1.8.1",
-    "multer": "^1.4.3",
-    "prettier": "^2.3.2",
-    "store": "^2.0.12",
-    "uuid": "^8.3.2"
+    "store": "^2.0.12"
   }
 }
