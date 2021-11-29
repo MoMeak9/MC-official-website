@@ -1,31 +1,25 @@
 <template>
   <v-container>
-    <v-carousel v-model="model"
-                height="500"
-                cycle
-                hide-delimiter-background
-                show-arrows-on-hover>
-      <v-carousel-item
-        v-for="(color, i) in colors"
-        :key="color"
-      >
-        <v-sheet
-          height="100%"
-          :color="color"
-          tile
-        >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
+    <v-row justify="center" align="center">
+      <v-responsive :aspect-ratio="16/9"
+                    max-height="700px"
+                    max-width="1500px">
+        <v-carousel v-model="model"
+                    height="100%"
+                    cycle
+                    hide-delimiter-background
+                    delimiter-icon="mdi-minus"
+                    show-arrows-on-hover>
+          <v-carousel-item
+            v-for="item in images"
+            :key="item.path"
+            style="max-width: 100vw"
+            :src="item.path"
           >
-            <div class="text-h2">
-              Slide {{ i + 1 }}
-            </div>
-          </v-row>
-        </v-sheet>
-      </v-carousel-item>
-    </v-carousel>
+          </v-carousel-item>
+        </v-carousel>
+      </v-responsive>
+    </v-row>
     <v-row justify="center"
            style="margin-top: 20px">
       <v-dialog
@@ -78,7 +72,7 @@
         </v-card>
       </v-dialog>
     </v-row>
-    <v-row justify="center">
+    <v-row justify="center" align="center">
       <v-main>
         &sect;我们的社区约定:
 
@@ -93,12 +87,19 @@ export default {
   data: () => ({
     model: 0,
     dialog: false,
-    colors: [
-      'primary',
-      'secondary',
-      'yellow darken-2',
-      'red',
-      'orange',
+    images: [
+      {
+        path: require('../assets/images/join/1.jpg')
+      },
+      {
+        path: require('../assets/images/join/2.jpg')
+      },
+      {
+        path: require('../assets/images/join/3.png')
+      },
+      {
+        path: require('../assets/images/join/4.jpg')
+      },
     ],
   }),
   methods: {

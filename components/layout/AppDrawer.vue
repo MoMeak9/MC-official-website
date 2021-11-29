@@ -20,6 +20,31 @@
           <v-list-item-title v-text="item.title"/>
         </v-list-item-content>
       </v-list-item>
+
+      <v-list-group>
+        <template #activator>
+          <v-list-item-icon>
+            <v-icon>mdi-chart-bubble</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>关于我们</v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact>
+          <v-list-item-action>
+            <v-icon>mdi-chart-bubble</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="123"/>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 </template>

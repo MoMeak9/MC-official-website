@@ -1,10 +1,12 @@
 <template>
-<div>服务器介绍</div>
+  <div>
+    团队介绍
+  </div>
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "Team"
 }
 </script>
 

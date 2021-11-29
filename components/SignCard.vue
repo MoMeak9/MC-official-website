@@ -1,7 +1,7 @@
 <template>
   <v-card style="padding: 20px"
           max-width="100vw"
-          min-width="450px">
+          min-width="25vw">
     <v-card-title>
       <v-icon>
         mdi-draw

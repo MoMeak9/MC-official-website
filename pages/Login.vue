@@ -29,6 +29,14 @@ export default {
 
 <style scoped lang="scss">
 #login {
-  min-height: 80vh;
+  margin: 0;
+  padding: 0;
+  background: url("assets/images/login-background.jpeg") no-repeat fixed center;
+  background-size: auto 100%;
+  min-height: 100%;
+
+  @media screen and (min-width: 1000px){
+    background-size: 100% 100%;
+  }
 }
 </style>

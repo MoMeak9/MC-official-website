@@ -1,10 +1,10 @@
 <template>
-<div>服务器介绍</div>
+
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "PersonalCenter"
 }
 </script>
 

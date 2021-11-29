@@ -14,7 +14,7 @@
               :index="index"
               @change="updateData"></Select>
     </div>
-    <div>
+    <div style="text-align: center;margin-top: 50px">
       <h2>问卷考试结束啦！</h2>
       <br>
       <v-btn @click="submitAnswer">提交</v-btn>
@@ -52,10 +52,12 @@ export default {
           sentMessage.success(this.$store, {
             message: res.head.msg
           })
+          this.$router.push('/')
         } else {
           sentMessage.error(this.$store, {
             message: res.head.msg
           })
+          this.$router.back()
         }
       })
     }

@@ -1,27 +1,25 @@
 <template>
-  <div>
-    <v-row style="background-color: #FAFAFA;width: 100%">
-      <v-parallax
-        dark
-        style="width: 100%;"
-        src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-      >
-        <v-row justify="center" align="center">
-          <div style="text-align: center">
-            <h1>LightWorld 辉光世界</h1>
-            <h2>静待1.18 ing......</h2>
-            <h3>LightWorld MC</h3>
-            <v-btn
-              outlined
-              large
-              color="white"
-              @click="toJoinUs">
-              加入我们
-            </v-btn>
-          </div>
-        </v-row>
-      </v-parallax>
-    </v-row>
+  <div id="index">
+    <v-parallax
+      dark
+      style="width: 100%;"
+      :src="require('/assets/images/new-year.png')"
+    >
+      <v-row justify="center" align="center">
+        <div style="text-align: center">
+          <h1>LightWorld 辉光世界</h1>
+          <h2>静待1.18 ing......</h2>
+          <h3>LightWorld MC</h3>
+          <v-btn
+            outlined
+            large
+            color="white"
+            @click="toJoinUs">
+            加入我们
+          </v-btn>
+        </div>
+      </v-row>
+    </v-parallax>
     <v-container style="margin-top: 20px">
       <v-row justify="center" align="center">
         <v-responsive :aspect-ratio="16/9"
@@ -29,27 +27,14 @@
                       max-width="1500px">
           <v-carousel v-model="model"
                       height="100%"
+                      delimiter-icon="mdi-minus"
                       hide-delimiter-background>
             <v-carousel-item
-              v-for="(color, i) in colors"
-              :key="color"
+              v-for="item in images"
+              :key="item.path"
+              style="max-width: 100vw"
+              :src="item.path"
             >
-
-              <v-sheet
-                :color="color"
-                height="100%"
-                tile
-              >
-                <v-row
-                  class="fill-height"
-                  align="center"
-                  justify="center"
-                >
-                  <div class="text-h2">
-                    Slide {{ i + 1 }}
-                  </div>
-                </v-row>
-              </v-sheet>
             </v-carousel-item>
           </v-carousel>
         </v-responsive>
@@ -97,12 +82,19 @@
 export default {
   data: () => ({
     model: 0,
-    colors: [
-      'primary',
-      'secondary',
-      'yellow darken-2',
-      'red',
-      'orange',
+    images: [
+      {
+        path: require('../assets/images/1.jpg')
+      },
+      {
+        path: require('../assets/images/2.jpg')
+      },
+      {
+        path: require('../assets/images/3.jpg')
+      },
+      {
+        path: require('../assets/images/4.jpg')
+      }
     ],
     activitiesList: [
       {
@@ -129,3 +121,5 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+</style>
