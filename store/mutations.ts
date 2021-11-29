@@ -9,10 +9,16 @@ export default {
     state.msgPool.push(step)
     // 将消息添加到消息列表
   },
-  increment(state: any) {
-    state.counter = 2
-  },
   popMessage(state: any) {
     state.msgPool.shift()
+  },
+  setToken: (state: any, token: string) => {
+    state.token = token
+  },
+  setUserInfo: (state: any, userInfo: any) => {
+    state.userInfo = userInfo
+  },
+  signOut(state: any) {
+    state.userInfo = ''
   }
 }

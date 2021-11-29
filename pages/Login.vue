@@ -1,7 +1,7 @@
 <template>
   <v-row id="login" justify="center" align="center">
     <login-card v-if="type==='login'" @change-type="changeType"></login-card>
-    <sign-card @change-type="changeType" v-else></sign-card>
+    <sign-card v-else @change-type="changeType"></sign-card>
   </v-row>
 </template>
 

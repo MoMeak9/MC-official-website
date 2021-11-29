@@ -6,16 +6,26 @@
     <v-app-bar-nav-icon @click.stop="changeDrawer"/>
     <v-toolbar-title v-text="title"/>
     <v-spacer/>
-    <v-btn style="margin-right: 10px">
-      <v-icon>mdi-login-variant</v-icon>
-      <nuxt-link to="/login?type=login" style="text-decoration: none;color: black">
+    {{ userInfo.user_game_id }}
+    <v-btn
+      v-if="userInfo==null||userInfo===''"
+      style="margin-right: 10px">
+      <nuxt-link to="/login" style="text-decoration: none;color: black">
+        <v-icon>mdi-login-variant</v-icon>
         Login
       </nuxt-link>
+    </v-btn>
+    <v-btn
+      v-else
+      @click="Logout">
+      Log out
     </v-btn>
   </v-app-bar>
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex/dist/vuex.mjs";
+
 export default {
   name: "AppBar",
   data() {
@@ -23,7 +33,14 @@ export default {
       title: 'Minecraft 辉光世界'
     }
   },
+  computed: {
+    ...mapGetters(['userInfo', 'userName'])
+  },
+  mounted() {
+    this.getUserInfo()
+  },
   methods: {
+    ...mapActions(['getUserInfo', 'Logout']),
     changeDrawer() {
       this.$emit('change-drawer')
     }

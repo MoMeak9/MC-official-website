@@ -1,14 +1,10 @@
-/**
- * Created by Yihui_Shi on 2021/8/7 12:46
- */
 import request from '@/utils/requires'
 
 export const api = {
     login: "/api/user/login",
     register: "/api/user/register",
     getUserInfo: "/api/user/getUserInfo",
-    uploadImage: "/api/user/uploadImage",
-    updateUser: "/api/user/updateUser"
+  sendCode: "/api/user/sendCode"
 }
 
 export function login(param) {
@@ -35,21 +31,11 @@ export function getUserInfo(param) {
     })
 }
 
-export function uploadImage(param) {
+export function sendCode(param) {
     return request({
-        url: api.uploadImage,
+        url: api.sendCode,
         method: 'post',
         data: param,
-        headers: {
-            'Content-Type': 'multipart/form-data',
-        }
     })
 }
 
-export function updateUser(param) {
-    return request({
-        url: api.updateUser,
-        method: 'post',
-        data: param,
-    })
-}

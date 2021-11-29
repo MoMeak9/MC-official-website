@@ -1,7 +1,5 @@
 import axios from 'axios'
 import storage from 'store'
-
-
 // create an axios instance
 const service = axios.create({
   // eslint-disable-next-line no-undef
@@ -13,18 +11,11 @@ const service = axios.create({
 // request interceptor
 service.interceptors.request.use(
   config => {
-    if (config.requestServer) {
-      process.env.NODE_ENV === 'development'
-        // eslint-disable-next-line no-undef
-        ? config.baseURL = config.requestServer.dev
-        // eslint-disable-next-line no-undef
-        : config.baseURL = config.requestServer.prod
-    }
     if (storage.get('token')) {
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation
-      config.headers.Authorization = storage.get('token')
+      config.headers.Authorization = `Bearer ${storage.get('token')}`
     }
     return config
   },
@@ -37,7 +28,8 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   response => {
-    console.log(response)
+    console.log(response.data.head.msg)
+    return response.data
   },
   error => {
     console.log(error)
