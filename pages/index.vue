@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row style="background-color: #FAFAFA;">
+    <v-row style="background-color: #FAFAFA;width: 100%">
       <v-parallax
         dark
         style="width: 100%;"
