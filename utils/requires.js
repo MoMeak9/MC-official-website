@@ -3,7 +3,9 @@ import storage from 'store'
 // create an axios instance
 const service = axios.create({
   // eslint-disable-next-line no-undef
-  baseURL: "http://localhost:3001", // url = base url + request url
+  baseURL: process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3001'
+    : 'http://mchttp.syhwdsj.xyz',
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000 // request timeout
 })
