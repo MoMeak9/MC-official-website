@@ -16,7 +16,6 @@
 
 <script>
 import Message from '../components/Message.vue'
-import sentMessage from "../utils/sentMessage";
 import AppBar from "../components/layout/AppBar";
 import AppDrawer from "../components/layout/AppDrawer";
 

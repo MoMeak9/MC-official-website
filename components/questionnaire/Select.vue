@@ -1,7 +1,6 @@
 <template>
   <div id="select">
     <h3>{{ item.title }}</h3>
-    {{ content }}
     <div v-if="item.isMultiple===true">
       <v-checkbox
         v-for="subItem in item.subItem"

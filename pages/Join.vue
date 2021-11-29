@@ -34,7 +34,7 @@
       >
         <template #activator="{ on, attrs }">
           <v-btn
-            v-if="$store.state.token"
+            v-if="$store.state.userInfo"
             color="blue"
             dark
             v-bind="attrs"
@@ -70,19 +70,19 @@
             <v-btn
               color="primary"
               text
-              @click="dialog = false"
+              @click="dialog = false;toQuestions()"
             >
-              I accept
+              确认
             </v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
     </v-row>
     <v-row justify="center">
-      <v-content>
+      <v-main>
         &sect;我们的社区约定:
 
-      </v-content>
+      </v-main>
     </v-row>
   </v-container>
 </template>
@@ -100,7 +100,12 @@ export default {
       'red',
       'orange',
     ],
-  })
+  }),
+  methods: {
+    toQuestions() {
+      this.$router.push('/questionnaire')
+    }
+  }
 }
 </script>
 

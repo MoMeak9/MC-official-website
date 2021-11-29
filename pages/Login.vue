@@ -18,9 +18,6 @@ export default {
   data: () => ({
     type: 'login'
   }),
-  mounted() {
-    this.type = this.$route.query.type
-  },
   methods: {
     changeType(type) {
       this.type = type

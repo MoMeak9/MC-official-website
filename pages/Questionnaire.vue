@@ -1,10 +1,9 @@
 <template>
   <v-container id="question">
     <h1>白名单审核问卷</h1>
-    <v-main
-      align="center">
+    <p>
       本次白名单考核问卷将是你入服的唯一参照
-    </v-main>
+    </p>
     <div v-for="(item,index) in questionList" :key="item.title">
       <Input v-if="item.type==='input'"
              :item="item"
@@ -15,10 +14,10 @@
               :index="index"
               @change="updateData"></Select>
     </div>
-    <div style="text-align: center">
-      <h2>考试结束啦！</h2>
+    <div>
+      <h2>问卷考试结束啦！</h2>
       <br>
-      <v-btn>提交</v-btn>
+      <v-btn @click="submitAnswer">提交</v-btn>
     </div>
   </v-container>
 </template>
@@ -27,6 +26,8 @@
 import Select from "../components/questionnaire/Select";
 import Input from "../components/questionnaire/Input";
 import questionList from "./questionList";
+import {submitPaper} from "~/api/website";
+import sentMessage from "~/utils/sentMessage";
 
 export default {
   name: "Questionnaire",
@@ -44,14 +45,23 @@ export default {
       this.questionList[index].content = value
     },
     submitAnswer() {
-
+      submitPaper({
+        paper_content: this.questionList
+      }).then(res => {
+        if (res.head.code === 1) {
+          sentMessage.success(this.$store, {
+            message: res.head.msg
+          })
+        } else {
+          sentMessage.error(this.$store, {
+            message: res.head.msg
+          })
+        }
+      })
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-#question {
-  width: 100vh;
-}
 </style>

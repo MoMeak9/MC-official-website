@@ -2,6 +2,7 @@
   <div id="input">
     <h3>{{ item.title }}</h3>
     <v-text-field
+      style="max-width: 90vw"
       :value="item.content"
       :label="item.subtitle"
       placeholder="官网正版ID"

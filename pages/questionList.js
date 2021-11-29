@@ -197,24 +197,24 @@ export default [
   },{
     type: 'select',
     isMultiple: false,
-    title: '以下那个是幻翼膜的用途？',
+    title: '牛奶会消除几种buff？',
     subtitle: '请认证回答',
     content: '',
-    solution: 'A',
+    solution: 'C',
     score: 10,
     subItem: [
       {
         value: 'A',
-        label: '炼药',
+        label: '1',
       }, {
         value: 'B',
-        label: '制作鞘翅',
+        label: '5',
       }, {
         value: 'C',
-        label: '吃',
+        label: 'N',
       }, {
         value: 'D',
-        label: '合成装备',
+        label: '6',
       }
     ]
   },

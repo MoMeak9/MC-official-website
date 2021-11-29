@@ -6,7 +6,9 @@
     <v-app-bar-nav-icon @click.stop="changeDrawer"/>
     <v-toolbar-title v-text="title"/>
     <v-spacer/>
-    {{ userInfo.user_game_id }}
+    <strong style="margin-right: 10px">
+      {{ userInfo.user_game_id }}
+    </strong>
     <v-btn
       v-if="userInfo==null||userInfo===''"
       style="margin-right: 10px">

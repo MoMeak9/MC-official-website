@@ -1,21 +1,21 @@
 <template>
   <div>
-    <v-row style="background-color: #FAFAFA;height: 100vh">
+    <v-row style="background-color: #FAFAFA;">
       <v-parallax
         dark
-        style="width: 100%;height: 100%"
+        style="width: 100%;"
         src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
       >
         <v-row justify="center" align="center">
           <div style="text-align: center">
-            <h1>LightWorld 辉光世界公益服</h1>
+            <h1>LightWorld 辉光世界</h1>
             <h2>静待1.18 ing......</h2>
-            <h3>LightWorld Public Welfare Community</h3>
+            <h3>LightWorld MC</h3>
             <v-btn
-              @click="toJoinUs"
-              color="white"
               outlined
-              large>
+              large
+              color="white"
+              @click="toJoinUs">
               加入我们
             </v-btn>
           </div>
@@ -24,12 +24,17 @@
     </v-row>
     <v-container style="margin-top: 20px">
       <v-row justify="center" align="center">
-        <v-col cols="24">
-          <v-carousel v-model="model">
+        <v-responsive :aspect-ratio="16/9"
+                      max-height="700px"
+                      max-width="1500px">
+          <v-carousel v-model="model"
+                      height="100%"
+                      hide-delimiter-background>
             <v-carousel-item
               v-for="(color, i) in colors"
               :key="color"
             >
+
               <v-sheet
                 :color="color"
                 height="100%"
@@ -47,7 +52,7 @@
               </v-sheet>
             </v-carousel-item>
           </v-carousel>
-        </v-col>
+        </v-responsive>
       </v-row>
       <v-row justify="center" align="center">
         <v-card
@@ -57,30 +62,28 @@
           outlined
           style="width: 80%;margin: 10px">
           <v-card-title>
-            标题
+            {{ item.title }}
           </v-card-title>
           <v-card-subtitle>
-            副标题
+            {{ item.subTitle }}
           </v-card-subtitle>
           <v-card-text>
-            简介
+            {{ item.introduction }}
           </v-card-text>
           <v-card-actions>
-            <v-btn
-              outlined>
-              Learn more
-            </v-btn>
             <v-spacer></v-spacer>
+            <v-btn
+              icon
+              @click="item.show = !item.show"
+            >
+              <v-icon>{{ item.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+            </v-btn>
           </v-card-actions>
           <v-expand-transition>
-            <div>
+            <div v-show="item.show">
               <v-divider></v-divider>
-
               <v-card-text>
-                I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for
-                sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey,
-                you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way
-                to escape.
+                {{ item.text }}
               </v-card-text>
             </div>
           </v-expand-transition>
@@ -103,34 +106,20 @@ export default {
     ],
     activitiesList: [
       {
-        ID: '',
-        title: '',
-        subTitle: '',
-        text: '',
+        ID: 1,
+        title: '1.18 开服预告',
+        subTitle: '11月30日准时启程',
+        text: '随着我的世界1.18正式版的更新，服务器也同步跟进，进入到1.18.X时代......',
         show: false,
-        introduction: ''
+        introduction: '随着我的世界1.18正式版的更新，服务器也同步跟进，进入到1.18.X时代......'
       }, {
-        ID: '',
-        title: '',
-        subTitle: '',
-        text: '',
+        ID: 2,
+        title: '1.17 辉光世界第六周目完结',
+        subTitle: '存档将在下一周目开始后发放',
+        text: '存档将在下一周目开始后发放',
         show: false,
-        introduction: ''
-      }, {
-        ID: '',
-        title: '',
-        subTitle: '',
-        text: '',
-        show: false,
-        introduction: ''
-      }, {
-        ID: '',
-        title: '',
-        subTitle: '',
-        text: '',
-        show: false,
-        introduction: ''
-      },
+        introduction: '存档将在下一周目开始后发放'
+      }
     ],
   }),
   methods: {
