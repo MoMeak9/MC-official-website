@@ -5,7 +5,7 @@
   >
     <v-app-bar-nav-icon @click.stop="changeDrawer"/>
     <v-toolbar-title>
-      Minecraft <strong style="color:rgb(43,216,241);">辉光</strong>世界
+      Minecraft <strong>辉光</strong>世界
       <v-icon>mdi-server-network</v-icon>
     </v-toolbar-title>
     <v-spacer/>
@@ -55,5 +55,9 @@ export default {
 </script>
 
 <style scoped>
-
+strong {
+  background: linear-gradient(to right, #78bbea, blue);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 </style>
