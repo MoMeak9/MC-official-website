@@ -20,6 +20,15 @@
         </div>
       </v-row>
     </v-parallax>
+    <v-row justify="center" align="center" style="margin-top: 20px">
+      <h2>服务器状态</h2>
+      <v-icon>Server status</v-icon>
+    </v-row>
+    <v-img max-width="70vw"
+           style="margin: auto"
+           width="300px"
+           :src="require('../assets/images/服务器异常.svg')">
+    </v-img>
     <v-container style="margin-top: 20px">
       <v-row justify="center" align="center">
         <v-responsive :aspect-ratio="16/9"
@@ -39,7 +48,11 @@
           </v-carousel>
         </v-responsive>
       </v-row>
-      <v-row justify="center" align="center">
+      <v-row justify="center" align="center" style="margin-top: 20px">
+        <h2>社区动态</h2>
+        <v-icon>Community news</v-icon>
+      </v-row>
+      <v-row justify="center" align="center" style="margin-top: 20px">
         <v-card
           v-for="item in activitiesList"
           :key="item.ID"

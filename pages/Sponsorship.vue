@@ -1,13 +1,12 @@
 <template>
-<div>服务器介绍
+  <div>
 
-  玩家列表
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "Sponsorship"
 }
 </script>
 

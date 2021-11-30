@@ -27,6 +27,7 @@
 
 <script>
 import {mapActions, mapGetters} from "vuex/dist/vuex.mjs";
+import storage from 'store'
 
 export default {
   name: "AppBar",
@@ -39,7 +40,9 @@ export default {
     ...mapGetters(['userInfo', 'userName'])
   },
   mounted() {
-    this.getUserInfo()
+    if (storage.get('token')) {
+      this.getUserInfo()
+    }
   },
   methods: {
     ...mapActions(['getUserInfo', 'Logout']),

@@ -1,13 +1,12 @@
 import request from '@/utils/requires'
 
 export const api = {
-  submitPaper: "/api/paper/submitPaper",
+  getServerInfo: "/api/website/getServerInfo",
 }
 
-export function submitPaper(param) {
+export function getServerInfo() {
   return request({
-    url: api.submitPaper,
-    method: 'post',
-    data: param
+    url: api.getServerInfo,
+    method: 'get',
   })
 }

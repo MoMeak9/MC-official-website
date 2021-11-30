@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="join">
     <v-row justify="center" align="center">
       <v-responsive :aspect-ratio="16/9"
                     max-height="700px"
@@ -31,6 +31,7 @@
             v-if="$store.state.userInfo"
             color="blue"
             dark
+            x-large
             v-bind="attrs"
             v-on="on"
           >
@@ -110,6 +111,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+#join {
 
+}
 </style>

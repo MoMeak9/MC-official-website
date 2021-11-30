@@ -1,6 +1,6 @@
 <template>
   <div id="select">
-    <h3>{{ item.title }}</h3>
+    <h3>{{ index + 1 }}.  {{ item.title }}</h3>
     <div v-if="item.isMultiple===true">
       <v-checkbox
         v-for="subItem in item.subItem"

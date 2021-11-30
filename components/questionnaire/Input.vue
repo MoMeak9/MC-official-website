@@ -1,8 +1,8 @@
 <template>
   <div id="input">
-    <h3>{{ item.title }}</h3>
+    <h3>{{ index + 1 }}.  {{ item.title }}</h3>
     <v-text-field
-      style="max-width: 90vw"
+      style="max-width: 90vw;width: 450px"
       :value="item.content"
       :label="item.subtitle"
       placeholder="官网正版ID"
@@ -24,6 +24,10 @@ export default {
         }
       },
       type: Object
+    },
+    index: {
+      default: 0,
+      type: Number
     }
   },
   data() {
@@ -34,6 +38,7 @@ export default {
 
 <style scoped lang="scss">
 #input {
+
   h3 {
     margin-bottom: 15px;
   }

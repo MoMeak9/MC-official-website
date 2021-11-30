@@ -1,23 +1,27 @@
 <template>
   <v-container id="question">
-    <h1>白名单审核问卷</h1>
-    <p>
-      本次白名单考核问卷将是你入服的唯一参照
-    </p>
-    <div v-for="(item,index) in questionList" :key="item.title">
-      <Input v-if="item.type==='input'"
-             :item="item"
-             :index="index"
-             @change="updateData"></Input>
-      <Select v-else-if="item.type='select'"
-              :item="item"
-              :index="index"
-              @change="updateData"></Select>
-    </div>
-    <div style="text-align: center;margin-top: 50px">
-      <h2>问卷考试结束啦！</h2>
-      <br>
-      <v-btn @click="submitAnswer">提交</v-btn>
+    <div class="center">
+      <h1>白名单审核问卷</h1>
+      <p>
+        本次白名单考核问卷将是你入服的唯一参照
+      </p>
+      <v-row v-for="(item,index) in questionList"
+             :key="item.title"
+             style="padding: 10px">
+        <Input v-if="item.type==='input'"
+               :item="item"
+               :index="index"
+               @change="updateData"></Input>
+        <Select v-else-if="item.type='select'"
+                :item="item"
+                :index="index"
+                @change="updateData"></Select>
+      </v-row>
+      <div style="text-align: center;margin-top: 50px">
+        <h2>问卷考试结束啦！</h2>
+        <br>
+        <v-btn @click="submitAnswer">提交</v-btn>
+      </div>
     </div>
   </v-container>
 </template>
@@ -26,7 +30,7 @@
 import Select from "../components/questionnaire/Select";
 import Input from "../components/questionnaire/Input";
 import questionList from "./questionList";
-import {submitPaper} from "~/api/website";
+import {submitPaper} from "~/api/paper";
 import sentMessage from "~/utils/sentMessage";
 
 export default {
@@ -66,4 +70,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#question {
+  @media screen and (min-width: 1000px) {
+    .center {
+      width: 500px;
+      margin: auto;
+    }
+  }
+}
 </style>

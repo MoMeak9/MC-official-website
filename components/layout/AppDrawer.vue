@@ -32,16 +32,16 @@
         </template>
 
         <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
+          v-for="item in aboutUs"
+          :key="item.to"
           :to="item.to"
           router
           exact>
           <v-list-item-action>
-            <v-icon>mdi-chart-bubble</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="123"/>
+            <v-list-item-title v-text="item.title"/>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -73,9 +73,21 @@ export default {
           to: '/map'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: '关于我们',
+          icon: 'mdi-apps',
+          title: '社区赞助',
+          to: '/sponsorship'
+        }
+      ],
+      aboutUs: [
+        {
+          icon: 'mdi-apps',
+          title: '关于社区',
           to: '/about'
+        },
+        {
+          icon: 'mdi-apps',
+          title: '我们的团队',
+          to: '/team'
         }
       ],
       miniVariant: false,
