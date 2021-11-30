@@ -4,7 +4,10 @@
     app
   >
     <v-app-bar-nav-icon @click.stop="changeDrawer"/>
-    <v-toolbar-title v-text="title"/>
+    <v-toolbar-title>
+      Minecraft <strong style="color:rgb(43,216,241);">辉光</strong>世界
+      <v-icon>mdi-server-network</v-icon>
+    </v-toolbar-title>
     <v-spacer/>
     <strong style="margin-right: 10px">
       {{ userInfo.user_game_id }}
@@ -32,9 +35,7 @@ import storage from 'store'
 export default {
   name: "AppBar",
   data() {
-    return {
-      title: 'Minecraft 辉光世界'
-    }
+    return {}
   },
   computed: {
     ...mapGetters(['userInfo', 'userName'])

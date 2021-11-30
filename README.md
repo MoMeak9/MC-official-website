@@ -1,6 +1,24 @@
 # LightWorld|辉光世界官网
 
-## 构建
+## 使用
+
+本地运行
+
+```shell
+yarn run dev
+```
+
+构建
+
+```shell
+yarn run build
+```
+
+启动
+
+```shell
+yarn run start
+```
 
 ## 部署
 

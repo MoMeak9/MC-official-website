@@ -3,7 +3,7 @@
     <v-row justify="center" align="center">
       <v-responsive :aspect-ratio="16/9"
                     max-height="700px"
-                    max-width="1500px">
+                    max-width="1200px">
         <v-carousel v-model="model"
                     height="100%"
                     cycle
@@ -42,6 +42,7 @@
           </v-btn>
           <v-btn
             v-else
+            x-large
             disabled>
             <v-icon left>
               mdi-pencil
@@ -113,6 +114,6 @@ export default {
 
 <style scoped lang="scss">
 #join {
-
+  margin-top: 20px;
 }
 </style>
