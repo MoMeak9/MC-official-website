@@ -40,32 +40,39 @@ export default {
     return {
       historyList: [{
         time: '2019年4月5日',
-        content: '服务器开服'
+        content: '1.13.2服务器开服，启用白名单审核入会制'
       }, {
         time: '2019年4月6日',
         content: '服务器开启第一周目，迎接第一位玩家。'
       }, {
-        time: '2019年4月5日',
-        content: '服务器开服'
+        time: '2019年6月3日',
+        content: '服务器1.14.3第二周目'
       }, {
-        time: '2019年4月5日',
-        content: '服务器开服'
+        time: '2019年7月3日',
+        content: '服务器升级至1.14.4'
       }, {
-        time: '2019年4月5日',
-        content: '服务器开服'
+        time: '2020年1月14日',
+        content: '服务器1.15.2第三周目'
       }, {
-        time: '2019年4月5日',
-        content: '服务器开服'
+        time: '2020年1月20日',
+        content: '开启内外服，内服纯净并开启正版验证，外服（第四周目）为插件服'
       }, {
-        time: '2019年4月5日',
-        content: '服务器开服'
+        time: '2020年9月7日',
+        content: '服务器1.16.3第五周目，内外服合并，开启正版验证'
+      }, {
+        time: '2020年11月5日',
+        content: '服务器1.17第六周目开启'
+      }, {
+        time: '2021年2月10日',
+        content: '第六周目新年特别活动'
       }, {
         time: '2021年4月15日',
         content: '正式会员超过300人'
       }, {
-        time: '2021年2月10日',
-        content: '第五周目新年特别活动'
-      }],
+        time: '2021年12月1日',
+        content: '服务器1.18第七周目启动...'
+      }
+      ],
       headers: [
         {
           text: 'Dessert (100g serving)',
@@ -79,16 +86,17 @@ export default {
         {text: 'Protein (g)', value: 'protein'},
         {text: 'Iron (%)', value: 'iron'},
       ],
-      desserts: [
-        {
-          name: 'Frozen Yogurt',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: '1%',
-        }
-      ]
+      desserts:
+        [
+          {
+            name: 'Frozen Yogurt',
+            calories: 159,
+            fat: 6.0,
+            carbs: 24,
+            protein: 4.0,
+            iron: '1%',
+          }
+        ]
     }
   },
   computed: {
