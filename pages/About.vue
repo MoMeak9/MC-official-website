@@ -71,8 +71,7 @@ export default {
       }, {
         time: '2021年12月1日',
         content: '服务器1.18第七周目启动...'
-      }
-      ],
+      }],
       headers: [
         {
           text: 'Dessert (100g serving)',
