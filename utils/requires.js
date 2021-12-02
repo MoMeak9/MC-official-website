@@ -4,8 +4,8 @@ import storage from 'store'
 const service = axios.create({
   // eslint-disable-next-line no-undef
   baseURL: process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3001'
-    : 'http://mchttp.syhwdsj.xyz',
+    ? 'https://mchttp.syhwdsj.xyz'
+    : 'https://mchttp.syhwdsj.xyz',
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000 // request timeout
 })
@@ -30,7 +30,11 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   response => {
-    console.log(response.data.head.msg)
+    if (response.data.head.code === 0) {
+      this.$router.push('/login').then(() => {
+        storage.delete('token')
+      })
+    }
     return response.data
   },
   error => {
