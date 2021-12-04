@@ -15,7 +15,6 @@
     >
       <v-text-field
         v-model="registerForm.user_game_id"
-        :counter="10"
         :rules="nameRules"
         label="绑定正版ID"
       ></v-text-field>

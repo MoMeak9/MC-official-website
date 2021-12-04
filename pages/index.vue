@@ -24,7 +24,11 @@
       <h2>服务器状态</h2>
       <v-icon>Server status</v-icon>
     </v-row>
-    <v-img max-width="70vw"
+    <server-info v-if="serverInfo"
+                 :server-info="serverInfo">
+    </server-info>
+    <v-img v-else
+           max-width="70vw"
            style="margin: auto"
            width="300px"
            :src="require('../assets/images/服务器异常.svg')">
@@ -92,7 +96,14 @@
 </template>
 
 <script>
+import ServerInfo from "@/components/home/ServerInfo";
+import {getServerInfo} from "@/api/website";
+
 export default {
+  components: {ServerInfo},
+  comments: {
+    ServerInfo
+  },
   data: () => ({
     model: 0,
     images: [
@@ -126,7 +137,13 @@ export default {
         introduction: '存档将在下一周目开始后发放'
       }
     ],
+    serverInfo: {}
   }),
+  mounted() {
+    getServerInfo().then(res => {
+      this.serverInfo = res.data;
+    })
+  },
   methods: {
     toJoinUs() {
       this.$router.push('/join')

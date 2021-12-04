@@ -65,16 +65,16 @@ export default {
   data: () => ({
     teamNumbers: [
       {
-        name: '优酷',
+        name: 'youkw',
         imgUrl: require('../assets/images/teamNumber/2.jpg'),
         job: 'op',
-        intro: '这个人很懒......',
+        intro: '他说让腐竹先帮他写一下',
       },
       {
-        name: 'GNK48-赛博贵物',
+        name: 'risayama',
         imgUrl: require('../assets/images/teamNumber/3.jpg'),
         job: 'op',
-        intro: '这个人很懒......',
+        intro: '专业摸鱼的后台技术',
       },
       {
         name: 'Sakura_Six',
@@ -87,7 +87,7 @@ export default {
         name: 'rabbit_99',
         imgUrl: require('../assets/images/teamNumber/5.jpg'),
         job: '技术专员',
-        intro: '这个人很懒......',
+        intro: '摸鱼型生电玩家',
       }
     ]
   })
