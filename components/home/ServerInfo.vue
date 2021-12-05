@@ -1,6 +1,6 @@
 <template>
   <v-card
-    style="margin: 40px auto 0"
+    style="margin: 30px auto 0"
     max-width="350"
   >
     <v-card-text>
@@ -10,13 +10,14 @@
       </p>
       <strong style="font-size: 20px">
         Players:
-        {{ Number(serverInfo.current_players) + 2 }}/{{ serverInfo.max_players }}
+        {{ Number(serverInfo.current_players) }}/{{ serverInfo.max_players }}
       </strong>
       <div style="margin-top: 10px">
         <v-icon>
           1.18
         </v-icon>
-        <v-icon color="green">
+        <v-icon color="green"
+                right>
           Online
         </v-icon>
       </div>

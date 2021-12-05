@@ -1,4 +1,4 @@
-interface dataType {
+type dataType = {
   type?: string
   message?: string,
   light?: boolean,

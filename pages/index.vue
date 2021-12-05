@@ -20,25 +20,13 @@
         </div>
       </v-row>
     </v-parallax>
-    <v-row justify="center" align="center" style="margin-top: 20px">
-      <h2>服务器状态</h2>
-      <v-icon>Server status</v-icon>
-    </v-row>
-    <server-info v-if="serverInfo"
-                 :server-info="serverInfo">
-    </server-info>
-    <v-img v-else
-           max-width="70vw"
-           style="margin: auto"
-           width="300px"
-           :src="require('../assets/images/服务器异常.svg')">
-    </v-img>
     <v-container style="margin-top: 20px">
       <v-row justify="center" align="center">
         <v-responsive :aspect-ratio="16/9"
                       max-height="700px"
                       max-width="1500px">
           <v-carousel v-model="model"
+                      cycle
                       height="100%"
                       delimiter-icon="mdi-minus"
                       hide-delimiter-background>
@@ -52,6 +40,21 @@
           </v-carousel>
         </v-responsive>
       </v-row>
+
+      <v-row justify="center" align="center" style="margin-top: 30px">
+        <h2>服务器状态</h2>
+        <v-icon>Server status</v-icon>
+      </v-row>
+      <server-info v-if="serverInfo"
+                   :server-info="serverInfo">
+      </server-info>
+      <v-img v-else
+             max-width="70vw"
+             style="margin: auto"
+             width="300px"
+             :src="require('../assets/images/服务器异常.svg')">
+      </v-img>
+
       <v-row justify="center" align="center" style="margin-top: 20px">
         <h2>社区动态</h2>
         <v-icon>Community news</v-icon>
@@ -62,7 +65,8 @@
           :key="item.ID"
           elevation="2"
           outlined
-          style="width: 80%;margin: 10px">
+          min-width="350"
+          style="width:80%;margin: 10px">
           <v-card-title>
             {{ item.title }}
           </v-card-title>
@@ -92,6 +96,11 @@
         </v-card>
       </v-row>
     </v-container>
+    <v-footer>
+      <span>&copy; {{ new Date().getFullYear() }} LightWorld 辉光世界公益社区</span>
+      <v-spacer></v-spacer>
+      <a href="https://beian.miit.gov.cn/" style="text-decoration: none">闽ICP备19026932号-1</a>
+    </v-footer>
   </div>
 </template>
 

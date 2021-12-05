@@ -5,11 +5,6 @@
       <Nuxt/>
     </v-main>
     <app-drawer ref="drawer"></app-drawer>
-    <v-footer
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }} LightWorld 辉光世界公益社区</span>
-    </v-footer>
     <Message/>
   </v-app>
 </template>
