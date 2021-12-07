@@ -8,7 +8,7 @@
       <v-row justify="center" align="center">
         <div style="text-align: center">
           <h1>LightWorld 辉光世界</h1>
-          <h2>静待1.18 ing......</h2>
+          <h2>1.18 全新启航</h2>
           <h3>LightWorld MC</h3>
           <v-btn
             outlined
@@ -160,5 +160,21 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+/* 滚动槽 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: rgba(0,0,0,0.06);
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(0,0,0,0.12);
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
 </style>
