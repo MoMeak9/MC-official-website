@@ -6,7 +6,7 @@ export default {
   target: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - temple',
+    titleTemplate: '%s - LightWorld',
     title: 'temple',
     htmlAttrs: {
       lang: 'en'
