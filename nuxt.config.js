@@ -6,8 +6,8 @@ export default {
   target: 'server',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - temple',
-    title: 'temple',
+    titleTemplate: '辉光世界-Minecraft服务器',
+    title: '辉光世界-Minecraft服务器',
     htmlAttrs: {
       lang: 'en'
     },

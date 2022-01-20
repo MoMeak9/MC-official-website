@@ -3,7 +3,7 @@
     <v-parallax
       dark
       style="width: 100%;"
-      :src="require('/assets/images/new-year.png')"
+      src="https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201531215.png"
     >
       <v-row justify="center" align="center">
         <div style="text-align: center">
@@ -20,11 +20,35 @@
         </div>
       </v-row>
     </v-parallax>
-    <v-container style="margin-top: 20px">
-      <v-row justify="center" align="center">
-        <v-responsive :aspect-ratio="16/9"
-                      max-height="700px"
-                      max-width="1500px">
+    <v-container style="margin-top: 4rem">
+      <div style="display: flex;flex-wrap: wrap">
+        <v-col :cols="isPhone?5:12">
+          <h2>辉光世界欢迎您</h2>
+          <p>
+            这是一个温馨和谐的服务器，提供了稳定流畅的体验，自从2019年开服以来我们努力创建一个环境良好更公平公正的游戏氛围，和玩家们一起度过了很多愉快的时光,在这里的日子将会是你值得回忆的美好。
+            我们保证不做影响平衡、破坏公平的行为。服务器开放白名单以及正版验证，欢迎玩家提出意见或者举报违规行为，请大家自觉遵守游戏规则。
+          </p>
+        </v-col>
+        <v-col v-if="isPhone" cols="7">
+          <v-responsive :aspect-ratio="16/9">
+            <v-carousel v-model="model"
+                        cycle
+                        height="100%"
+                        delimiter-icon="mdi-minus"
+                        hide-delimiter-background>
+              <v-carousel-item
+                v-for="item in images"
+                :key="item.path"
+                style="max-width: 100vw"
+                :src="item.path"
+              >
+              </v-carousel-item>
+            </v-carousel>
+          </v-responsive>
+        </v-col>
+      </div>
+      <v-row v-if="!isPhone" align="center">
+        <v-responsive :aspect-ratio="16/9">
           <v-carousel v-model="model"
                       cycle
                       height="100%"
@@ -45,6 +69,7 @@
         <h2>服务器状态</h2>
         <v-icon>Server status</v-icon>
       </v-row>
+
       <server-info v-if="serverInfo"
                    :server-info="serverInfo">
       </server-info>
@@ -112,16 +137,16 @@ export default {
     model: 0,
     images: [
       {
-        path: require('../assets/images/1.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201524309.jpg'
       },
       {
-        path: require('../assets/images/2.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201524308.jpg'
       },
       {
-        path: require('../assets/images/3.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201524307.jpg'
       },
       {
-        path: require('../assets/images/4.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201524302.jpg'
       }
     ],
     activitiesList: [
@@ -143,6 +168,23 @@ export default {
     ],
     serverInfo: {}
   }),
+  computed: {
+    isPhone() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return false
+        case 'sm':
+          return false
+        case 'md':
+          return true
+        case 'lg':
+          return true
+        case 'xl':
+          return true
+      }
+      return null
+    },
+  },
   mounted() {
     getServerInfo().then(res => {
       this.serverInfo = res.data;
@@ -152,24 +194,31 @@ export default {
     toJoinUs() {
       this.$router.push('/join')
     }
-  }
+  },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+p {
+  text-indent: 2em;
+  text-align: justify;
+}
+
 /* 滚动槽 */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   border-radius: 3px;
-  background: rgba(0,0,0,0.06);
-  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+  background: rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.08);
 }
+
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background: rgba(0,0,0,0.12);
-  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 </style>
