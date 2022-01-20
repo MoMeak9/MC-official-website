@@ -1,6 +1,6 @@
 <template>
-  <div>
-
+  <div style="min-height: 100vh">
+    <h1>还在施工...</h1>
   </div>
 </template>
 

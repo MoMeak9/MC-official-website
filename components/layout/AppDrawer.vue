@@ -58,34 +58,34 @@ export default {
       drawer: false,
       items: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-home',
           title: '首页',
           to: '/'
         },
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-account-multiple',
           title: '加入我们',
           to: '/join'
         },
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-map',
           title: '卫星地图',
           to: '/map'
         },
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-cash-multiple',
           title: '社区赞助',
           to: '/sponsorship'
         }
       ],
       aboutUs: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-home-group',
           title: '关于社区',
           to: '/about'
         },
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-briefcase',
           title: '我们的团队',
           to: '/team'
         }

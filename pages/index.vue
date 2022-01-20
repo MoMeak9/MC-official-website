@@ -130,9 +130,6 @@ import {getServerInfo} from "@/api/website";
 
 export default {
   components: {ServerInfo},
-  comments: {
-    ServerInfo
-  },
   data: () => ({
     model: 0,
     images: [
