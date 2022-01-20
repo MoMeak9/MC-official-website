@@ -1,8 +1,7 @@
 <template>
   <div id="about">
     <v-row justify="center" class="white--text" style="padding-top: 40px">
-      <h1>社区发展史</h1>
-      <v-icon color="white">History</v-icon>
+      <h1>社区发展史 History</h1>
     </v-row>
     <v-row justify="center">
       <v-timeline :dense="!isDense">
@@ -18,8 +17,7 @@
       </v-timeline>
     </v-row>
     <v-row justify="center" class="white--text">
-      <h1>社区会员</h1>
-      <v-icon color="white">Community Members</v-icon>
+      <h1>社区会员 Community Members</h1>
     </v-row>
     <v-row justify="center">
       <v-card style="margin: 30px 0 50px" max-width="100vw">
@@ -154,6 +152,10 @@ export default {
   background: url("https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/2021124maxresdefault.jpg") no-repeat center fixed;
   background-size: auto 100%;
   min-height: 100%;
+
+  h1{
+    -webkit-text-stroke: 2px #333;
+  }
 
   @media screen and (min-width: 1000px) {
     background-size: 100% 100%;

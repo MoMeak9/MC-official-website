@@ -80,7 +80,9 @@
              :src="require('../assets/images/服务器异常.svg')">
       </v-img>
 
-      <v-row justify="center" align="center" style="margin-top: 20px">
+      <v-row justify="center"
+             align="center"
+             style="margin-top: 20px">
         <h2>社区动态</h2>
         <v-icon>Community news</v-icon>
       </v-row>
@@ -120,6 +122,12 @@
           </v-expand-transition>
         </v-card>
       </v-row>
+
+      <v-row justify="center" align="center" style="margin-top: 30px">
+        <h2>风景鉴赏</h2>
+        <v-icon>Scenery</v-icon>
+      </v-row>
+
     </v-container>
   </div>
 </template>
@@ -218,4 +226,43 @@ p {
   background: rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/*动画效果*/
+h1::before,
+h1::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+h1::before {
+  top: 0;
+  transform-origin: right;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+h1::after {
+  bottom: 0;
+  transform-origin: left;
+}
+
+h1:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+h1:hover::after {
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
 </style>

@@ -93,16 +93,16 @@ export default {
     dialog: false,
     images: [
       {
-        path: require('../assets/images/join/1.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640962.png'
       },
       {
-        path: require('../assets/images/join/2.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640962.png'
       },
       {
-        path: require('../assets/images/join/3.png')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640961.jpg'
       },
       {
-        path: require('../assets/images/join/4.jpg')
+        path: 'https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640960.jpg'
       },
     ],
     // 注意更换为数据库内

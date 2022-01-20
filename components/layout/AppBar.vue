@@ -9,9 +9,13 @@
       <v-icon>mdi-server-network</v-icon>
     </v-toolbar-title>
     <v-spacer/>
-    <strong style="margin-right: 10px">
-      {{ userInfo.user_game_id }}
-    </strong>
+
+    <nuxt-link to="user" style="text-decoration: none">
+      <strong class="user-name">
+        {{ userInfo.user_game_id }}
+      </strong>
+    </nuxt-link>
+
     <v-btn
       v-if="userInfo==null||userInfo===''"
       style="margin-right: 10px">
@@ -59,5 +63,9 @@ strong {
   background: linear-gradient(to right, #78bbea, blue);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.user-name {
+  margin-right: 10px;
 }
 </style>
