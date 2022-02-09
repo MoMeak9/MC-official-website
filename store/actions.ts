@@ -2,14 +2,14 @@ import storage from 'store'
 import {getUserInfo} from '@/api/user'
 
 export default {
-  Logout({commit}) {
+  Logout({commit}: any) {
     return new Promise((resolve) => {
       commit('signOut')
       storage.remove('token')
-      resolve()
+      resolve(resolve)
     })
   },
-  getUserInfo({commit}) {
+  getUserInfo({commit}: any) {
     return new Promise((resolve, reject) => {
       try {
         getUserInfo({}).then(res => {

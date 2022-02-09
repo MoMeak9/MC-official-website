@@ -32,7 +32,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "store": "^2.0.12",
+    "@types/store": "^2.0.12",
     "vuex": "^3.6.2"
   }
 }
