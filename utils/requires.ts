@@ -1,5 +1,6 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 import storage from 'store'
+
 // create an axios instance
 const service = axios.create({
   // eslint-disable-next-line no-undef
@@ -12,12 +13,12 @@ const service = axios.create({
 
 // request interceptor
 service.interceptors.request.use(
-  config => {
+  (config: AxiosRequestConfig) => {
     if (storage.get('token')) {
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation
-      config.headers.Authorization = `Bearer ${storage.get('token')}`
+      config.headers = { 'Authorization': `Bearer ${storage.get('token')}` }
     }
     return config
   },
@@ -31,8 +32,9 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     if (response.data.head.code === 0) {
+      // @ts-ignore
       this.$router.push('/login').then(() => {
-        storage.delete('token')
+        storage.remove('token')
       })
     }
     return response.data

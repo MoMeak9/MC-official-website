@@ -1667,6 +1667,11 @@
   resolved "https://registry.npmmirror.com/@types/parse-json/download/@types/parse-json-4.0.0.tgz"
   integrity sha1-L4u0QUNNFjs1+4/9zNcTiSf/uMA=
 
+"@types/prismjs@^1.26.0":
+  version "1.26.0"
+  resolved "https://registry.npmmirror.com/@types/prismjs/-/prismjs-1.26.0.tgz#a1c3809b0ad61c62cac6d4e0c56d610c910b7654"
+  integrity sha512-ZTaqn/qSqUuAq1YwvOFQfVW1AR/oQJlLSZVustdjwI+GZ8kr0MSHBj0tsXPW1EqHubx50gtBEjbPGsdZwQwCjQ==
+
 "@types/pug@2.0.4":
   version "2.0.4"
   resolved "https://registry.nlark.com/@types/pug/download/@types/pug-2.0.4.tgz"
@@ -3249,13 +3254,6 @@ core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.nlark.com/core-util-is/download/core-util-is-1.0.3.tgz"
   integrity sha1-pgQtNjTCsn6TKPg3uWX6yDgI24U=
-
-cos-js-sdk-v5@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.npmmirror.com/cos-js-sdk-v5/download/cos-js-sdk-v5-1.3.1.tgz#f87e9c41201e32a82fd478ca1231ca6bb7485821"
-  integrity sha512-Q12rZXb6eHeyMwloblVMYha4VlGd4+4iJkXLL2YUxPEc3c9GNZeso88ujBUKrxu3wF+Z6vbth/DJ3fQkpPTi+Q==
-  dependencies:
-    xmldom "^0.1.31"
 
 cosmiconfig@^5.0.0:
   version "5.2.1"
@@ -8125,10 +8123,15 @@ pretty-time@^1.1.0:
   resolved "https://registry.npm.taobao.org/pretty-time/download/pretty-time-1.1.0.tgz"
   integrity sha1-/7dCmvq7hTXDRqNOQYc63z103Q4=
 
-prismjs@^1.13.0, prismjs@^1.23.0, prismjs@^1.25.0:
+prismjs@^1.13.0, prismjs@^1.23.0:
   version "1.25.0"
   resolved "https://registry.npmmirror.com/prismjs/download/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
   integrity sha1-b4It8b2tllc0sxCzFaIzFc+Zl1Y=
+
+prismjs@^1.25.0:
+  version "1.26.0"
+  resolved "https://registry.npmmirror.com/prismjs/-/prismjs-1.26.0.tgz#16881b594828bb6b45296083a8cbab46b0accd47"
+  integrity sha512-HUoH9C5Z3jKkl3UunCyiD5jwk0+Hz0fIgQ2nbwU2Oo/ceuTAQAg+pPVnfdt2TJWRVLcxKh9iuoYDUSc8clb5UQ==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -10123,11 +10126,6 @@ ws@^7.3.1:
   version "7.5.5"
   resolved "https://registry.npmmirror.com/ws/download/ws-7.5.5.tgz"
   integrity sha1-i0vEr1GM+r0Ec65PmRRCh7M+uIE=
-
-xmldom@^0.1.31:
-  version "0.1.31"
-  resolved "https://registry.nlark.com/xmldom/download/xmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
-  integrity sha1-t2yaG9nwqXN+WnLcNyMc84N14v8=
 
 xss@^1.0.9:
   version "1.0.10"
