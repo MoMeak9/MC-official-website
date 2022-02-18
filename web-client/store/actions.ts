@@ -1,5 +1,5 @@
 import storage from 'store'
-import {getUserInfo} from '@/api/user'
+import {getUserInfo} from '@/web-client/api/user'
 
 export default {
   Logout({commit}: any) {

@@ -7,7 +7,7 @@
       <v-img
         height="400px"
         contain
-        :src="require('/assets/images/404.svg')">
+        :src="require('/web-client/assets/images/404.svg')">
       </v-img>
     </v-row>
     <v-row justify="center">
