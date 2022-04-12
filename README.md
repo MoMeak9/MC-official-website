@@ -11,6 +11,8 @@
 
 这个项目更像是一个综合前端技术栈的实践demo，当然也提供了基础的网页布局和工具配置。也同时使用了Eslint和TypeScript等等
 
+Node.js + Express [后端项目地址](https://github.com/MoMeak9/demo-express-http)
+
 **关于Nuxt与SSR**
 
 利用 Nuxt的 SSR模式（也叫做 "universal" or "isomorphic" 模式），Node.js 服务器将基于 Vue 的组件渲染成 HTML 并传输到客户端，而不是纯 javascript。与传统的 Vue SPA 相比，使用 SSR 将带来巨大的 SEO 提升、更好的用户体验和更多的机会。
