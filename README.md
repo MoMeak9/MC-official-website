@@ -11,7 +11,7 @@
 
 这个项目更像是一个综合前端技术栈的实践demo，当然也提供了基础的网页布局和工具配置。也同时使用了Eslint和TypeScript等等
 
-Node.js + Express [后端项目地址](https://github.com/MoMeak9/demo-express-http)
+TypeScript + Express [后端项目地址](https://github.com/MoMeak9/demo-express-http)
 
 **关于Nuxt与SSR**
 
