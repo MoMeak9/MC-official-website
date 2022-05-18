@@ -1,73 +1,42 @@
-# LightWorld|辉光世界官网
+# Nuxt 3 Minimal Starter
 
-<p style="text-align:center;">
-    LightWorld 辉光世界官网前端工程<br/>
-    基于Vue2、Nuxt.js、Vuetify 开发的Minecraft我的世界国际服网站
-<p/>
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-随着我个人建立开放的我的世界服务器玩家越来越多的，需要有一个更加正式的宣传端口，并且希望有一个网站可以解决类似白名单发布审核这样的事情（主要还是懒得手动审批问卷233）
+## Setup
 
-## 关于项目
+Make sure to install the dependencies:
 
-这个项目更像是一个综合前端技术栈的实践demo，当然也提供了基础的网页布局和工具配置。也同时使用了Eslint和TypeScript等等
+```bash
+# yarn
+yarn install
 
-TypeScript + Express [后端项目地址](https://github.com/MoMeak9/demo-express-http)
+# npm
+npm install
 
-**关于Nuxt与SSR**
-
-利用 Nuxt的 SSR模式（也叫做 "universal" or "isomorphic" 模式），Node.js 服务器将基于 Vue 的组件渲染成 HTML 并传输到客户端，而不是纯 javascript。与传统的 Vue SPA 相比，使用 SSR 将带来巨大的 SEO 提升、更好的用户体验和更多的机会。
-
-**关于为什么使用Vue2而不是Vue3？**
-
-Nuxt 3 还处于beta阶段，而且有着更加优异的用户交互体验的Vuetify的Vue3版本也尚处于Alpha阶段，所以先使用了基于Vue2的Nuxt，也是为了避免踩坑......
-
-**服务端以及管理系统**
-
-服务端尚在完善当中，使用Express.js和Typescript编写，敬请期待哦~
-
-[管理系统](https://github.com/MoMeak9/MC-official-website-MS)
-
-**后续工作**
-
-后续还有很多工作要做哦，会不断完善学习完善哒
-
-## 预览
-
-[辉光世界](https://mc.syhwdsj.xyz/)
-
-## 使用
-
-本地运行
-
-```shell
-yarn run dev
+# pnpm
+pnpm install --shamefully-hoist
 ```
 
-打包构建
+## Development Server
 
-```shell
-yarn run build
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
 ```
 
-启动
+## Production
 
-```shell
-yarn run start
+Build the application for production:
+
+```bash
+npm run build
 ```
 
-## 部署
+Locally preview production build:
 
-当你将项目打包构建完成之后，上传以下文件至服务器并启动：
+```bash
+npm run preview
+```
 
-- .nuxt
-- static
-- nuxt.config.js
-- package.json
-
-## 贡献
-
-使用过程中发现任何问题都可以提 Issue 给我，当然，我们也非常欢迎你给我发 PR。
-
-## 开源协议
-
-MIT
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
