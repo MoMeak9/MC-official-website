@@ -17,9 +17,6 @@
             <v-card class="card-shadow">
               <v-card-text>
                 <div class="pa-10 text-center">
-                  <v-chip small color="info" text-color="white">
-                    Feature 3
-                  </v-chip>
                   <h3 class="feature3-title font-weight-medium">
                     The New way of Making Your Website in mins
                   </h3>
@@ -28,17 +25,6 @@
                     customer services will be great experience. You will love it
                     for sure.
                   </p>
-                  <v-btn
-                    color="error"
-                    class="btn-custom-lg linking mt-10 btn-arrow"
-                    nuxt
-                    large
-                    to="/"
-                    elevation="0"
-                  >
-                    <span>Explore More</span>
-                    <i class="mdi mdi-arrow-right"></i>
-                  </v-btn>
                 </div>
               </v-card-text>
             </v-card>

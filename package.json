@@ -2,7 +2,7 @@
   "name": "mc",
   "version": "1.0.0",
   "private": true,
-  "description": "NextUI - Free Nuxt Js UI Kit",
+  "description": "Light World Website",
   "author": "Wrappixel",
   "scripts": {
     "dev": "nuxt",

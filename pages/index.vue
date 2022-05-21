@@ -1,52 +1,30 @@
 <template>
   <div>
-    <!-- -----------------------------------------------
-    Banner
-    ----------------------------------------------- -->
-    <Banner />
-    <!-- -----------------------------------------------
-    ./ Banner
-    ----------------------------------------------- -->
-    <!-- -----------------------------------------------
-    All Components
-    ----------------------------------------------- -->
-    <AllCustomComponents />
-    <!-- -----------------------------------------------
-    ./ All Components
-    ----------------------------------------------- -->
-    <!-- -----------------------------------------------
-    Coming Soon
-    ----------------------------------------------- -->
-    <ComingSoon />
-    <!-- -----------------------------------------------
-    ./ Coming Soon
-    ----------------------------------------------- -->
+    <Banner/>
+    <Feature2/>
+    <Portfolio/>
+    <Banner1/>
+    <Team/>
+    <ComingSoon/>
   </div>
 </template>
 
 <script>
 export default {
   head() {
-    return {
-      title: "NuxtJs UI kit | Free UI kit built with Vuetify",
-      meta: [
-        {
-          hid: "description",
-          name: "Next Ui Kit",
-          content: "Next Ui Kit is the best way",
-        },
-      ],
-    };
+    return {};
   },
 
   data() {
     return {};
   },
   components: {
+    Team: () => import("@/components/custom/team/Team"),
     Banner: () => import("@/components/shared/lp-banner/Banner"),
     ComingSoon: () => import("@/components/shared/coming-soon/ComingSoon"),
-    AllCustomComponents: () =>
-      import("@/components/custom/AllCustomComponents"),
+    Portfolio: () => import("@/components/custom/portfolio/Portfolio"),
+    Banner1: () => import("@/components/custom/banner/Banner1"),
+    Feature2: () => import("@/components/custom/features/Feature3"),
   },
 };
 </script>

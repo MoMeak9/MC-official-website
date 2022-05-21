@@ -9,12 +9,10 @@
           <v-col cols="12" sm="10" md="9" lg="7">
             <div class="text-center">
               <h2 class="section-title font-weight-medium">
-                Experienced & Professional Team
+                我们的团队 Our Team
               </h2>
               <p>
-                You can relay on our amazing features list and also our customer
-                services will be great experience for you without doubt and in
-                no-time
+
               </p>
             </div>
           </v-col>
@@ -27,11 +25,16 @@
             Start Team
         ----------------------------------------------- -->
         <v-row class="mt-13">
-          <v-col cols="12" md="6" lg="3">
+          <v-col
+            v-for="(item,index) in teamNumbers"
+            :key="index"
+            cols="12"
+            md="6"
+            lg="3">
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
                 <v-img
-                  :src="require('@/assets/images/team/t1.jpg')"
+                  :src="item.image"
                   alt="team"
                 />
                 <div class="img-overlay">
@@ -61,145 +64,14 @@
               </div>
               <div>
                 <h5 class="team-title font-weight-medium font-18">
-                  Michael Doe
+                  {{item.name}}
                 </h5>
-                <p class="team-subtitle">Property Specialist</p>
+                <p class="team-subtitle">
+                  {{item.role}}
+                </p>
               </div>
               <p>
-                You can relay on our amazing features list and also our customer
-                services will be great experience.
-              </p>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="6" lg="3">
-            <v-card elevation="0" class="team-card overflow-hidden mb-15">
-              <div class="social-overlay">
-                <v-img
-                  :src="require('@/assets/images/team/t2.jpg')"
-                  alt="team"
-                />
-                <div class="img-overlay">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-youtube"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h5 class="team-title font-weight-medium font-18">
-                  Michael Doe
-                </h5>
-                <p class="team-subtitle">Property Specialist</p>
-              </div>
-              <p>
-                You can relay on our amazing features list and also our customer
-                services will be great experience.
-              </p>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="6" lg="3">
-            <v-card elevation="0" class="team-card overflow-hidden mb-15">
-              <div class="social-overlay">
-                <v-img
-                  :src="require('@/assets/images/team/t3.jpg')"
-                  alt="team"
-                />
-                <div class="img-overlay">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-youtube"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h5 class="team-title font-weight-medium font-18">
-                  Michael Doe
-                </h5>
-                <p class="team-subtitle">Property Specialist</p>
-              </div>
-              <p>
-                You can relay on our amazing features list and also our customer
-                services will be great experience.
-              </p>
-            </v-card>
-          </v-col>
-          <v-col cols="12" md="6" lg="3">
-            <v-card elevation="0" class="team-card overflow-hidden mb-15">
-              <div class="social-overlay">
-                <v-img
-                  :src="require('@/assets/images/team/t4.jpg')"
-                  alt="team"
-                />
-                <div class="img-overlay">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-youtube"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h5 class="team-title font-weight-medium font-18">
-                  Michael Doe
-                </h5>
-                <p class="team-subtitle">Property Specialist</p>
-              </div>
-              <p>
-                You can relay on our amazing features list and also our customer
-                services will be great experience.
+                {{item.description}}
               </p>
             </v-card>
           </v-col>
@@ -212,11 +84,45 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 export default {
   name: "Team",
   data() {
-    return {};
+    return {
+      teamNumbers: [
+        {
+          name: 'youkw',
+          imgUrl: '',
+          role: 'op',
+          description: '他说让腐竹先帮他写一下',
+        },
+        {
+          name: 'youkw',
+          imgUrl: '',
+          role: 'op',
+          description: '他说让腐竹先帮他写一下',
+        },
+        {
+          name: 'risayama',
+          imgUrl: '',
+          role: 'op',
+          description: '专业摸鱼的后台技术',
+        },
+        {
+          name: 'Sakura_Six',
+          imgUrl: '',
+          role: '宣传委员',
+          description: '我叫撒库拉性别女爱好男是个咸鱼喜欢打原神搞搞Unity之流的旁门左道;' +
+            '曾以大保底80发的记录成为身边原神圈中的最非之人',
+        },
+        {
+          name: 'rabbit_99',
+          imgUrl: '',
+          role: '技术专员',
+          description: '摸鱼型生电玩家',
+        }
+      ]
+    };
   },
   methods: {},
 };

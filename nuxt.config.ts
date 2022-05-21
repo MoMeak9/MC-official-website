@@ -4,10 +4,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "%s - Nuxt js UI Kit",
-    title: "NuxtJs UI kit | Free UI kit built with Vuetifyy",
+    titleTemplate: "%s - LightWorld",
+    title: "LightWorld | 辉光世界",
     htmlAttrs: {
-      lang: "en"
+      lang: "zh-CN"
     },
     meta: [
       { charset: "utf-8" },

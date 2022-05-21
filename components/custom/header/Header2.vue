@@ -57,7 +57,7 @@
           to="/"
           elevation="0"
         >
-          Hire Me
+          加入我们
         </v-btn>
       </v-container>
     </v-app-bar>
@@ -82,4 +82,3 @@ export default {
   },
 };
 </script>
- 

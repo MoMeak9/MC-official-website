@@ -8,10 +8,11 @@
         <v-col cols="12" md="7" lg="6" class="d-flex align-center">
           <div class="text-center text-md-left">
             <h1 class="banner-title font-weight-bold white--text">
-              Build stunning websites with NuxtJs UI Kit
+              LightWorld辉光世界服务器
             </h1>
             <h4 class="banner-subtitle white--text font-weight-regular">
-              Free Vuetify UI Kit with Lots of Ready to Use Sections
+              Minecraft我的世界公益社区<br>
+              2019-2022
             </h4>
             <div class="mt-16 pt-2">
               <v-btn
@@ -23,7 +24,7 @@
                 href="/"
                 elevation="0"
               >
-                Download Free
+                立即注册
               </v-btn>
               <v-btn
                 nuxt
@@ -34,7 +35,7 @@
                 color="white"
                 elevation="0"
               >
-                Upgrade to Pro
+                了解更多
               </v-btn>
             </div>
           </div>
