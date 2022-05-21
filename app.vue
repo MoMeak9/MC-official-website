@@ -1,5 +1,9 @@
 <template>
   <div>
-    <NuxtWelcome />
+    123
+
   </div>
 </template>
+<script setup lang="ts">
+
+</script>
