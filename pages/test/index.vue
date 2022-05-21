@@ -11,9 +11,24 @@
 </v-main>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "index"
+  name: "index",
+  data() {
+    return {
+      list:[]
+    };
+  },
+  asyncData(){
+
+  },
+  methods: {
+    getList() {
+      this.$http.get("/api/list").then(res => {
+        this.list = res.data;
+      });
+    }
+  },
 }
 </script>
 
