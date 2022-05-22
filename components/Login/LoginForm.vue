@@ -2,75 +2,114 @@
   <v-row justify='center'>
     <v-col cols='12' sm='10' md='7' lg='4'>
       <v-card>
-        <v-card-text>
+        <v-card-title>
+          <v-icon>
+            mdi-login
+          </v-icon>
+          登入 Login
+        </v-card-title>
+        <v-form
+          ref="form"
+          v-model="valid"
+          lazy-validation
+        >
           <v-text-field
-            label='User Name'
-            v-model='uname'
-            placeholder='Enter username'
+            v-model="email"
+            :rules="emailRules"
+            label="邮箱"
+            required
           ></v-text-field>
+
           <v-text-field
-            label='Email'
-            type='email'
-            v-model='email'
-            placeholder='Email address'
+            v-model="password"
+            type="password"
+            label="密码"
+            required
           ></v-text-field>
-          <v-text-field
-            v-model='password'
-            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-            :rules='[rules.required, rules.min]'
-            :type="show1 ? 'text' : 'password'"
-            name='input-10-1'
-            label='Password'
-            placeholder='Enter password'
-            counter
-            @click:append='show1 = !show1'
-          ></v-text-field>
-          <v-text-field
-            v-model='cpassword'
-            :append-icon="show2 ? 'mdi-eye' : 'mdi-eye-off'"
-            :rules='[rules.required, rules.min]'
-            :type="show2 ? 'text' : 'password'"
-            name='input-10-1'
-            label='Confirm Password'
-            placeholder='Enter Confirm password'
-            counter
-            @click:append='show1 = !show1'
-          ></v-text-field>
-          <v-checkbox
-            v-model='checkbox2'
-            class='mt-2'
-            label='Remember me'
-            hide-details
-          ></v-checkbox>
-          <div class='mt-10'>
-            <v-btn color='success' elevation='0' class='mr-2'>Save</v-btn>
-            <v-btn color='black' elevation='0' dark>Cancel</v-btn>
-          </div>
-        </v-card-text>
+
+          <v-card-actions>
+            <v-btn
+              :disabled="!valid"
+              color="success"
+              class="mr-4"
+              @click="validate"
+            >
+              登入
+            </v-btn>
+
+            <v-btn
+              color="error"
+              class="mr-4"
+              @click="reset"
+            >
+              重置
+            </v-btn>
+            <v-spacer/>
+            <v-btn
+              @click="changeType"
+            >
+              去注册
+            </v-btn>
+          </v-card-actions>
+        </v-form>
       </v-card>
     </v-col>
   </v-row>
 </template>
 
-<script>
+<script lang='ts'>
+import storage from 'store'
+import {login} from '~/api/user';
+import sentMessage from "~/utils/sentMessage";
+
 export default {
   name: 'LoginForm',
-  data() {
-    return {
-      uname: '',
-      email: '',
-      password: '',
-      cpassword: '',
-      show1: false,
-      show2: false,
-      checkbox2: false,
-      rules: {
-        required: (value) => !!value || 'Required.',
-        min: (v) => v.length >= 8 || 'Min 8 characters',
-        emailMatch: () => 'The email and password you entered don\'t match'
+  data: () => ({
+    valid: true,
+    nameRules: [
+      v => !!v || 'Name is required',
+      v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+    ],
+    email: '',
+    password: '',
+    emailRules: [
+      v => !!v || 'E-mail is required',
+      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+    ],
+  }),
+  methods: {
+    validate() {
+      if (this.$refs.form.validate()) {
+        login({
+          user_email: this.email,
+          user_password: this.password
+        }).then((res) => {
+          if (res.head.code === 1) {
+            sentMessage.success(this.$store, {
+              message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`
+            })
+            storage.set('token', res.data.token)
+            this.$store.commit('setToken', res.data.token)
+            this.$store.commit('setUserInfo', res.data.userBean)
+            this.$router.push('/')
+          } else {
+            sentMessage.error(this.$store, {
+              message: res.head.msg
+            })
+          }
+        })
       }
+    },
+    reset() {
+      this.$refs.form.reset()
+    },
+    resetValidation() {
+      this.$refs.form.resetValidation()
+    },
+    changeType() {
+      this.$emit('change-type', 'sign')
     }
-  }
+  },
 }
 </script>
 

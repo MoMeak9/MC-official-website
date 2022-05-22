@@ -11,8 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.8",
+    "store": "^2.0.12",
     "ts-node": "^10.7.0",
     "vuetify": "^2.6.6"
   },
@@ -20,6 +23,7 @@
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript": "^2.8.1",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/vuetify": "^1.12.1"
+    "@nuxtjs/vuetify": "^1.12.1",
+    "@types/store": "^2.0.2"
   }
 }
