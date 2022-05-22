@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  name: 'sponsor'
-}
+  name: 'Sponsor',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

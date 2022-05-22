@@ -3,16 +3,16 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 export default {
-  name: "topics",
-  data() {
-    return {};
-  },
+  name: 'Topics',
 
   components: {
     // Categorybanner: () =>
     //   import("@/components/sections/categorybanner/Categorybanner"),
+  },
+  data() {
+    return {};
   },
 };
 </script>

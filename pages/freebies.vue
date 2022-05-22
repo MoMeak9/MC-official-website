@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  name: 'freebies'
-}
+  name: 'Freebies',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

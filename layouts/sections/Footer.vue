@@ -10,14 +10,10 @@
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
           <h4 class="font-weight-regular font-18">服务器地址</h4>
-          <p class="mt-10">
-            Host：加入群获取
-          </p>
+          <p class="mt-10">Host：加入群获取</p>
           <p>
             Site :
-            <a class="dark-link" href="https://www.lwmc.net/"
-            >lwmc.net</a
-            >
+            <a class="dark-link" href="https://www.lwmc.net/">lwmc.net</a>
           </p>
         </v-col>
         <!-- -----------------------------------------------
@@ -25,9 +21,7 @@
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
           <h4 class="font-weight-regular font-18">官方QQ群：770125832</h4>
-          <p class="mt-10">
-            腐竹QQ：1308994506
-          </p>
+          <p class="mt-10">腐竹QQ：1308994506</p>
         </v-col>
         <!-- -----------------------------------------------
         Third Column
@@ -35,14 +29,15 @@
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
           <h4 class="font-weight-regular font-18">联系方式</h4>
           <p class="mt-10 mb-0">
-            Office : <a class="dark-link" href="mailto:shi_yihui@qq.com">shi_yihui@qq.com</a>
+            Office :
+            <a class="dark-link" href="mailto:shi_yihui@qq.com">shi_yihui@qq.com</a>
           </p>
-<!--          <p>-->
-<!--            Site :-->
-<!--            <a class="dark-link" href="https://www.wrappixel.com/"-->
-<!--              >wrappixel.com</a-->
-<!--            >-->
-<!--          </p>-->
+          <!--          <p>-->
+          <!--            Site :-->
+          <!--            <a class="dark-link" href="https://www.wrappixel.com/"-->
+          <!--              >wrappixel.com</a-->
+          <!--            >-->
+          <!--          </p>-->
         </v-col>
         <!-- -----------------------------------------------
         Fourth Column
@@ -95,7 +90,7 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
   data() {
     return {
       data: [],

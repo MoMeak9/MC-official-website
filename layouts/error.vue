@@ -6,29 +6,28 @@
 
 <script>
 export default {
-  layout: "empty",
+  components: {
+    Banner: () => import('@/components/shared/lp-banner/Banner404'),
+  },
+  layout: 'empty',
   props: {
     error: {
       type: Object,
-      default: null
-    }
-  },
-  components: {
-    Banner: () => import("@/components/shared/lp-banner/Banner404")
+      default: null,
+    },
   },
   data() {
     return {
-      pageNotFound: "404 Not Found",
-      otherError: "An error occurred"
+      pageNotFound: '404 Not Found',
+      otherError: 'An error occurred',
     };
   },
   head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
+    const title = this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
     return {
-      title
+      title,
     };
-  }
+  },
 };
 </script>
 

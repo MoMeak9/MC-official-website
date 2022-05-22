@@ -6,22 +6,22 @@
 
 <script>
 export default {
-  layout: "coming-soon",
+  components: {
+    Banner: () => import('@/components/shared/lp-banner/BannerComingSoon'),
+  },
+  layout: 'coming-soon',
   props: {
     error: {
       type: Object,
-      default: null
-    }
-  },
-  components: {
-    Banner: () => import("@/components/shared/lp-banner/BannerComingSoon")
+      default: null,
+    },
   },
   data() {
     return {
-      pageNotFound: "404 Not Found",
-      otherError: "An error occurred"
+      pageNotFound: '404 Not Found',
+      otherError: 'An error occurred',
     };
-  }
+  },
 };
 </script>
 

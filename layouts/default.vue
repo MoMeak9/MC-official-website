@@ -12,18 +12,16 @@
 
 <script>
 export default {
-  head() {
-    return {}
-  },
   components: {
     Message: () => import('./Message.vue'),
     Header: () => import('@/layouts/sections/Header'),
-    Footer: () => import('@/layouts/sections/Footer')
+    Footer: () => import('@/layouts/sections/Footer'),
   },
-  methods: {}
-}
+  head() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 
-<style scoped lang='scss'>
-
-</style>
+<style scoped lang="scss"></style>

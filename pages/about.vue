@@ -1,13 +1,11 @@
 <template>
-<v-container></v-container>
+  <v-container></v-container>
 </template>
 
 <script>
 export default {
-  name: 'about'
-}
+  name: 'About',
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

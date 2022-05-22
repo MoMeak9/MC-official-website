@@ -3,7 +3,7 @@
     <!-- -----------------------------------------------
           Start Header
     ----------------------------------------------- -->
-    <Header2/>
+    <Header2 />
     <!-- -----------------------------------------------
           End Header
     ----------------------------------------------- -->
@@ -12,17 +12,16 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
 
   components: {
-    Header2: () => import("@/components/custom/header/Header2"),
+    Header2: () => import('@/components/custom/header/Header2'),
   },
   data() {
     return {
-      isActive: false
+      isActive: false,
     };
   },
-  methods: {
-  }
+  methods: {},
 };
 </script>

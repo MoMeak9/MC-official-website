@@ -1,24 +1,24 @@
 interface IStepType {
-  type: string
-  message: string,
-  light: boolean,
+  type: string;
+  message: string;
+  light: boolean;
 }
 
 export default {
   message(state: any, step: IStepType) {
-    state.msgPool.push(step)
+    state.msgPool.push(step);
     // 将消息添加到消息列表
   },
   popMessage(state: any) {
-    state.msgPool.shift()
+    state.msgPool.shift();
   },
   setToken: (state: any, token: string) => {
-    state.token = token
+    state.token = token;
   },
   setUserInfo: (state: any, userInfo: any) => {
-    state.userInfo = userInfo
+    state.userInfo = userInfo;
   },
   signOut(state: any) {
-    state.userInfo = ''
-  }
-}
+    state.userInfo = '';
+  },
+};

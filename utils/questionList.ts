@@ -10,7 +10,8 @@ export default [
     title: '入正时间',
     subtitle: '年月',
     content: '',
-  }, {
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '是否加入过其他正版公益类服务器？',
@@ -26,9 +27,10 @@ export default [
       {
         value: 'B',
         label: '否',
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '1+2+3+4+5+6.......+71=？',
@@ -44,15 +46,18 @@ export default [
       {
         value: 'B',
         label: '2485',
-      }, {
+      },
+      {
         value: 'C',
         label: '2359',
-      }, {
+      },
+      {
         value: 'D',
         label: '老子不会',
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: 'i的2次方等于？',
@@ -68,15 +73,18 @@ export default [
       {
         value: 'B',
         label: '-1',
-      }, {
+      },
+      {
         value: 'C',
         label: '1',
-      }, {
+      },
+      {
         value: 'D',
         label: '老子不会',
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '怪物能生成在下台阶（半砖）上？',
@@ -92,9 +100,10 @@ export default [
       {
         value: 'B',
         label: '错',
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '钻石稿子在白板情况下挖石头最快？',
@@ -106,12 +115,14 @@ export default [
       {
         value: 'A',
         label: '对',
-      }, {
+      },
+      {
         value: 'B',
         label: '错',
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '鞘翅会生成在什么建筑物中？',
@@ -123,18 +134,22 @@ export default [
       {
         value: 'A',
         label: '末地门',
-      }, {
+      },
+      {
         value: 'B',
         label: '地牢',
-      }, {
+      },
+      {
         value: 'C',
         label: '末地船',
-      }, {
+      },
+      {
         value: 'D',
         label: '腐竹家',
-      }
-    ]
-  }, {
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '以下那个是幻翼膜的用途？',
@@ -146,18 +161,22 @@ export default [
       {
         value: 'A',
         label: '炼药',
-      }, {
+      },
+      {
         value: 'B',
         label: '制作鞘翅',
-      }, {
+      },
+      {
         value: 'C',
         label: '吃',
-      }, {
+      },
+      {
         value: 'D',
         label: '合成装备',
-      }
-    ]
-  },{
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '北极熊可以繁殖？',
@@ -169,12 +188,14 @@ export default [
       {
         value: 'A',
         label: '对',
-      }, {
+      },
+      {
         value: 'B',
         label: '错',
-      }
-    ]
-  },{
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '蓝冰由什么合成？',
@@ -186,15 +207,18 @@ export default [
       {
         value: 'A',
         label: '浮冰',
-      }, {
+      },
+      {
         value: 'B',
         label: '冰块',
-      }, {
+      },
+      {
         value: 'C',
         label: '雪',
-      }
-    ]
-  },{
+      },
+    ],
+  },
+  {
     type: 'select',
     isMultiple: false,
     title: '牛奶会消除几种buff？',
@@ -206,16 +230,19 @@ export default [
       {
         value: 'A',
         label: '1',
-      }, {
+      },
+      {
         value: 'B',
         label: '5',
-      }, {
+      },
+      {
         value: 'C',
         label: 'N',
-      }, {
+      },
+      {
         value: 'D',
         label: '6',
-      }
-    ]
+      },
+    ],
   },
 ]
