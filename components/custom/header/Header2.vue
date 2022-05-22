@@ -41,6 +41,9 @@
               <n-link class="nav-link" nuxt to="/map"> 卫星地图 </n-link>
             </li>
             <li class="nav-item" text>
+              <n-link class="nav-link" nuxt to="/freebies"> 服务器动态 </n-link>
+            </li>
+            <li class="nav-item" text>
               <n-link class="nav-link" nuxt to="/sponsor"> 赞助支持 </n-link>
             </li>
             <li class="nav-item" text>
