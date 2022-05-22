@@ -4,17 +4,19 @@
       <v-col cols='12' sm='10' md='9' lg='7'>
         <div class='text-center'>
           <h2 class='ui-title font-weight-bold'>
-            Sign In
+            {{type==='SIGN_IN'?'Sign In':'Sign Up'}}
           </h2>
           <p>
-            Here you can check Demos we created you can easily use it. Its
-            quite easy to Create your own dream website & dashboard in
-            No-time.
           </p>
         </div>
       </v-col>
     </v-row>
-    <LoginForm/>
+    <LoginForm
+      v-if="type==='SIGN_IN'"
+      @change-type="changeType"/>
+    <SignUpForm
+      v-else
+      @change-type="changeType"/>
   </div>
 </template>
 
@@ -22,10 +24,18 @@
 export default {
   name: 'login',
   components: {
-    LoginForm: () => import('../components/Login/LoginForm.vue')
+    LoginForm: () => import('../components/Login/LoginForm.vue'),
+    SignUpForm: () => import('../components/Login/SignUpForm.vue')
   },
   data() {
-    return {}
+    return {
+      type: 'SIGN_IN',
+    }
+  },
+  methods: {
+    changeType(type) {
+      this.type = type;
+    }
   }
 }
 </script>

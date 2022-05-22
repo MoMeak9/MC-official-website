@@ -1,7 +1,7 @@
 <template>
   <v-row justify='center'>
     <v-col cols='12' sm='10' md='7' lg='4'>
-      <v-card>
+      <v-card class='card-style'>
         <v-card-title>
           <v-icon>
             mdi-login
@@ -57,7 +57,7 @@
   </v-row>
 </template>
 
-<script lang='ts'>
+<script>
 import storage from 'store'
 import {login} from '~/api/user';
 import sentMessage from "~/utils/sentMessage";
@@ -84,7 +84,7 @@ export default {
           user_email: this.email,
           user_password: this.password
         }).then((res) => {
-          if (res.head.code === 1) {
+          if (res.code === 1) {
             sentMessage.success(this.$store, {
               message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`
             })
@@ -103,9 +103,6 @@ export default {
     reset() {
       this.$refs.form.reset()
     },
-    resetValidation() {
-      this.$refs.form.resetValidation()
-    },
     changeType() {
       this.$emit('change-type', 'sign')
     }
@@ -113,6 +110,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang='scss'>
+@import "assets/scss/index";
 </style>

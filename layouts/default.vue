@@ -6,21 +6,24 @@
       <nuxt />
     </v-main>
     <Footer />
+    <Message />
   </v-app>
 </template>
 
 <script>
 export default {
   head() {
-    return {
-    };
+    return {}
   },
   components: {
-    Header: () => import("@/layouts/sections/Header"),
-    Footer: () => import("@/layouts/sections/Footer")
+    Message: () => import('./Message.vue'),
+    Header: () => import('@/layouts/sections/Header'),
+    Footer: () => import('@/layouts/sections/Footer')
   },
   methods: {}
-};
+}
 </script>
 
-<style></style>
+<style scoped lang='scss'>
+
+</style>

@@ -9,10 +9,6 @@ export const api = {
   getAllUsers: '/api/user/getAllUsers'
 }
 
-interface IRes{
-
-}
-
 export function login(param: object): AxiosPromise {
   return request({
     url: api.login,

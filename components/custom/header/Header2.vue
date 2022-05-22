@@ -35,7 +35,7 @@
               <n-link class="nav-link" nuxt to="/"> 首页 </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/about"> 关于我们 </n-link>
+              <n-link class="nav-link" nuxt to="/join"> 白名单申请 </n-link>
             </li>
             <li class="nav-item" text>
               <n-link class="nav-link" nuxt to="/map"> 卫星地图 </n-link>

@@ -25,7 +25,9 @@
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
           <h4 class="font-weight-regular font-18">官方QQ群：770125832</h4>
-          <p>腐竹：1308994506</p>
+          <p class="mt-10">
+            腐竹QQ：1308994506
+          </p>
         </v-col>
         <!-- -----------------------------------------------
         Third Column
@@ -70,7 +72,7 @@
       <div class="footer-bottom-bar font-14">
         <div class="d-block d-md-flex justify-space-around">
           <p>
-            <a href="https://beian.miit.gov.cn" class="link">闽ICP备19026932号-2</a>
+            <a href="https://beian.miit.gov.cn" class="link">闽ICP备19026932号-3</a>
           </p>
           <p class="ml-auto">
             All Rights Reserved by

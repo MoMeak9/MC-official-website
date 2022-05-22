@@ -17,6 +17,7 @@
     "nuxt": "^2.15.8",
     "store": "^2.0.12",
     "ts-node": "^10.7.0",
+    "vue-property-decorator": "^9.1.2",
     "vuetify": "^2.6.6"
   },
   "devDependencies": {
