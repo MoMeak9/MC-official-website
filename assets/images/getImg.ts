@@ -1,5 +1,7 @@
 const basePath = `https://cdn.lwmc.net/`;
-const imageStore = {}
+const imageStore = {
+  ...require('./teamNumbers')
+}
 
 export function getImage(flag: string) {
   if (!imageStore[flag]) {

@@ -10,7 +10,7 @@
             <h2 class="coming-title font-weight-bold white--text">
               快速加群
             </h2>
-            <h4 class="coming-subtitle white--text font-weight-light">
+            <h4 class="coming-subtitle white--text font-weight-bold">
               你还在等什么？快速加群了解我们的最新动态
             </h4>
             <div class="mt-16 pt-2">
@@ -19,7 +19,7 @@
                 large
                 to="/#"
                 class="btn-custom-md"
-                color="white"
+                color="primary"
                 elevation="0"
               >
                 JOIN US

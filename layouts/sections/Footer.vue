@@ -68,16 +68,18 @@
         </v-col>
       </v-row>
       <div class="footer-bottom-bar font-14">
-        <div class="d-block d-md-flex align-center">
+        <div class="d-block d-md-flex justify-space-around">
           <p>
+            <a href="https://beian.miit.gov.cn" class="link">闽ICP备19026932号-2</a>
+          </p>
+          <p class="ml-auto">
             All Rights Reserved by
-            <a href="https://www.wrappixel.com/" class="link">wrappixel.com</a>
+            <a href="https://www.lwmc.net/" class="link">lwmc.com</a>
           </p>
           <div class="ml-auto">
             <div class="d-flex align-center">
               <a href="/" class="link px-4">Terms of Use</a>
               <a href="/" class="link px-4">Legal Disclaimer</a>
-              <a href="/" class="link px-4">Privacy Policy</a>
             </div>
           </div>
         </div>

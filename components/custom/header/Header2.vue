@@ -32,19 +32,19 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/"> Home </n-link>
+              <n-link class="nav-link" nuxt to="/"> 首页 </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/about"> About Me </n-link>
+              <n-link class="nav-link" nuxt to="/about"> 关于我们 </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/work"> Work </n-link>
+              <n-link class="nav-link" nuxt to="/map"> 卫星地图 </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/services"> Services </n-link>
+              <n-link class="nav-link" nuxt to="/sponsor"> 赞助支持 </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/freebies"> Freebies </n-link>
+              <n-link class="nav-link" nuxt to="/freebies"> 友情链接 </n-link>
             </li>
           </ul>
         </div>
