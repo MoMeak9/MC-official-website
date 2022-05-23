@@ -19,6 +19,6 @@ export default {
     state.userInfo = userInfo;
   },
   signOut(state: any) {
-    state.userInfo = '';
+    state.userInfo = "";
   },
 };

@@ -1,16 +1,16 @@
 <template>
   <v-container>
-    <v-card class="apply-qs">
+    <v-card class='apply-qs'>
       <h1>白名单审核问卷</h1>
       <p>本次白名单考核问卷将是你入服的唯一参照</p>
-      <v-row v-for="(item, index) in questionList" :key="item.title">
-        <Input v-if="item.type === 'input'" :item="item" :index="index" @change="updateData"></Input>
-        <Select v-else-if="(item.type = 'select')" :item="item" :index="index" @change="updateData"></Select>
+      <v-row v-for='(item, index) in questionList' :key='item.title'>
+        <Input v-if="item.type === 'input'" :item='item' :index='index' @change='updateData'></Input>
+        <Select v-else-if="(item.type = 'select')" :item='item' :index='index' @change='updateData'></Select>
       </v-row>
-      <div style="text-align: center; margin-top: 50px">
+      <div style='text-align: center; margin-top: 50px'>
         <h2>问卷考试结束啦！</h2>
         <br />
-        <v-btn @click="submitAnswer">提交</v-btn>
+        <v-btn @click='submitAnswer'>提交</v-btn>
       </div>
     </v-card>
   </v-container>
@@ -20,6 +20,7 @@
 import questionList from '@/utils/questionList';
 import { submitPaper } from '~/api/paper';
 import sentMessage from '~/utils/sentMessage';
+
 export default {
   name: 'Apply',
   components: {
@@ -56,7 +57,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang='scss'>
 .apply-qs {
   max-width: 100%;
   margin: auto;

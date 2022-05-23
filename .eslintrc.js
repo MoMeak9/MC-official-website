@@ -5,26 +5,26 @@ module.exports = {
     node: true,
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:prettier/recommended',
-    'plugin:nuxt/recommended',
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:prettier/recommended",
+    "plugin:nuxt/recommended",
   ],
   plugins: [],
   // add your custom rules here
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    'prettier/prettier': [
-      'error',
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "warn",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "warn",
+    "prettier/prettier": [
+      "error",
       {
-        printWidth: 80,
+        printWidth: 120,
         tabWidth: 2,
         useTabs: false,
-        singleQuote: true,
+        singleQuote: false,
         semi: true,
-        trailingComma: 'all',
-        arrowParens: 'avoid',
-        htmlWhitespaceSensitivity: 'ignore',
+        trailingComma: "all",
+        arrowParens: "avoid",
+        htmlWhitespaceSensitivity: "ignore",
       },
     ],
   },
