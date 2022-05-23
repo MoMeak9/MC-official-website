@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Logo',
+  name: "Logo",
 
   data() {
     return {};

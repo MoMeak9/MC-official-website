@@ -12,12 +12,12 @@
 <script>
 export default {
   components: {
-    Team: () => import('@/components/custom/team/Team'),
-    Banner: () => import('@/components/shared/lp-banner/Banner'),
-    ComingSoon: () => import('@/components/shared/coming-soon/ComingSoon'),
-    Portfolio: () => import('@/components/custom/portfolio/Portfolio'),
-    Banner1: () => import('@/components/custom/banner/Banner1'),
-    Feature2: () => import('@/components/custom/features/Feature3'),
+    Team: () => import("@/components/custom/team/Team"),
+    Banner: () => import("@/components/shared/lp-banner/Banner"),
+    ComingSoon: () => import("@/components/shared/coming-soon/ComingSoon"),
+    Portfolio: () => import("@/components/custom/portfolio/Portfolio"),
+    Banner1: () => import("@/components/custom/banner/Banner1"),
+    Feature2: () => import("@/components/custom/features/Feature3"),
   },
 
   data() {

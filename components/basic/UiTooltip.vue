@@ -10,8 +10,8 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Tooltip</h2>
               <p>
-                Here you can check Demos we created based on WrapKit. Its quite
-                easy to Create your own dream website & dashboard in No-time.
+                Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &
+                dashboard in No-time.
               </p>
             </div>
           </v-col>
@@ -27,61 +27,29 @@
         <div class="text-center">
           <div class="btn-groups">
             <v-tooltip left>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  color="accent"
-                  elevation="0"
-                  dark
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  Left
-                </v-btn>
+              <template #activator="{ on, attrs }">
+                <v-btn color="accent" elevation="0" dark v-bind="attrs" v-on="on">Left</v-btn>
               </template>
               <span>Left tooltip</span>
             </v-tooltip>
 
             <v-tooltip top>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  color="accent"
-                  elevation="0"
-                  dark
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  Top
-                </v-btn>
+              <template #activator="{ on, attrs }">
+                <v-btn color="accent" elevation="0" dark v-bind="attrs" v-on="on">Top</v-btn>
               </template>
               <span>Top tooltip</span>
             </v-tooltip>
 
             <v-tooltip bottom>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  color="accent"
-                  elevation="0"
-                  dark
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  Bottom
-                </v-btn>
+              <template #activator="{ on, attrs }">
+                <v-btn color="accent" elevation="0" dark v-bind="attrs" v-on="on">Bottom</v-btn>
               </template>
               <span>Bottom tooltip</span>
             </v-tooltip>
 
             <v-tooltip right>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  color="accent"
-                  elevation="0"
-                  dark
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  Right
-                </v-btn>
+              <template #activator="{ on, attrs }">
+                <v-btn color="accent" elevation="0" dark v-bind="attrs" v-on="on">Right</v-btn>
               </template>
               <span>Right tooltip</span>
             </v-tooltip>

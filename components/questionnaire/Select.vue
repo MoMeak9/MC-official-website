@@ -1,7 +1,7 @@
 <template>
   <div id="select">
-    <h3>{{ index + 1 }}.  {{ item.title }}</h3>
-    <div v-if="item.isMultiple===true">
+    <h3>{{ index + 1 }}. {{ item.title }}</h3>
+    <div v-if="item.isMultiple === true">
       <v-checkbox
         v-for="subItem in item.subItem"
         :key="subItem.value"
@@ -30,36 +30,36 @@ export default {
     item: {
       default() {
         return {
-          title: 'title',
-          subtitle: 'subtitle',
+          title: "title",
+          subtitle: "subtitle",
           isMultiple: false,
-          content: '',
+          content: "",
           subItem: [
             {
-              value: '',
-              label: '',
-            }
-          ]
-        }
+              value: "",
+              label: "",
+            },
+          ],
+        };
       },
-      type: Object
+      type: Object,
     },
     index: {
       default: 0,
-      type: Number
-    }
+      type: Number,
+    },
   },
   data() {
     return {
-      content: []
-    }
+      content: [],
+    };
   },
   watch: {
     content() {
-      this.$emit('change', this.content, this.index)
-    }
-  }
-}
+      this.$emit("change", this.content, this.index);
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

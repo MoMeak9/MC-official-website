@@ -90,12 +90,12 @@
 
 <script>
 export default {
-  name: 'Footer',
+  name: "Footer",
+  components: {},
   data() {
     return {
       data: [],
     };
   },
-  components: {},
 };
 </script>

@@ -9,9 +9,9 @@
 <script>
 export default {
   components: {
-    BannerTwo: () => import('@/components/shared/lp-banner/BannerTwo'),
-    ComingSoon: () => import('@/components/shared/coming-soon/ComingSoon'),
-    AllComponents: () => import('@/components/basic/AllComponents'),
+    BannerTwo: () => import("@/components/shared/lp-banner/BannerTwo"),
+    ComingSoon: () => import("@/components/shared/coming-soon/ComingSoon"),
+    AllComponents: () => import("@/components/basic/AllComponents"),
   },
 
   data() {
@@ -19,12 +19,12 @@ export default {
   },
   head() {
     return {
-      title: 'Basic Components',
+      title: "Basic Components",
       meta: [
         {
-          hid: 'description',
-          name: 'Next Ui Kit',
-          content: 'Next Ui Kit is the best way',
+          hid: "description",
+          name: "Next Ui Kit",
+          content: "Next Ui Kit is the best way",
         },
       ],
     };

@@ -13,9 +13,9 @@
 <script>
 export default {
   components: {
-    Message: () => import('./Message.vue'),
-    Header: () => import('@/layouts/sections/Header'),
-    Footer: () => import('@/layouts/sections/Footer'),
+    Message: () => import("./Message.vue"),
+    Header: () => import("@/layouts/sections/Header"),
+    Footer: () => import("@/layouts/sections/Footer"),
   },
   head() {
     return {};

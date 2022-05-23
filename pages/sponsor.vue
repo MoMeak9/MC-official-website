@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Sponsor',
+  name: "Sponsor",
 };
 </script>
 

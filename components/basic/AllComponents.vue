@@ -16,10 +16,6 @@
 <script>
 export default {
   name: "AllComponents",
-
-  data() {
-    return {};
-  },
   components: {
     UiButton: () => import("@/components/basic/UiButton"),
     UiPagination: () => import("@/components/basic/UiPagination"),
@@ -31,6 +27,10 @@ export default {
     UiTable: () => import("@/components/basic/UiTable"),
     UiTooltip: () => import("@/components/basic/UiTooltip"),
     UiTypography: () => import("@/components/basic/UiTypography"),
+  },
+
+  data() {
+    return {};
   },
 };
 </script>

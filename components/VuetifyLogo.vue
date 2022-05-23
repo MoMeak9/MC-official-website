@@ -1,9 +1,5 @@
 <template>
-  <img
-    class="VuetifyLogo"
-    alt="Vuetify Logo"
-    src=""
-  >
+  <img class="VuetifyLogo" alt="Vuetify Logo" src="" />
 </template>
 
 <style>

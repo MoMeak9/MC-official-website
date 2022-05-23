@@ -8,16 +8,11 @@
         <v-row justify="center">
           <v-col cols="12" md="10" lg="7">
             <div class="text-center">
-              <v-chip small color="error" text-color="white">
-                Feature 1
-              </v-chip>
-              <h2 class="section-title font-weight-medium">
-                Awesome with Extra Ordinary Flexibility
-              </h2>
+              <v-chip small color="error" text-color="white">Feature 1</v-chip>
+              <h2 class="section-title font-weight-medium">Awesome with Extra Ordinary Flexibility</h2>
               <p>
-                You can relay on our amazing features list and also our customer
-                services will be great experience for you without doubt and in
-                no-time
+                You can relay on our amazing features list and also our customer services will be great experience for
+                you without doubt and in no-time
               </p>
             </div>
           </v-col>
@@ -38,22 +33,12 @@
                 </div>
                 <h5 class="font-weight-medium font-18">Instant Solutions</h5>
                 <p class="mt-10 mb-8">
-                  You can relay on our amazing features list and also our
-                  customer services will be great experience. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Praesent tristique
-                  pellentesque ipsum.
+                  You can relay on our amazing features list and also our customer services will be great experience.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique pellentesque ipsum.
                 </p>
-                <a
-                  href="#"
-                  class="
-                    text-themecolor
-                    linking
-                    text-decoration-none
-                    d-flex
-                    align-center
-                  "
-                >
-                  Explore More <i class="mdi mdi-arrow-right"></i>
+                <a href="#" class="text-themecolor linking text-decoration-none d-flex align-center">
+                  Explore More
+                  <i class="mdi mdi-arrow-right"></i>
                 </a>
               </v-card-text>
             </v-card>
@@ -66,22 +51,12 @@
                 </div>
                 <h5 class="font-weight-medium font-18">Powerful Techniques</h5>
                 <p class="mt-10 mb-8">
-                  You can relay on our amazing features list and also our
-                  customer services will be great experience. Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Praesent tristique
-                  pellentesque ipsum.
+                  You can relay on our amazing features list and also our customer services will be great experience.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique pellentesque ipsum.
                 </p>
-                <a
-                  href="#"
-                  class="
-                    text-themecolor
-                    linking
-                    text-decoration-none
-                    d-flex
-                    align-center
-                  "
-                >
-                  Explore More <i class="mdi mdi-arrow-right"></i>
+                <a href="#" class="text-themecolor linking text-decoration-none d-flex align-center">
+                  Explore More
+                  <i class="mdi mdi-arrow-right"></i>
                 </a>
               </v-card-text>
             </v-card>

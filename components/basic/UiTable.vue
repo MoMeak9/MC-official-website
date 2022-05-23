@@ -10,8 +10,8 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Table</h2>
               <p>
-                Here you can check Demos we created based on WrapKit. Its quite
-                easy to Create your own dream website & dashboard in No-time.
+                Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &
+                dashboard in No-time.
               </p>
             </div>
           </v-col>
@@ -29,7 +29,7 @@
             <v-card>
               <v-card-text>
                 <v-simple-table>
-                  <template v-slot:default>
+                  <template #default>
                     <thead>
                       <tr>
                         <th class="text-left">Name</th>

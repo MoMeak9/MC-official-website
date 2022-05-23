@@ -4,7 +4,7 @@
     Header
     ----------------------------------------------- -->
     <HeaderText />
-<!--    <Header1 />-->
+    <!--    <Header1 />-->
     <Header2 />
     <!-- -----------------------------------------------
     ./ Header
@@ -92,10 +92,6 @@
 <script>
 export default {
   name: "AllCustomComponents",
-
-  data() {
-    return {};
-  },
   components: {
     HeaderText: () => import("@/components/custom/header/HeaderText"),
     BannerText: () => import("@/components/custom/banner/BannerText"),
@@ -103,12 +99,10 @@ export default {
     PricingText: () => import("@/components/custom/pricing/PricingText"),
     TeamText: () => import("@/components/custom/team/TeamText"),
     ContactText: () => import("@/components/custom/contact/ContactText"),
-    TestimonialText: () =>
-      import("@/components/custom/testimonial/TestimonialText"),
+    TestimonialText: () => import("@/components/custom/testimonial/TestimonialText"),
     C2aText: () => import("@/components/custom/c2a/C2aText"),
     PortfolioText: () => import("@/components/custom/portfolio/PortfolioText"),
-    FormBannerText: () =>
-      import("@/components/custom/form-banner/FormBannerText"),
+    FormBannerText: () => import("@/components/custom/form-banner/FormBannerText"),
     Header1: () => import("@/components/custom/header/Header1"),
     Header2: () => import("@/components/custom/header/Header2"),
     Banner1: () => import("@/components/custom/banner/Banner1"),
@@ -125,6 +119,10 @@ export default {
     C2a1: () => import("@/components/custom/c2a/C2a1"),
     C2a2: () => import("@/components/custom/c2a/C2a2"),
     Contact: () => import("@/components/custom/contact/Contact"),
+  },
+
+  data() {
+    return {};
   },
 };
 </script>

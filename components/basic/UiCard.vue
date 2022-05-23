@@ -10,8 +10,8 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Card</h2>
               <p>
-                Here you can check Demos we created based on WrapKit. Its quite
-                easy to Create your own dream website & dashboard in No-time.
+                Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &
+                dashboard in No-time.
               </p>
             </div>
           </v-col>
@@ -32,10 +32,10 @@
                 height="200px"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
-                <v-card-title>Special Title Treatment </v-card-title>
+                <v-card-title>Special Title Treatment</v-card-title>
               </v-img>
 
-              <v-card-subtitle class="pb-0"> Number 10 </v-card-subtitle>
+              <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
 
               <v-card-text class="text--primary">
                 <div>Whitehaven Beach</div>
@@ -44,23 +44,19 @@
               </v-card-text>
 
               <v-card-actions>
-                <v-btn color="primary" text> Share </v-btn>
+                <v-btn color="primary" text>Share</v-btn>
 
-                <v-btn color="error" text> Explore </v-btn>
+                <v-btn color="error" text>Explore</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
           <v-col cols="12" sm="10" md="6" lg="4">
             <v-card class="card-shadow">
-              <v-img
-                class="white--text align-end"
-                height="200px"
-                src="https://cdn.vuetifyjs.com/images/cards/road.jpg"
-              >
-                <v-card-title>Special Title Treatment </v-card-title>
+              <v-img class="white--text align-end" height="200px" src="https://cdn.vuetifyjs.com/images/cards/road.jpg">
+                <v-card-title>Special Title Treatment</v-card-title>
               </v-img>
 
-              <v-card-subtitle class="pb-0"> Number 10 </v-card-subtitle>
+              <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
 
               <v-card-text class="text--primary">
                 <div>Whitehaven Beach</div>
@@ -69,9 +65,9 @@
               </v-card-text>
 
               <v-card-actions>
-                <v-btn color="primary" text> Share </v-btn>
+                <v-btn color="primary" text>Share</v-btn>
 
-                <v-btn color="error" text> Explore </v-btn>
+                <v-btn color="error" text>Explore</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -82,10 +78,10 @@
                 height="200px"
                 src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
               >
-                <v-card-title>Special Title Treatment </v-card-title>
+                <v-card-title>Special Title Treatment</v-card-title>
               </v-img>
 
-              <v-card-subtitle class="pb-0"> Number 10 </v-card-subtitle>
+              <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
 
               <v-card-text class="text--primary">
                 <div>Whitehaven Beach</div>
@@ -94,9 +90,9 @@
               </v-card-text>
 
               <v-card-actions>
-                <v-btn color="primary" text> Share </v-btn>
+                <v-btn color="primary" text>Share</v-btn>
 
-                <v-btn color="error" text> Explore </v-btn>
+                <v-btn color="error" text>Explore</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>

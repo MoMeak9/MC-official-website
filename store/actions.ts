@@ -1,11 +1,11 @@
-import storage from 'store';
-import { getUserInfo } from '@/api/user';
+import storage from "store";
+import { getUserInfo } from "@/api/user";
 
 export default {
   Logout({ commit }: any) {
     return new Promise(resolve => {
-      commit('signOut');
-      storage.remove('token');
+      commit("signOut");
+      storage.remove("token");
       resolve(resolve);
     });
   },
@@ -15,11 +15,11 @@ export default {
         getUserInfo({})
           .then(res => {
             if (res) {
-              commit('setUserInfo', res.data.userBean);
+              commit("setUserInfo", res.data.userBean);
               resolve(res);
             } else {
-              commit('Logout');
-              storage.remove('token');
+              commit("Logout");
+              storage.remove("token");
             }
           })
           .catch(err => {
