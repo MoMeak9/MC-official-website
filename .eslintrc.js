@@ -4,7 +4,11 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended", "plugin:nuxt/recommended"],
+  extends: [
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:prettier/recommended",
+    "plugin:nuxt/recommended",
+  ],
   plugins: [],
   // add your custom rules here
   rules: {
@@ -13,7 +17,7 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        printWidth: 120,
+        printWidth: 80,
         tabWidth: 2,
         useTabs: false,
         singleQuote: false,
