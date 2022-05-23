@@ -1,39 +1,34 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - LightWorld',
     title: 'LightWorld | 辉光世界',
     htmlAttrs: {
-      lang: 'zh-CN'
+      lang: 'zh-CN',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/scss/style.scss',
-    'animate.css'
-  ],
+  css: ['~/assets/scss/style.scss', 'animate.css'],
 
   // Customize the progress-bar color
   loading: {
     color: 'DodgerBlue',
     height: '5px',
     continuous: true,
-    duration: 3000
+    duration: 3000,
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '@/plugins/route', ssr: true }
-  ],
+  plugins: [{ src: '@/plugins/route', ssr: true }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -42,7 +37,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxt/typescript-build',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -54,13 +49,17 @@ export default {
     optionsPath: './vuetify.options.js',
     treeShake: true,
     options: {
-      customProperties: true
-    }
+      customProperties: true,
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   env: {
-    BASEIMAGE: process.env.BASEIMAGE || 'https://localhost:3000'
-  }
-}
+    BASEIMAGE: process.env.BASEIMAGE || 'https://cdn.lwmc.net',
+  },
+  server: {
+    host: '0.0.0.0', // 监听所有的网卡服务器，保证生产服务器能够被访问
+    port: 3000, // 项目端口
+  },
+};
