@@ -4,7 +4,7 @@ import storage from "store";
 // create an axios instance
 const service = axios.create({
   // eslint-disable-next-line no-undef
-  baseURL: process.env.NODE_ENV === "development" ? "https://mchttp.syhwdsj.xyz" : "https://mchttp.syhwdsj.xyz",
+  baseURL: process.env.BASEURL,
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000, // request timeout
 });

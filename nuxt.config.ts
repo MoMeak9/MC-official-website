@@ -57,6 +57,7 @@ export default {
   build: {},
   env: {
     BASEIMAGE: "https://cdn.lwmc.net",
+    BASEURL: "http://dev.lwmc.net",
   },
   // server: {
   //   host: "0.0.0.0", // 监听所有的网卡服务器，保证生产服务器能够被访问

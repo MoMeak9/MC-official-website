@@ -7,12 +7,29 @@
           登入 Login
         </v-card-title>
         <v-form ref="form" v-model="valid" lazy-validation>
-          <v-text-field v-model="email" :rules="emailRules" label="邮箱" required></v-text-field>
+          <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            label="邮箱"
+            required
+          ></v-text-field>
 
-          <v-text-field v-model="password" type="password" label="密码" required></v-text-field>
+          <v-text-field
+            v-model="password"
+            type="password"
+            label="密码"
+            required
+          ></v-text-field>
 
           <v-card-actions>
-            <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">登入</v-btn>
+            <v-btn
+              :disabled="!valid"
+              color="success"
+              class="mr-4"
+              @click="validate"
+            >
+              登入
+            </v-btn>
 
             <v-btn color="error" class="mr-4" @click="reset">重置</v-btn>
             <v-spacer />
@@ -33,10 +50,16 @@ export default {
   name: "LoginForm",
   data: () => ({
     valid: true,
-    nameRules: [v => !!v || "Name is required", v => (v && v.length <= 10) || "Name must be less than 10 characters"],
+    nameRules: [
+      v => !!v || "Name is required",
+      v => (v && v.length <= 10) || "Name must be less than 10 characters",
+    ],
     email: "",
     password: "",
-    emailRules: [v => !!v || "E-mail is required", v => /.+@.+\..+/.test(v) || "E-mail must be valid"],
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+\..+/.test(v) || "E-mail must be valid",
+    ],
   }),
   methods: {
     validate() {
@@ -45,6 +68,7 @@ export default {
           user_email: this.email,
           user_password: this.password,
         }).then(res => {
+          console.log(res);
           if (res.code === 1) {
             sentMessage.success(this.$store, {
               message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`,
@@ -55,7 +79,7 @@ export default {
             this.$router.push("/");
           } else {
             sentMessage.error(this.$store, {
-              message: res.head.msg,
+              message: res.msg,
             });
           }
         });
