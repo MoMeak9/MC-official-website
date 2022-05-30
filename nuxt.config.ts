@@ -14,7 +14,7 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/logo.png" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -56,7 +56,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   env: {
-    BASEIMAGE: process.env.BASEIMAGE || "https://cdn.lwmc.net",
+    BASEIMAGE: "https://cdn.lwmc.net",
   },
   // server: {
   //   host: "0.0.0.0", // 监听所有的网卡服务器，保证生产服务器能够被访问

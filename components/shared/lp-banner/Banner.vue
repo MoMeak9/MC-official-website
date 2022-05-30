@@ -43,7 +43,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="5" lg="6">
-          <v-img :src="getImage('banner2')" alt="banner" />
+          <img style="width: 100%" :src="getImage('banner2')" alt="banner" />
         </v-col>
       </v-row>
 
@@ -63,3 +63,5 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss"></style>
