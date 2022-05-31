@@ -67,7 +67,7 @@ export default {
     BASEURL:
       process.env.NODE_ENV === "dev"
         ? "http://localhost:9000"
-        : "http://dev.lwmc.net",
+        : "https://dev.lwmc.net",
   },
   // server: {
   //   host: "0.0.0.0", // 监听所有的网卡服务器，保证生产服务器能够被访问
