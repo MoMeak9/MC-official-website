@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/scss/style.scss", "animate.css",'@mdi/font/css/materialdesignicons.css'],
+  css: ["~/assets/scss/style.scss", "animate.css",'@mdi/font/css/materialdesignicons.css','typeface-roboto/index.css'],
 
   // Customize the progress-bar color
   loading: {
