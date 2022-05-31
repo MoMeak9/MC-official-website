@@ -29,7 +29,7 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   (response: AxiosResponse) => {
-    if (response.data.head.code === 0) {
+    if (response.data.code === 401) {
       // @ts-ignore
       this.$router.push("/login").then(() => {
         storage.remove("token");
@@ -38,7 +38,7 @@ service.interceptors.response.use(
     return response.data;
   },
   error => {
-    console.log(error);
+    return Promise.reject(error.response.data);
   },
 );
 

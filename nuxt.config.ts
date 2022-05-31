@@ -14,7 +14,7 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/logo.png" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -28,7 +28,10 @@ export default {
     duration: 3000,
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "@/plugins/route", ssr: true }],
+  plugins: [
+    { src: "@/plugins/route", ssr: true },
+    { src: "@/plugins/md-editor", ssr: true },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -57,7 +60,10 @@ export default {
   build: {},
   env: {
     BASEIMAGE: "https://cdn.lwmc.net",
-    BASEURL: "http://dev.lwmc.net",
+    BASEURL:
+      process.env.NODE_ENV === "dev"
+        ? "http://localhost:9000"
+        : "http://dev.lwmc.net",
   },
   // server: {
   //   host: "0.0.0.0", // 监听所有的网卡服务器，保证生产服务器能够被访问

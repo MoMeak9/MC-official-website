@@ -4,8 +4,18 @@
       <h1>白名单审核问卷</h1>
       <p>本次白名单考核问卷将是你入服的唯一参照</p>
       <v-row v-for="(item, index) in questionList" :key="item.title">
-        <Input v-if="item.type === 'input'" :item="item" :index="index" @change="updateData"></Input>
-        <Select v-else-if="(item.type = 'select')" :item="item" :index="index" @change="updateData"></Select>
+        <Input
+          v-if="item.type === 'input'"
+          :item="item"
+          :index="index"
+          @change="updateData"
+        ></Input>
+        <Select
+          v-else-if="(item.type = 'select')"
+          :item="item"
+          :index="index"
+          @change="updateData"
+        ></Select>
       </v-row>
       <div style="text-align: center; margin-top: 50px">
         <h2>问卷考试结束啦！</h2>

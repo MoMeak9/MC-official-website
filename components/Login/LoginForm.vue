@@ -67,9 +67,8 @@ export default {
         login({
           user_email: this.email,
           user_password: this.password,
-        }).then(res => {
-          console.log(res);
-          if (res.code === 1) {
+        })
+          .then(res => {
             sentMessage.success(this.$store, {
               message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`,
             });
@@ -77,12 +76,12 @@ export default {
             this.$store.commit("setToken", res.data.token);
             this.$store.commit("setUserInfo", res.data.userBean);
             this.$router.push("/");
-          } else {
+          })
+          .catch(err => {
             sentMessage.error(this.$store, {
-              message: res.msg,
+              message: err.message,
             });
-          }
-        });
+          });
       }
     },
     reset() {

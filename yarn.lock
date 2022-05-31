@@ -1044,7 +1044,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kangc/v-md-editor@^1.7.8":
+"@kangc/v-md-editor@^1.7.11":
   version "1.7.11"
   resolved "https://registry.npmmirror.com/@kangc/v-md-editor/-/v-md-editor-1.7.11.tgz#83d950c687bcd2a7414a0308e2867ca55ba752d2"
   integrity sha512-398+4uKqc2Ybog0kktTuLDkBObN8/2QB0OsIjOgUURojy9RY1fX2PeJ5OXL5zWMf3y8dF98Ho/x9AAUY6L6YZA==
@@ -8735,7 +8735,7 @@ pretty-time@^1.1.0:
   resolved "https://registry.npmmirror.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
 
-prismjs@^1.13.0, prismjs@^1.23.0:
+prismjs@^1.13.0, prismjs@^1.23.0, prismjs@^1.28.0:
   version "1.28.0"
   resolved "https://registry.npmmirror.com/prismjs/-/prismjs-1.28.0.tgz#0d8f561fa0f7cf6ebca901747828b149147044b6"
   integrity sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==
