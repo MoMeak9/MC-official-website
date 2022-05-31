@@ -2,7 +2,7 @@
   <!-- -----------------------------------------------
           Start Header
     ----------------------------------------------- -->
-  <v-app-bar app class="app-header position-relative navbar-light header1" flat>
+  <v-app-bar app class="app-header position-relative navbar-light header1">
     <v-container class="py-0 fill-height">
       <!-- Logo -->
       <div style="height: 100%">

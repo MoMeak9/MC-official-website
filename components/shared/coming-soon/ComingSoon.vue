@@ -15,7 +15,8 @@
               <v-btn
                 nuxt
                 large
-                to="/#"
+                target="_blank"
+                href="https://qm.qq.com/cgi-bin/qm/qr?k=LyhaBNgHliX2gl4u6oSvlrSMayyAAEe_&jump_from=webapi"
                 class="btn-custom-md"
                 color="primary"
                 elevation="0"
