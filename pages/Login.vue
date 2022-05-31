@@ -10,8 +10,10 @@
         </div>
       </v-col>
     </v-row>
-    <LoginForm v-if="type === 'SIGN_IN'" @change-type="changeType" />
-    <SignUpForm v-else @change-type="changeType" />
+    <client-only>
+      <LoginForm v-if="type === 'SIGN_IN'" @change-type="changeType" />
+      <SignUpForm v-else @change-type="changeType" />
+    </client-only>
   </div>
 </template>
 

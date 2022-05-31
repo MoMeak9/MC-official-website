@@ -50,17 +50,15 @@ export default {
       submitPaper({
         paper_content: this.questionList,
       }).then(res => {
-        if (res.code === 1) {
-          sentMessage.success(this.$store, {
-            message: res.msg,
-          });
-          this.$router.push("/");
-        } else {
-          sentMessage.error(this.$store, {
-            message: res.msg,
-          });
-          this.$router.back();
-        }
+        sentMessage.success(this.$store, {
+          message: res.message,
+        });
+        this.$router.push("/");
+      }).catch(err => {
+        sentMessage.error(this.$store, {
+          message: err.message,
+        });
+        this.$router.back();
       });
     },
   },

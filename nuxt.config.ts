@@ -32,7 +32,6 @@ export default {
     { src: "@/plugins/route", ssr: true },
     { src: "@/plugins/md-editor", ssr: true },
   ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -50,14 +49,11 @@ export default {
   vuetify: {
     customVariables: ["~/assets/scss/variables.scss"],
     optionsPath: "./vuetify.options.js",
-    treeShake: true,
-    options: {
-      customProperties: true,
-    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
   env: {
     BASEIMAGE: "https://cdn.lwmc.net",
     BASEURL:

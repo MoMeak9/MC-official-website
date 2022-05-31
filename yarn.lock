@@ -1525,7 +1525,7 @@
     defu "^6.0.0"
     eslint-webpack-plugin "^2.6.0"
 
-"@nuxtjs/vuetify@^1.12.1":
+"@nuxtjs/vuetify@^1.12.3":
   version "1.12.3"
   resolved "https://registry.npmmirror.com/@nuxtjs/vuetify/-/vuetify-1.12.3.tgz#d4adf84e18fd474044bf971e7cc978e25eb16ba1"
   integrity sha512-6uVL3cfESMB00eVjJTNkyU4jvuPTGPn1yteo7lQTH6v+fxHcPaOgvzVYHIKSHIz1DecuOiB5c9b+YjsRP5+C8A==
@@ -10598,7 +10598,7 @@ vuetify-loader@^1.7.3:
     file-loader "^6.2.0"
     loader-utils "^2.0.0"
 
-vuetify@^2.6, vuetify@^2.6.6:
+vuetify@^2.6:
   version "2.6.6"
   resolved "https://registry.npmmirror.com/vuetify/-/vuetify-2.6.6.tgz#7af178fece5ccd561639eba425fe6c0a5803b37e"
   integrity sha512-H4KtxDFmDN8QiTRiGfBySyjMhVaHAJTKB0llGGKZT5jKxtnx9gvEtMWXKtVuRP0NJJP0H6xBPJHNOH7nT18qiQ==

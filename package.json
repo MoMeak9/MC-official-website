@@ -22,8 +22,7 @@
     "prismjs": "^1.28.0",
     "store": "^2.0.12",
     "ts-node": "^10.7.0",
-    "vue-property-decorator": "^9.1.2",
-    "vuetify": "^2.6.6"
+    "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -32,7 +31,7 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
-    "@nuxtjs/vuetify": "^1.12.1",
+    "@nuxtjs/vuetify": "^1.12.3",
     "@types/prismjs": "^1.26.0",
     "@types/store": "^2.0.2",
     "babel-eslint": "^10.1.0",
