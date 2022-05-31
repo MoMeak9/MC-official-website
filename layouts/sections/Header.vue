@@ -39,7 +39,7 @@
             <n-link class="nav-link" nuxt to="/sponsor">赞助支持</n-link>
           </li>
           <li class="nav-item" text>
-            <n-link class="nav-link" nuxt to="/freebies">友情链接</n-link>
+            <n-link class="nav-link" nuxt to="/gallery">画廊</n-link>
           </li>
           <v-menu offset-y>
             <template #activator="{ on, attrs }">
@@ -74,6 +74,7 @@
       >
         登入
       </v-btn>
+      {{ userInfo }}
     </v-container>
   </v-app-bar>
   <!-- -----------------------------------------------
@@ -89,11 +90,14 @@ export default {
       isActive: false,
       items: [
         { title: "历史文件", link: "/history" },
-        { title: "Click Me" },
-        { title: "Click Me" },
-        { title: "Click Me 2" },
+        { title: "客户端下载" },
+        { title: "Java 下载" },
       ],
+      userInfo: this.$store.state.userInfo,
     };
+  },
+  mounted() {
+    this.$store.dispatch("getUserInfo");
   },
   methods: {
     toggleClass: function() {

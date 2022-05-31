@@ -3,13 +3,12 @@
     <v-row justify="center" align="center">
 
     </v-row>
-    <v-row justify="center" style="margin-top: 20px">
+    <v-row justify="center" style="margin: 20px">
       <v-dialog v-model="dialog" width="500">
         <template #activator="{ on, attrs }">
           <v-btn
             v-if="$store.state.userInfo"
             color="blue"
-            dark
             x-large
             v-bind="attrs"
             v-on="on"
@@ -48,6 +47,7 @@
         </v-card>
       </v-dialog>
     </v-row>
+
     <v-row justify="center" align="center">
       <v-md-editor v-model="text" mode="preview"></v-md-editor>
       <v-main></v-main>
@@ -121,7 +121,7 @@ export default {
   }),
   methods: {
     toQuestions() {
-      this.$router.push("/questionnaire");
+      this.$router.push("/apply");
     },
   },
 };
