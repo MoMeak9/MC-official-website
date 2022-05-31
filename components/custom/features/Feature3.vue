@@ -6,8 +6,7 @@
       ----------------------------------------------- -->
       <v-row>
         <v-col cols="12" lg="10">
-          <img
-            style="width: 100%"
+          <v-img
             :src="getImage('banner1')"
             alt="feature"
             class="rounded"

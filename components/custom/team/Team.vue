@@ -32,8 +32,7 @@
           >
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
-                <img
-                  style="width: 100%"
+                <v-img
                   :src="getImage(item.imgUrl)"
                   alt="team"
                 />

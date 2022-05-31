@@ -10,6 +10,8 @@ export default {
     });
   },
   getUserInfo({ commit }: any) {
+    const token = storage.get("token");
+    if (token == null || token === "") return false;
     return new Promise((resolve, reject) => {
       try {
         getUserInfo({})
