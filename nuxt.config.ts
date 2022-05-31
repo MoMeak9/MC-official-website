@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/scss/style.scss", "animate.css"],
+  css: ["~/assets/scss/style.scss", "animate.css",'@mdi/font/css/materialdesignicons.css'],
 
   // Customize the progress-bar color
   loading: {
@@ -29,8 +29,8 @@ export default {
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: "@/plugins/route", ssr: true },
-    { src: "@/plugins/md-editor", ssr: true },
+    { src: "@/plugins/route", ssr: false },
+    { src: "@/plugins/md-editor", ssr: false },
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -53,6 +53,10 @@ export default {
     options: {
       customProperties: true,
     },
+    defaultAssets: {
+      font: false, // 关闭google字体
+      icons: false // 关闭远程图标
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
