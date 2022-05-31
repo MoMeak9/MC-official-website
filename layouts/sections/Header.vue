@@ -2,7 +2,7 @@
   <!-- -----------------------------------------------
           Start Header
     ----------------------------------------------- -->
-  <v-app-bar app class="app-header position-relative navbar-light header1">
+  <v-app-bar max-height="85px" app class="app-header position-relative navbar-light header1">
     <v-container class="py-0 fill-height">
       <!-- Logo -->
       <div style="height: 100%">
@@ -41,26 +41,6 @@
           <li class="nav-item" text>
             <n-link class="nav-link" nuxt to="/gallery">画廊</n-link>
           </li>
-          <v-menu offset-y>
-            <template #activator="{ on, attrs }">
-              <li class="nav-item" text>
-                <a class="nav-link" href="#" v-bind="attrs" v-on="on">
-                  服务器支持
-                </a>
-              </li>
-            </template>
-            <v-list>
-              <v-list-item v-for="(item, index) in items" :key="index" nav>
-                <n-link
-                  style="text-decoration: none; color: #8c9295"
-                  nuxt
-                  :to="item.link"
-                >
-                  友情链接
-                </n-link>
-              </v-list-item>
-            </v-list>
-          </v-menu>
         </ul>
       </div>
       <!-- login-regiter -->
@@ -69,12 +49,11 @@
         nuxt
         outlined
         color="primary"
-        to="/login"
+        :to="user_game_id?'/user':'/login'"
         elevation="0"
       >
-        登入
+        {{ user_game_id || "登录" }}
       </v-btn>
-      {{ userInfo }}
     </v-container>
   </v-app-bar>
   <!-- -----------------------------------------------
@@ -93,15 +72,19 @@ export default {
         { title: "客户端下载" },
         { title: "Java 下载" },
       ],
-      userInfo: this.$store.state.userInfo,
+      user_game_id: "",
     };
   },
   mounted() {
-    this.$store.dispatch("getUserInfo");
+    this.getUserInfo();
   },
   methods: {
     toggleClass: function() {
       this.isActive = !this.isActive;
+    },
+    async getUserInfo() {
+      await this.$store.dispatch("getUserInfo");
+      this.user_game_id = this.$store.state.userInfo.user_game_id;
     },
   },
 };
