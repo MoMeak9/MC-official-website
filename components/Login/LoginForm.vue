@@ -75,25 +75,6 @@ export default {
             message: err.message,
           });
         });
-
-        // login({
-        //   user_email: this.email,
-        //   user_password: this.password,
-        // })
-        //   .then(res => {
-        //     sentMessage.success(this.$store, {
-        //       message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`,
-        //     });
-        //     storage.set("token", res.data.token);
-        //     this.$store.dispatch("setToken", res.data.userBean);
-        //     this.$store.commit("setUserInfo", res.data.userBean);
-        //     this.$router.push("/");
-        //   })
-        //   .catch(err => {
-        //     sentMessage.error(this.$store, {
-        //       message: err.message,
-        //     });
-        //   });
       }
     },
     reset() {
