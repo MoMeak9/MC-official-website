@@ -1550,6 +1550,11 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
+"@parrotjs/vue-waterfall@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.npmmirror.com/@parrotjs/vue-waterfall/-/vue-waterfall-8.0.0.tgz#219db2e8c18b09f5a207f07834ed6c8c01332baa"
+  integrity sha512-FXuoF4mNuD3paZSyLJQrwQ/ooEZHbdP69ROT/Xyjp0MrmFDEQYnbMij4kY7yaZhLJclwvOR3Ibn2gxuh2kR8Rw==
+
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
   resolved "https://registry.npmmirror.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
