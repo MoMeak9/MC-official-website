@@ -3,6 +3,7 @@ import request from "@/utils/requires";
 
 export const api = {
   getServerInfo: "/api/website/getServerInfo",
+
 };
 
 export function getServerInfo(): AxiosPromise {
@@ -11,3 +12,4 @@ export function getServerInfo(): AxiosPromise {
     method: "get",
   });
 }
+

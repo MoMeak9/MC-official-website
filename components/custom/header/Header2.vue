@@ -8,16 +8,28 @@
         <!-- Logo -->
         <div class="logo">
           <NLink to="/">
-            <v-img :src="require('@/assets/images/logos/white-logo.png')" alt="logo" />
+            <v-img
+              :src="require('@/assets/images/logos/white-logo.png')"
+              alt="logo"
+            />
           </NLink>
         </div>
 
         <v-spacer></v-spacer>
-        <v-btn class="d-block d-md-none" color="white" text @click="toggleClass()">
+        <v-btn
+          class="d-block d-md-none"
+          color="white"
+          text
+          @click="toggleClass()"
+        >
           <v-app-bar-nav-icon class="white--text" />
         </v-btn>
         <!-- Desktop view Navigation -->
-        <div class="navigation" :class="[isActive ? 'd-block' : '']" @click="isActive = !isActive">
+        <div
+          class="navigation"
+          :class="[isActive ? 'd-block' : '']"
+          @click="isActive = !isActive"
+        >
           <ul class="navbar-nav">
             <li class="nav-item" text>
               <n-link class="nav-link" nuxt to="/">首页</n-link>
@@ -37,19 +49,34 @@
             <v-menu offset-y>
               <template #activator="{ on, attrs }">
                 <li class="nav-item" text>
-                  <a class="nav-link" href="#" v-bind="attrs" v-on="on">服务器支持</a>
+                  <a class="nav-link" href="#" v-bind="attrs" v-on="on">
+                    服务器支持
+                  </a>
                 </li>
               </template>
               <v-list>
                 <v-list-item v-for="(item, index) in items" :key="index" nav>
-                  <n-link style="text-decoration: none; color: #8c9295" nuxt :to="item.link">友情链接</n-link>
+                  <n-link
+                    style="text-decoration: none; color: #8c9295"
+                    nuxt
+                    :to="item.link"
+                  >
+                    友情链接
+                  </n-link>
                 </v-list-item>
               </v-list>
             </v-menu>
           </ul>
         </div>
         <!-- login-regiter -->
-        <v-btn class="d-none d-lg-flex btn-custom-nm ml-5" nuxt depressed color="primary" to="/login" elevation="0">
+        <v-btn
+          class="d-none d-lg-flex btn-custom-nm ml-5"
+          nuxt
+          depressed
+          color="primary"
+          to="/login"
+          elevation="0"
+        >
           登入
         </v-btn>
       </v-container>

@@ -1,0 +1,17 @@
+component: website
+name: website-9a48fU1ZMx
+org: '1259409954'
+app: lwmc-website
+stage: prod
+inputs:
+  src:
+    src: ./dist
+    dist: ./dist
+    hook: npm run build
+    index: index.html
+    error: index.html
+  region: ap-guangzhou
+  bucketName: lwmc-website
+  protocol: https
+  isAutoCiDeploy: false
+  replace: true
