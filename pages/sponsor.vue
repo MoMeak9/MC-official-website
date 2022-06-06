@@ -37,6 +37,8 @@
       <v-col cols="12" md="7" class="my-auto">
         <p class="text-h3 black--text mb-8 mb-md-12">特别鸣谢</p>
         <v-data-table
+          loading
+          loading-text="加载中... 请稍后"
           :headers="sponsorHeaders"
           :items="sponsorList"
           :items-per-page="5"
@@ -48,6 +50,8 @@
 </template>
 
 <script>
+import { getSponsorList } from "~/api/website";
+
 export default {
   name: "Sponsor",
   data() {
@@ -57,39 +61,66 @@ export default {
           text: "ID",
           align: "start",
           sortable: false,
-          value: "name",
+          value: "user_game_id",
         },
-        { text: "赞助额", value: "amount" },
+        { text: "赞助额", value: "total_number" },
       ],
+      loadingState: true,
       sponsorList: [
         {
-          name: "lili0",
-          amount: 9239,
+          user_game_id: "lili0",
+          total_number: 9239,
         },
         {
-          name: "lili1",
-          amount: 9239,
+          user_game_id: "lili1",
+          total_number: 9239,
         },
         {
-          name: "lili2",
-          amount: 9239,
+          user_game_id: "lili2",
+          total_number: 9239,
         },
         {
-          name: "lili3",
-          amount: 9239,
+          user_game_id: "lili3",
+          total_number: 9239,
         },
         {
-          name: "lili4",
-          amount: 9239,
+          user_game_id: "lili4",
+          total_number: 9239,
+        },
+        {
+          user_game_id: "lili5",
+          total_number: 9239,
+        },
+        {
+          user_game_id: "lili6",
+          total_number: 9239,
         },
       ],
+      pages: {
+        page: 1,
+        pageSize: 10,
+      },
     };
   },
+  methods: {
+    getSponsors() {
+      getSponsorList(this.pages)
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+  },
+  mounted() {
+    this.getSponsors();
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .container {
-  background-color: #90CAF9;
+  background-color: #90caf9;
 }
 </style>
