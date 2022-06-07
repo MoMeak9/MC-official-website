@@ -7,6 +7,7 @@ export const api = {
   getServerInfo: `${base}getServerInfo`,
   getPeriod: `${base}period`,
   getTeamMember: `${base}teamMember`,
+  getSponsorList: `${base}sponsor/list`
 };
 
 export function getServerInfo(): AxiosPromise {
@@ -30,5 +31,10 @@ export function getTeamMember(): AxiosPromise {
   });
 }
 
-
-
+export function getSponsorList(param: object = { page: 1, pageSize: 10 }): AxiosPromise {
+  return request({
+    url: api.getSponsorList,
+    method: "get",
+    params: param,
+  });
+}
