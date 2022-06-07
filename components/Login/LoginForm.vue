@@ -70,6 +70,7 @@ export default {
             message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`,
           });
           this.$router.push("/");
+          this.$store.dispatch("getUserInfo");
         }).catch(err => {
           sentMessage.error(this.$store, {
             message: err.message,

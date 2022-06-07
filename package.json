@@ -6,6 +6,7 @@
   "author": "Wrappixel",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nuxt",
+    "prod": "cross-env NODE_ENV=prod nuxt",
     "build": "cross-env NODE_ENV=prod nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

@@ -49,10 +49,10 @@
         nuxt
         outlined
         color="primary"
-        :to="user_game_id?'/user':'/login'"
+        :to="$store.state.userInfo.user_game_id?'/user':'/login'"
         elevation="0"
       >
-        {{ user_game_id || "登录" }}
+        {{ $store.state.userInfo.user_game_id || "登录" }}
       </v-btn>
     </v-container>
   </v-app-bar>
@@ -84,7 +84,6 @@ export default {
     },
     async getUserInfo() {
       await this.$store.dispatch("getUserInfo");
-      this.user_game_id = this.$store.state.userInfo.user_game_id;
     },
   },
 };

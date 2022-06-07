@@ -33,7 +33,7 @@
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
                 <v-img
-                  :src="getImage(item.imgUrl)"
+                  :src="item.image_url"
                   alt="team"
                 />
                 <div class="img-overlay">
@@ -83,8 +83,9 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { getImage } from "~/assets/images/getImg";
+import { getTeamMember } from "~/api/website";
 
 export default {
   name: "Team",
@@ -127,6 +128,13 @@ export default {
       ],
     };
   },
-  methods: {},
+  mounted() {
+    this.initData();
+  },
+  methods: {
+    async initData() {
+      this.teamNumbers = (await getTeamMember()).data;
+    },
+  },
 };
 </script>
