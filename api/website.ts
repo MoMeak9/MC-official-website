@@ -7,7 +7,8 @@ export const api = {
   getServerInfo: `${base}getServerInfo`,
   getPeriod: `${base}period`,
   getTeamMember: `${base}teamMember`,
-  getSponsorList: `${base}sponsor/list`
+  getSponsorList: `${base}sponsor/list`,
+  getGallery:`${base}gallery`
 };
 
 export function getServerInfo(): AxiosPromise {
@@ -17,9 +18,18 @@ export function getServerInfo(): AxiosPromise {
   });
 }
 
-export function getPeriod(): AxiosPromise {
+export function getGallery(params={}): AxiosPromise {
   return request({
-    url: api.getServerInfo,
+    params,
+    url: api.getGallery,
+    method: "get",
+  });
+}
+
+export function getPeriod(params={}): AxiosPromise {
+  return request({
+    params,
+    url: api.getPeriod,
     method: "get",
   });
 }

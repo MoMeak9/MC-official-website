@@ -92,40 +92,7 @@ export default {
   data() {
     return {
       getImage,
-      teamNumbers: [
-        {
-          name: "MoMeaks",
-          imgUrl: "MoMeaks",
-          role: "op",
-          description: "他说让腐竹先帮他写一下",
-        },
-        {
-          name: "youkw",
-          imgUrl: "youkw",
-          role: "op",
-          description: "他说让腐竹先帮他写一下",
-        },
-        {
-          name: "risayama",
-          imgUrl: "risayama",
-          role: "op",
-          description: "专业摸鱼的后台技术",
-        },
-        {
-          name: "Sakura_Six",
-          imgUrl: "Sakura_Six",
-          role: "宣传委员",
-          description:
-            "我叫撒库拉性别女爱好男是个咸鱼喜欢打原神搞搞Unity之流的旁门左道;" +
-            "曾以大保底80发的记录成为身边原神圈中的最非之人",
-        },
-        {
-          name: "rabbit_99",
-          imgUrl: "rabbit_99",
-          role: "技术专员",
-          description: "摸鱼型生电玩家",
-        },
-      ],
+      teamNumbers: [],
     };
   },
   mounted() {
