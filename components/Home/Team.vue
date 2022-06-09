@@ -84,23 +84,13 @@
   </div>
 </template>
 <script>
-import { getImage } from "~/assets/images/getImg";
-import { getTeamMember } from "~/api/website";
 
 export default {
   name: "Team",
-  data() {
-    return {
-      getImage,
-      teamNumbers: [],
-    };
-  },
-  mounted() {
-    this.initData();
-  },
-  methods: {
-    async initData() {
-      this.teamNumbers = (await getTeamMember()).data;
+  props: {
+    teamNumbers: {
+      type: Array,
+      default: () => [],
     },
   },
 };
