@@ -1,3 +1,4 @@
+import storage from "store";
 interface IStepType {
   type: string;
   message: string;
@@ -14,6 +15,7 @@ export default {
   },
   setToken: (state: any, token: string) => {
     state.token = token;
+    storage.set('token', token);
   },
   setUserInfo: (state: any, userInfo: any) => {
     state.userInfo = userInfo;

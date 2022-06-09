@@ -1,28 +1,18 @@
 <template>
   <v-container id="join">
     <v-row justify="center" align="center">
-      <v-responsive :aspect-ratio="16 / 9" max-height="700px" max-width="1200px">
-        <v-carousel
-          v-model="model"
-          height="100%"
-          cycle
-          hide-delimiter-background
-          delimiter-icon="mdi-minus"
-          show-arrows-on-hover
-        >
-          <v-carousel-item
-            v-for="item in images"
-            :key="item.path"
-            style="max-width: 100vw"
-            :src="item.path"
-          ></v-carousel-item>
-        </v-carousel>
-      </v-responsive>
+
     </v-row>
-    <v-row justify="center" style="margin-top: 20px">
+    <v-row justify="center" style="margin: 20px">
       <v-dialog v-model="dialog" width="500">
         <template #activator="{ on, attrs }">
-          <v-btn v-if="$store.state.userInfo" color="blue" dark x-large v-bind="attrs" v-on="on">
+          <v-btn
+            v-if="$store.state.userInfo"
+            color="blue"
+            x-large
+            v-bind="attrs"
+            v-on="on"
+          >
             <v-icon left>mdi-pencil</v-icon>
             开始进行白名单申请
           </v-btn>
@@ -57,6 +47,7 @@
         </v-card>
       </v-dialog>
     </v-row>
+
     <v-row justify="center" align="center">
       <v-md-editor v-model="text" mode="preview"></v-md-editor>
       <v-main></v-main>
@@ -70,20 +61,6 @@ export default {
   data: () => ({
     model: 0,
     dialog: false,
-    images: [
-      {
-        path: "https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640962.png",
-      },
-      {
-        path: "https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640962.png",
-      },
-      {
-        path: "https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640961.jpg",
-      },
-      {
-        path: "https://mc-web-1259409954.cos.ap-guangzhou.myqcloud.com/MyImages/202201201640960.jpg",
-      },
-    ],
     // 注意更换为数据库内
     text:
       "## NO.1 玩家行为守则\n" +
@@ -144,7 +121,7 @@ export default {
   }),
   methods: {
     toQuestions() {
-      this.$router.push("/questionnaire");
+      this.$router.push("/apply");
     },
   },
 };

@@ -1044,7 +1044,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kangc/v-md-editor@^1.7.8":
+"@kangc/v-md-editor@^1.7.11":
   version "1.7.11"
   resolved "https://registry.npmmirror.com/@kangc/v-md-editor/-/v-md-editor-1.7.11.tgz#83d950c687bcd2a7414a0308e2867ca55ba752d2"
   integrity sha512-398+4uKqc2Ybog0kktTuLDkBObN8/2QB0OsIjOgUURojy9RY1fX2PeJ5OXL5zWMf3y8dF98Ho/x9AAUY6L6YZA==
@@ -1064,6 +1064,11 @@
     prismjs "^1.23.0"
     resize-observer-polyfill "^1.5.1"
     xss "^1.0.9"
+
+"@mdi/font@^6.7.96":
+  version "6.7.96"
+  resolved "https://registry.npmmirror.com/@mdi/font/-/font-6.7.96.tgz#1686425ba291b90ea02a87292a565c6d0c854afe"
+  integrity sha512-M68vlRhtmA/SpDjo2dV3SUZus20jrU9Zp2ggslfzh0cbFpygPukcVpBIA3pErwsukhYt4RfbgXpFi74SjixOrQ==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1525,7 +1530,7 @@
     defu "^6.0.0"
     eslint-webpack-plugin "^2.6.0"
 
-"@nuxtjs/vuetify@^1.12.1":
+"@nuxtjs/vuetify@^1.12.3":
   version "1.12.3"
   resolved "https://registry.npmmirror.com/@nuxtjs/vuetify/-/vuetify-1.12.3.tgz#d4adf84e18fd474044bf971e7cc978e25eb16ba1"
   integrity sha512-6uVL3cfESMB00eVjJTNkyU4jvuPTGPn1yteo7lQTH6v+fxHcPaOgvzVYHIKSHIz1DecuOiB5c9b+YjsRP5+C8A==
@@ -1544,6 +1549,11 @@
     cookie "^0.3.1"
     mustache "^2.3.0"
     stack-trace "0.0.10"
+
+"@parrotjs/vue-waterfall@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.npmmirror.com/@parrotjs/vue-waterfall/-/vue-waterfall-8.0.0.tgz#219db2e8c18b09f5a207f07834ed6c8c01332baa"
+  integrity sha512-FXuoF4mNuD3paZSyLJQrwQ/ooEZHbdP69ROT/Xyjp0MrmFDEQYnbMij4kY7yaZhLJclwvOR3Ibn2gxuh2kR8Rw==
 
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
@@ -3665,10 +3675,10 @@ core-js@^2.6.5:
   resolved "https://registry.npmmirror.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.15.1:
-  version "3.22.6"
-  resolved "https://registry.npmmirror.com/core-js/-/core-js-3.22.6.tgz#294dd824b4cae2c24725a36baa4a791ed00bb0de"
-  integrity sha512-2IGcGH00z9I4twgNWU4uGCNEsBFG1s2JudVQrgSCoVhOfwoTwQjxC8aMo9exrpTMOxvobggEpaHnGMmQY4cfBQ==
+core-js@^3.19.3:
+  version "3.22.7"
+  resolved "https://registry.npmmirror.com/core-js/-/core-js-3.22.7.tgz#8d6c37f630f6139b8732d10f2c114c3f1d00024f"
+  integrity sha512-Jt8SReuDKVNZnZEzyEQT5eK6T2RRCXkfTq7Lo09kpm+fHjgGewSbNjV+Wt4yZMhPDdzz2x1ulI5z/w4nxpBseg==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -8735,7 +8745,7 @@ pretty-time@^1.1.0:
   resolved "https://registry.npmmirror.com/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA==
 
-prismjs@^1.13.0, prismjs@^1.23.0:
+prismjs@^1.13.0, prismjs@^1.23.0, prismjs@^1.28.0:
   version "1.28.0"
   resolved "https://registry.npmmirror.com/prismjs/-/prismjs-1.28.0.tgz#0d8f561fa0f7cf6ebca901747828b149147044b6"
   integrity sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==
@@ -10221,6 +10231,11 @@ typedarray@^0.0.6:
   resolved "https://registry.npmmirror.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
+typeface-roboto@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.npmmirror.com/typeface-roboto/-/typeface-roboto-1.1.13.tgz#9c4517cb91e311706c74823e857b4bac9a764ae5"
+  integrity sha512-YXvbd3a1QTREoD+FJoEkl0VQNJoEjewR2H11IjVv4bp6ahuIcw0yyw/3udC4vJkHw3T3cUh85FTg8eWef3pSaw==
+
 typescript@^3.5.1:
   version "3.9.10"
   resolved "https://registry.npmmirror.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
@@ -10598,7 +10613,7 @@ vuetify-loader@^1.7.3:
     file-loader "^6.2.0"
     loader-utils "^2.0.0"
 
-vuetify@^2.6, vuetify@^2.6.6:
+vuetify@^2.6:
   version "2.6.6"
   resolved "https://registry.npmmirror.com/vuetify/-/vuetify-2.6.6.tgz#7af178fece5ccd561639eba425fe6c0a5803b37e"
   integrity sha512-H4KtxDFmDN8QiTRiGfBySyjMhVaHAJTKB0llGGKZT5jKxtnx9gvEtMWXKtVuRP0NJJP0H6xBPJHNOH7nT18qiQ==

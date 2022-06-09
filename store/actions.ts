@@ -1,5 +1,5 @@
 import storage from "store";
-import { getUserInfo } from "@/api/user";
+import { getUserInfo, login } from "@/api/user";
 
 export default {
   Logout({ commit }: any) {
@@ -10,6 +10,8 @@ export default {
     });
   },
   getUserInfo({ commit }: any) {
+    const token = storage.get("token");
+    if (token == null || token === "") return false;
     return new Promise((resolve, reject) => {
       try {
         getUserInfo({})
@@ -30,4 +32,22 @@ export default {
       }
     });
   },
+  Login({ commit }: any, userInfo: any) {
+    return new Promise((resolve, reject) => {
+      try {
+        login(userInfo)
+          .then(res => {
+            commit("setToken", res.data.token);
+            commit("setUserInfo", res.data.userBean);
+            resolve(res);
+          })
+          .catch(err => {
+            reject(err);
+          });
+      } catch (error) {
+        reject(error);
+      }
+    });
+  },
 };
+

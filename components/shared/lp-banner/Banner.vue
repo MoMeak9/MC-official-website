@@ -31,7 +31,7 @@
               <v-btn
                 nuxt
                 large
-                to="/coming-soon"
+                to="/"
                 class="btn-custom-md"
                 outlined
                 color="white"
@@ -43,7 +43,7 @@
           </div>
         </v-col>
         <v-col cols="12" md="5" lg="6">
-          <v-img :src="getImage('banner2')" alt="banner" />
+          <v-img max-width="100%" max-height="100%" :src="getImage('banner2')" alt="banner" />
         </v-col>
       </v-row>
 
@@ -59,7 +59,11 @@ import { getImage } from "assets/images/getImg";
 export default {
   name: "Banner",
   data() {
-    return { getImage };
+    return {
+      getImage,
+    };
   },
 };
 </script>
+
+<style scoped lang="scss"></style>

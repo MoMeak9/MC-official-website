@@ -1,6 +1,6 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-
+  ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - LightWorld",
@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/scss/style.scss", "animate.css"],
+  css: ["~/assets/scss/style.scss", "animate.css",'@mdi/font/css/materialdesignicons.css','typeface-roboto/index.css'],
 
   // Customize the progress-bar color
   loading: {
@@ -28,8 +28,10 @@ export default {
     duration: 3000,
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "@/plugins/route", ssr: true }],
-
+  plugins: [
+    { src: "@/plugins/route", ssr: false },
+    { src: "@/plugins/md-editor", ssr: false },
+  ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -51,12 +53,21 @@ export default {
     options: {
       customProperties: true,
     },
+    defaultAssets: {
+      font: false, // 关闭google字体
+      icons: false // 关闭远程图标
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
   env: {
-    BASEIMAGE: process.env.BASEIMAGE || "https://cdn.lwmc.net",
+    BASEIMAGE: "https://cdn.lwmc.net",
+    BASEURL:
+      process.env.NODE_ENV === "dev"
+        ? "http://localhost:9000"
+        : "https://dev.lwmc.net",
   },
   // server: {
   //   host: "0.0.0.0", // 监听所有的网卡服务器，保证生产服务器能够被访问

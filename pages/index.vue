@@ -19,7 +19,6 @@ export default {
     Banner1: () => import("@/components/custom/banner/Banner1"),
     Feature2: () => import("@/components/custom/features/Feature3"),
   },
-
   data() {
     return {};
   },

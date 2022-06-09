@@ -1,10 +1,15 @@
 <template>
-  <div></div>
+  <div>
+    <developing></developing>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Map",
+  components: {
+    Developing: () => import("@/layouts/developing"),
+  },
 };
 </script>
 

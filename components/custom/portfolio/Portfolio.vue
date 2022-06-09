@@ -33,17 +33,17 @@
             <v-card class="portfolio-card overflow-hidden">
               <div class="portfolio-img">
                 <img
-                  :src="getImage(item.img)"
+                  :src="item.image_url"
                   class="img-fluid"
                   alt="portfolio"
                 />
               </div>
               <v-card-text>
                 <h5 class="font-weight-medium font-18">
-                  {{ item.time }}
+                  {{ item.name }}
                 </h5>
                 <p class="font-14 mb-0">
-                  {{ item.content }}
+                  {{ item.description }}
                 </p>
               </v-card-text>
             </v-card>
@@ -59,58 +59,28 @@
 </template>
 <script>
 import { getImage } from "assets/images/getImg";
+import { getPeriod } from "@/api/website";
 
 export default {
   name: "Portfolio",
+  asyncData() {
+  },
   data() {
     return {
       getImage,
-      historyList: [
-        {
-          time: "【一周目】2019年4月6日",
-          img: "term1",
-          content:
-            "1.13.2服务器开服，启用白名单审核入会制；服务器开启第一周目，迎接第一位玩家。",
-        },
-        {
-          time: "【二周目】2019年6月3日",
-          img: "term2",
-          content: "服务器1.14.x第二周目启动",
-        },
-        {
-          time: "【三周目】2020年1月14日",
-          img: "term3",
-          content: "服务器1.15.2第三周目，服务器向纯净服靠拢",
-        },
-        {
-          time: "【四周目】2020年1月20日",
-          img: "term4",
-          content:
-            "开启内外服，内服纯净并开启正版验证，外服（第四周目）为插件服",
-        },
-        {
-          time: "【五周目】2020年9月7日",
-          img: "term5",
-          content: "服务器1.16.3第五周目，内外服合并，开启正版验证",
-        },
-        {
-          time: "【六周目】2020年11月5日",
-          img: "term6",
-          content: "服务器1.17.X第六周目开启，正式会员超过300人",
-        },
-        {
-          time: "【七周目】2021年12月1日",
-          img: "term7",
-          content: "服务器1.18.X第七周目启动...",
-        },
-        {
-          time: "【八周目】待定......",
-          img: "term8",
-          content: "服务器1.19第八周目启动...",
-        },
-      ],
+      historyList: [],
     };
   },
-  methods: {},
+  mounted() {
+    this.initData();
+  },
+  methods: {
+    async initData() {
+      this.historyList = (await getPeriod({
+        page: 1,
+        pageSize: 10,
+      })).data;
+    },
+  },
 };
 </script>

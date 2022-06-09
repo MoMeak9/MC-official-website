@@ -1,5 +1,6 @@
 <template>
-  <v-container></v-container>
+<div style="height: 100vh">
+</div>
 </template>
 
 <script>
