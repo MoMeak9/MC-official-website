@@ -31,7 +31,7 @@
               <v-btn
                 nuxt
                 large
-                to="/about"
+                to="/"
                 class="btn-custom-md"
                 outlined
                 color="white"

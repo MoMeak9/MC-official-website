@@ -68,13 +68,7 @@ export default {
   data() {
     return {
       getImage,
-      historyList: [
-        {
-          name: "",
-          image_url: "",
-          description: "",
-        },
-      ],
+      historyList: [],
     };
   },
   mounted() {

@@ -1,10 +1,13 @@
 <template>
-  <v-container></v-container>
+    <developing></developing>
 </template>
 
 <script>
 export default {
   name: "About",
+  components: {
+    Developing: () => import("@/layouts/developing"),
+  },
 };
 </script>
 

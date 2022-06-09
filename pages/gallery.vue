@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import waterfall from "@/components/waterfall/waterfall";
+import waterfall from "@/components/Waterfall/waterfall";
 import { getGallery } from "@/api/website";
 
 export default {

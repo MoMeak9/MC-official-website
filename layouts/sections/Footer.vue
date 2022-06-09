@@ -10,7 +10,10 @@
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
           <h4 class="font-weight-regular font-18">服务器地址</h4>
-          <p class="mt-10">Host：加入群获取</p>
+          <p class="mt-10">
+            Host：
+            <a class="dark-link">game.lwmc.net</a>
+          </p>
           <p>
             Site :
             <a class="dark-link" href="https://www.lwmc.net/">lwmc.net</a>
@@ -71,7 +74,7 @@
           </p>
           <p class="ml-auto">
             All Rights Reserved by
-            <a href="https://www.lwmc.net/" class="link">lwmc.com</a>
+            <a href="https://www.lwmc.net/" class="link">lwmc.net</a>
           </p>
           <div class="ml-auto">
             <div class="d-flex align-center">
