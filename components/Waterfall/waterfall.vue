@@ -367,6 +367,11 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
+  ::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 
   .vue-waterfall-scroll {
     position: relative;

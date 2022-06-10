@@ -2,7 +2,7 @@
   <div>
     <Banner />
     <Feature2 />
-    <Portfolio />
+    <Portfolio :history-list="historyList" />
     <Banner1 />
     <Team :team-numbers="teamNumbers" />
     <ComingSoon />
@@ -11,6 +11,7 @@
 
 <script>
 import { getTeamMember } from "@/api/website";
+import { getPeriod } from "@/api/website";
 
 export default {
   components: {
@@ -24,15 +25,18 @@ export default {
   asyncData() {
     return Promise.all([
       getTeamMember(),
+      getPeriod(),
     ]).then((res) => {
       return {
         teamNumbers: res[0].data,
+        historyList: res[1].data,
       };
     });
   },
   data() {
     return {
       teamNumbers: [],
+      historyList: [],
     };
   },
   head() {

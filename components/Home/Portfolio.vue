@@ -58,28 +58,13 @@
   </div>
 </template>
 <script>
-import { getImage } from "assets/images/getImg";
-import { getPeriod } from "@/api/website";
 
 export default {
   name: "Portfolio",
-  asyncData() {
-  },
-  data() {
-    return {
-      getImage,
-      historyList: [],
-    };
-  },
-  mounted() {
-    this.initData();
-  },
-  methods: {
-    async initData() {
-      this.historyList = (await getPeriod({
-        page: 1,
-        pageSize: 10,
-      })).data;
+  props: {
+    historyList: {
+      type: Array,
+      default: ()=>[],
     },
   },
 };

@@ -24,4 +24,19 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style lang="scss">
+::-webkit-scrollbar {
+  width: 10px; /*竖向滚动条的宽度*/
+  height: 10px; /*横向滚动条的高度*/
+}
+
+::-webkit-scrollbar-thumb { /*滚动条里面的小方块*/
+  background: #019ee5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track { /*滚动条轨道的样式*/
+  background: #ccc;
+  border-radius: 5px;
+}
+</style>

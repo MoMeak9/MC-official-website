@@ -13,23 +13,16 @@ export default {
     const token = storage.get("token");
     if (token == null || token === "") return false;
     return new Promise((resolve, reject) => {
-      try {
-        getUserInfo({})
-          .then(res => {
-            if (res) {
-              commit("setUserInfo", res.data.userBean);
-              resolve(res);
-            } else {
-              commit("Logout");
-              storage.remove("token");
-            }
-          })
-          .catch(err => {
-            reject(err);
-          });
-      } catch (error) {
-        reject(error);
-      }
+      getUserInfo({})
+        .then(res => {
+          commit("setUserInfo", res.data.userBean);
+          resolve(res);
+        })
+        .catch(err => {
+          commit("Logout");
+          storage.remove("token");
+          reject(err);
+        });
     });
   },
   Login({ commit }: any, userInfo: any) {

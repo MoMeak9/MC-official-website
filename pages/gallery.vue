@@ -15,23 +15,30 @@ export default {
     waterfall,
   },
   async asyncData() {
-    const { data: imgsArr } = await getGallery();
+    const page = 1;
+    const pageSize = 18;
+    const { data: imgsArr } = await getGallery({
+      page,
+      pageSize,
+    });
     return {
       imgsArr,
+      page,
+      pageSize,
     };
   },
   data() {
     return {
       imgsArr: [],
-      page: 1,
-      pageSize: 10,
+      page: 0,
+      pageSize: 0,
     };
   },
   methods: {
     async handleReachBottom() {
       const { data } = await getGallery({
         page: ++this.page,
-        pageSize: ++this.pageSize,
+        pageSize: this.pageSize,
       });
       this.imgsArr = this.imgsArr.concat(data);
     },
