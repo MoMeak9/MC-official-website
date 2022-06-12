@@ -2,7 +2,8 @@
   <waterfall :imgs-arr="imgsArr"
              :img-width="300"
              height="100vh"
-             @scrollReachBottom="handleReachBottom" />
+             @scrollReachBottom="handleReachBottom">
+  </waterfall>
 </template>
 
 <script>
@@ -16,7 +17,7 @@ export default {
   },
   async asyncData() {
     const page = 1;
-    const pageSize = 18;
+    const pageSize = 24;
     const { data: imgsArr } = await getGallery({
       page,
       pageSize,
@@ -38,8 +39,11 @@ export default {
     async handleReachBottom() {
       const { data } = await getGallery({
         page: ++this.page,
-        pageSize: this.pageSize,
+        pageSize: 10,
       });
+      if(data.length===0){
+        this.imgsArr = this.imgsArr.concat(this.imgsArr);
+      }
       this.imgsArr = this.imgsArr.concat(data);
     },
   },
