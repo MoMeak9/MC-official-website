@@ -1,9 +1,12 @@
 # LightWorld|辉光世界官网
 
 <p style="text-align:center;">
-    LightWorld 辉光世界官网前端工程<br/>
-    基于Vue2、Nuxt.js、Vuetify 开发的Minecraft我的世界国际服网站
+    <img alt="" src="https://cdn.yihuiblog.top/images/logo.e536265.png"/><br>
+    LightWorld 辉光世界官网<br/>
+    基于Vue、Nuxt.js、Vuetify 开发的Minecraft我的世界国际服网站
 <p/>
+
+[English](https://github.com/MoMeak9/MC-official-website/blob/master/README.en.md) | 简体中文
 
 随着我个人建立开放的我的世界服务器玩家越来越多的，需要有一个更加正式的宣传端口，并且希望有一个网站可以解决类似白名单发布审核这样的事情（主要还是懒得手动审批问卷233）
 

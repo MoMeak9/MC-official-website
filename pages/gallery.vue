@@ -1,6 +1,6 @@
 <template>
   <waterfall :imgs-arr="imgsArr"
-             :img-width="300"
+             :img-width="480"
              height="100vh"
              @scrollReachBottom="handleReachBottom">
   </waterfall>
@@ -17,7 +17,7 @@ export default {
   },
   async asyncData() {
     const page = 1;
-    const pageSize = 24;
+    const pageSize = 10;
     const { data: imgsArr } = await getGallery({
       page,
       pageSize,
