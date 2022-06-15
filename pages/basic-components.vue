@@ -10,7 +10,7 @@
 export default {
   components: {
     BannerTwo: () => import("@/components/shared/lp-banner/BannerTwo"),
-    ComingSoon: () => import("@/components/shared/coming-soon/ComingSoon"),
+    ComingSoon: () => import("@/components/Home/ComingSoon"),
     AllComponents: () => import("@/components/basic/AllComponents"),
   },
 

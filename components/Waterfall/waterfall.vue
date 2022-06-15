@@ -65,7 +65,7 @@
                 height: item._height ? item._height + 'px' : false,
               }"
             >
-              <img :src="item[srcKey]" />
+              <v-img :src="item[srcKey]"/>
             </component>
             <div v-if="hasFooterSlot" class="img-box-footer">
               <slot name="footer" :data="item" />
@@ -368,6 +368,13 @@ export default {
   height: 100%;
   position: relative;
 
+  ::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+
   .vue-waterfall-scroll {
     position: relative;
     width: 100%;
@@ -443,9 +450,10 @@ export default {
     &.ball-beat {
       > .dot {
         vertical-align: bottom;
-        background-color: #4b15ab;
-        width: 12px;
-        height: 12px;
+        background-color: #8c9295;
+        width: 20px;
+        height: 20px;
+        border: 0.5px solid #FFFFFF;
         border-radius: 50%;
         margin: 3px;
         animation-fill-mode: both;

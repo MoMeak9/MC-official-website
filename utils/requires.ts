@@ -29,12 +29,6 @@ service.interceptors.request.use(
 // response interceptor
 service.interceptors.response.use(
   (response: AxiosResponse) => {
-    if (response.data.code === 401) {
-      // @ts-ignore
-      this.$router.push("/login").then(() => {
-        storage.remove("token");
-      });
-    }
     return response.data;
   },
   error => {

@@ -2,25 +2,42 @@
   <div>
     <Banner />
     <Feature2 />
-    <Portfolio />
+    <Portfolio :history-list="historyList" />
     <Banner1 />
-    <Team />
+    <Team :team-numbers="teamNumbers" />
     <ComingSoon />
   </div>
 </template>
 
 <script>
+import { getTeamMember } from "@/api/website";
+import { getPeriod } from "@/api/website";
+
 export default {
   components: {
-    Team: () => import("@/components/custom/team/Team"),
-    Banner: () => import("@/components/shared/lp-banner/Banner"),
-    ComingSoon: () => import("@/components/shared/coming-soon/ComingSoon"),
-    Portfolio: () => import("@/components/custom/portfolio/Portfolio"),
-    Banner1: () => import("@/components/custom/banner/Banner1"),
-    Feature2: () => import("@/components/custom/features/Feature3"),
+    Team: () => import("@/components/Home/Team"),
+    Banner: () => import("@/components/Home/BannerFirst"),
+    ComingSoon: () => import("@/components/Home/ComingSoon"),
+    Portfolio: () => import("@/components/Home/Portfolio"),
+    Banner1: () => import("@/components/Home/Banner"),
+    Feature2: () => import("@/components/Home/Feature"),
+  },
+  asyncData() {
+    return Promise.all([
+      getTeamMember(),
+      getPeriod(),
+    ]).then((res) => {
+      return {
+        teamNumbers: res[0].data,
+        historyList: res[1].data,
+      };
+    });
   },
   data() {
-    return {};
+    return {
+      teamNumbers: [],
+      historyList: [],
+    };
   },
   head() {
     return {};

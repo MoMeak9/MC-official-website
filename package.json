@@ -8,6 +8,7 @@
     "dev": "cross-env NODE_ENV=dev nuxt",
     "prod": "cross-env NODE_ENV=prod nuxt",
     "build": "cross-env NODE_ENV=prod nuxt build",
+    "deploy": "serverless deploy",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
@@ -15,7 +16,6 @@
   },
   "dependencies": {
     "@kangc/v-md-editor": "^1.7.11",
-    "@parrotjs/vue-waterfall": "^8.0.0",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "core-js": "^3.19.3",

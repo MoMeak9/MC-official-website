@@ -1,11 +1,6 @@
 <template>
   <div class="user-center">
-    <developing></developing>
-    <v-btn depressed
-           color="primary"
-           @click="loginOut">
-      退出登入
-    </v-btn>
+    <userInfo></userInfo>
   </div>
 </template>
 
@@ -13,7 +8,7 @@
 export default {
   name: "User",
   components: {
-    Developing: () => import("@/layouts/developing"),
+    userInfo: () => import("../components/userInfo/userInfo.vue"),
   },
   data: () => {
     return {};

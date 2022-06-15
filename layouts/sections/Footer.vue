@@ -30,10 +30,15 @@
         Third Column
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
-          <h4 class="font-weight-regular font-18">联系方式</h4>
+          <h4 class="font-weight-regular font-18">友情链接
+          </h4>
           <p class="mt-10 mb-0">
-            Office :
-            <a class="dark-link" href="mailto:shi_yihui@qq.com">shi_yihui@qq.com</a>
+            MCNav我的世界导航:
+            <a class="dark-link"
+               target="_blank"
+               href="https://www.mcnav.net/">
+              mcnav.net
+            </a>
           </p>
           <!--          <p>-->
           <!--            Site :-->
