@@ -11,49 +11,74 @@
       <v-divider></v-divider>
 
       <v-list>
-        <v-list-item v-for="[icon, text] in links" :key="icon" link>
+        <!-- <v-list-item v-for="[icon, text, rou] in links" :key="icon" link>
           <v-list-item-icon>
             <v-icon>{{ icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>{{ text }}</v-list-item-title>
+            <nuxt-link to="/user/${rou}"><v-list-item-title>{{ text }}</v-list-item-title></nuxt-link>
+          </v-list-item-content>
+        </v-list-item> -->
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-account-circle</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <nuxt-link to="/user/detail" class="link">
+              <v-list-item-title>个人信息</v-list-item-title>
+            </nuxt-link>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-account-edit</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <nuxt-link to="/user/editDetail" class="link">
+              <v-list-item-title>修改个人信息</v-list-item-title>
+            </nuxt-link>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-panorama</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <nuxt-link to="/user/imgUpload" class="link">
+              <v-list-item-title>画廊上传</v-list-item-title>
+            </nuxt-link>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-chat</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <nuxt-link to="/user/message" class="link">
+              <v-list-item-title>给腐竹留言</v-list-item-title>
+            </nuxt-link>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-logout</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <nuxt-link to="/user/detail" class="link">
+              <v-list-item-title>退出登录</v-list-item-title>
+            </nuxt-link>
+          </v-list-item-content>
+        </v-list-item>
+
       </v-list>
-      <!-- <v-icon></v-icon> -->
     </v-navigation-drawer>
 
     <v-main>
       <v-container class="container">
-        <v-row>
-          <v-col v-for="card in cards" :key="card" cols="12">
-            <v-card>
-              <v-subheader>{{ card }}</v-subheader>
-              <v-list two-line>
-                <template v-for="n in 6">
-                  <v-list-item :key="n">
-                    <v-list-item-avatar color="grey darken-1">
-                    </v-list-item-avatar>
-
-                    <v-list-item-content>
-                      <v-list-item-title>Message {{ n }}</v-list-item-title>
-
-                      <v-list-item-subtitle>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Nihil repellendus distinctio similique
-                      </v-list-item-subtitle>
-                    </v-list-item-content>
-                  </v-list-item>
-
-                  <v-divider v-if="n !== 6" :key="`divider-${n}`" inset></v-divider>
-                </template>
-              </v-list>
-            </v-card>
-          </v-col>
-        </v-row>
+        <nuxt-child />
       </v-container>
     </v-main>
-    
+
   </v-app>
 </template>
 
@@ -63,9 +88,9 @@ export default {
     cards: ["Today", "Yesterday"],
     drawer: null,
     links: [
-      ["mdi-account-circle", "个人信息"],
+      ["mdi-account-circle", "个人信息", "detail"],
       ["mdi-account-edit", "修改个人详情"],
-      ["mdi-panorama", "画廊上传"],
+      ["mdi-panorama", "画廊上传", "upload"],
       ["mdi-chat", "给腐竹留言"],
       ["mdi-logout", "退出登录"],
     ],
@@ -74,10 +99,14 @@ export default {
 </script>
 
 <style scoped>
-.userName{
+.userName {
   margin-top: 10px;
 }
 .container {
   margin-left: 290px;
+}
+.link {
+  text-decoration: none;
+  color: black;
 }
 </style>
