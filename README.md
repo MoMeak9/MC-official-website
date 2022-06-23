@@ -14,7 +14,7 @@
 
 这个项目更像是一个综合前端技术栈的实践demo，当然也提供了基础的网页布局和工具配置。也同时使用了Eslint和TypeScript等等
 
-TypeScript + Express [后端项目地址](https://github.com/MoMeak9/demo-express-http)
+TypeScript + Express [后端项目地址](https://github.com/MoMeak9/MC-official-website-service)
 
 **关于Nuxt与SSR**
 
@@ -28,7 +28,7 @@ Nuxt 3 还处于beta阶段，而且有着更加优异的用户交互体验的Vue
 
 服务端尚在完善当中，使用Express.js和Typescript编写，敬请期待哦~
 
-[管理系统](https://github.com/MoMeak9/MC-official-website-MS)
+[管理系统](https://github.com/MoMeak9/MC-official-website-CMS)
 
 **后续工作**
 
@@ -36,7 +36,7 @@ Nuxt 3 还处于beta阶段，而且有着更加优异的用户交互体验的Vue
 
 ## 预览
 
-[辉光世界](https://mc.syhwdsj.xyz/)
+[辉光世界](https://lwmc.net)
 
 ## 目录
 

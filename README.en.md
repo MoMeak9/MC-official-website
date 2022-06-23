@@ -63,8 +63,6 @@ When your project is packaged and built, upload the following files to the serve
 
 If you are Serverless deployment of Tencent Cloud, you can not directly use 'Serverless. Yml' deployment of this project, configuration content is for reference only, see: [Tencent Cloud Doc](https://cloud.tencent.com/document/product/1154/51080)
 
-当你将项目打包构建完成之后，上传以下文件至服务器并启动：
-
 ## Contribution
 
 If you find any problem in the process of using it, please Issue it to me. Of course, we also welcome you to contribute PR.
