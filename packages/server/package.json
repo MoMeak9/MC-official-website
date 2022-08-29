@@ -1,0 +1,35 @@
+{
+  "name": "express-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "pro": "set NODE_ENV=production && nodemon src/app.ts",
+    "dev": "set NODE_ENV=development && nodemon src/app.ts",
+    "build": "tsc && node build/app.js",
+    "deploy": "tsc && yarn install --production && serverless deploy && yarn install",
+    "typeorm": "typeorm-ts-node-commonjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cos-nodejs-sdk-v5": "^2.11.9",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-jwt": "^7.7.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.4",
+    "mysql": "^2.18.1",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.7.5",
+    "qcloud-cos-sts": "^3.1.0",
+    "reflect-metadata": "^0.1.13",
+    "store": "^2.0.12",
+    "typeorm": "0.3.6",
+    "uuid": "^8.3.2"
+  }
+}

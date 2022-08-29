@@ -21,7 +21,6 @@
     "core-js": "^3.19.3",
     "cross-env": "^7.0.3",
     "nuxt": "^2.15.8",
-    "prismjs": "^1.28.0",
     "store2": "^2.14.2",
     "ts-node": "^10.7.0",
     "vue-property-decorator": "^9.1.2",
@@ -34,7 +33,6 @@
     "@nuxt/typescript": "^2.8.1",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
-    "@types/prismjs": "^1.26.0",
     "@types/store": "^2.0.2"
   }
 }
