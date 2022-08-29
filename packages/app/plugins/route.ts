@@ -1,4 +1,4 @@
-import storage from "store";
+import storage from "store2";
 
 export default ({ app }: any) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

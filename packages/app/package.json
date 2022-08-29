@@ -22,7 +22,7 @@
     "cross-env": "^7.0.3",
     "nuxt": "^2.15.8",
     "prismjs": "^1.28.0",
-    "store": "^2.0.12",
+    "store2": "^2.14.2",
     "ts-node": "^10.7.0",
     "vue-property-decorator": "^9.1.2",
     "vue-template-compiler": "^2.7.10"

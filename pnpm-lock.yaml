@@ -56,6 +56,7 @@ importers:
       nuxt: ^2.15.8
       prismjs: ^1.28.0
       store: ^2.0.12
+      store2: ^2.14.2
       ts-node: ^10.7.0
       vue-property-decorator: ^9.1.2
       vue-template-compiler: ^2.7.10
@@ -68,6 +69,7 @@ importers:
       nuxt: 2.15.8
       prismjs: 1.29.0
       store: 2.0.12
+      store2: 2.14.2
       ts-node: 10.9.1
       vue-property-decorator: 9.1.2
       vue-template-compiler: 2.7.10
@@ -10226,6 +10228,10 @@ packages:
 
   /store/2.0.12:
     resolution: {integrity: sha512-eO9xlzDpXLiMr9W1nQ3Nfp9EzZieIQc10zPPMP5jsVV7bLOziSFFBP0XoDXACEIFtdI+rIz0NwWVA/QVJ8zJtw==}
+    dev: false
+
+  /store2/2.14.2:
+    resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: false
 
   /stream-browserify/2.0.2:

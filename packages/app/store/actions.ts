@@ -1,4 +1,4 @@
-import storage from "store";
+import storage from "store2";
 import { getUserInfo, login } from "@/api/user";
 
 export default {

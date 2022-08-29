@@ -1,4 +1,4 @@
-import storage from "store";
+import storage from "store2";
 interface IStepType {
   type: string;
   message: string;

@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import storage from "store";
+import storage from "store2";
 
 // create an axios instance
 const service = axios.create({
