@@ -1,0 +1,43 @@
+component: http
+name: http-express-x2cTM1Re_x
+inputs:
+  src:
+    src: ./
+    exclude:
+      - .git
+      - .gitignore
+      - src
+      - .idea
+  replace: true
+  faas:
+    framework: express
+    name: '${name}'
+    runtime: Nodejs12.16
+    eip: false
+    timeout: 3
+    memorySize: 512
+    tags: []
+    environments:
+    layers:
+      - name: '${output:${stage}:${app}:mc-web-service-layer.name}'
+        version: '${output:${stage}:${app}:mc-web-service-layer.version}'
+  apigw:
+    protocols:
+      - https
+    timeout: 60
+    environment: release
+    customDomains:
+      - domain: dev.lwmc.net
+        certId: wTqwX2Gd
+        protocols:
+          - https
+        pathMap:
+          - path: /
+            environment: release
+        customMap: true
+        isDefaultMapping: false
+  region: ap-guangzhou
+  isAutoCiDeploy: false
+org: '1259409954'
+app: mc-web-service
+stage: dev
