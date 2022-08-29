@@ -41,7 +41,7 @@ AppDataSource.initialize()
         })
         .unless({
           path: whitelist, // ⽩名单,除了这⾥写的地址，其他的URL都需要验证
-        }),
+        })
     );
     // register express route from defined application route
 
@@ -54,18 +54,18 @@ AppDataSource.initialize()
           const result = new (route.controller as any)()[route.action](
             req,
             res,
-            next,
+            next
           );
           if (result instanceof Promise) {
             result.then((result) =>
               result !== null && result !== undefined
                 ? res.send(result)
-                : undefined,
+                : undefined
             );
           } else if (result !== null && result !== undefined) {
             res.json(result);
           }
-        },
+        }
       );
     });
     // start express server

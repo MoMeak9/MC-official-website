@@ -7,9 +7,9 @@
 <script>
 export default {
   components: {
-    Banner: () => import("@/components/shared/lp-banner/BannerComingSoon"),
+    Banner: () => import('@/components/shared/lp-banner/BannerComingSoon'),
   },
-  layout: "coming-soon",
+  layout: 'coming-soon',
   props: {
     error: {
       type: Object,
@@ -18,8 +18,8 @@ export default {
   },
   data() {
     return {
-      pageNotFound: "404 Not Found",
-      otherError: "An error occurred",
+      pageNotFound: '404 Not Found',
+      otherError: 'An error occurred',
     };
   },
 };

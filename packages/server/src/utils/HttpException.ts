@@ -10,7 +10,7 @@ export class HttpException extends Error {
     data = {},
     msg = '服务器异常, 请联系管理员',
     errorCode = 10000,
-    code = 400,
+    code = 400
   ) {
     super();
     this.message = msg;
@@ -42,7 +42,7 @@ export class Success extends HttpException {
     code = 200,
     errorCode = 0,
     responseType?: string,
-    session?: string,
+    session?: string
   ) {
     super();
     this.code = code; //200查询成功, 201操作成功

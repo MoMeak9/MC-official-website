@@ -32,10 +32,7 @@
           >
             <v-card elevation="0" class="team-card overflow-hidden mb-15">
               <div class="social-overlay">
-                <v-img
-                  :src="item.image_url"
-                  alt="team"
-                />
+                <v-img :src="item.image_url" alt="team" />
                 <div class="img-overlay">
                   <ul>
                     <li>
@@ -84,9 +81,8 @@
   </div>
 </template>
 <script>
-
 export default {
-  name: "Team",
+  name: 'Team',
   props: {
     teamNumbers: {
       type: Array,

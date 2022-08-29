@@ -62,7 +62,7 @@ export async function getPolicy() {
         } else {
           resolve(credential);
         }
-      },
+      }
     );
   });
 }
@@ -99,7 +99,7 @@ export const uploadFile = (file): Promise<Result> => {
         } else {
           resolve(data);
         }
-      },
+      }
     );
   });
 };

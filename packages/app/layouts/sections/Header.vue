@@ -2,7 +2,11 @@
   <!-- -----------------------------------------------
           Start Header
     ----------------------------------------------- -->
-  <v-app-bar max-height="85px" app class="app-header position-relative navbar-light header1">
+  <v-app-bar
+    max-height="85px"
+    app
+    class="app-header position-relative navbar-light header1"
+  >
     <v-container class="py-0 fill-height">
       <!-- Logo -->
       <div style="height: 100%">
@@ -49,10 +53,10 @@
         nuxt
         outlined
         color="primary"
-        :to="$store.state.userInfo.user_game_id?'/user':'/login'"
+        :to="$store.state.userInfo.user_game_id ? '/user' : '/login'"
         elevation="0"
       >
-        {{ $store.state.userInfo.user_game_id || "登录" }}
+        {{ $store.state.userInfo.user_game_id || '登录' }}
       </v-btn>
     </v-container>
   </v-app-bar>
@@ -63,27 +67,27 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   data() {
     return {
       isActive: false,
       items: [
-        { title: "历史文件", link: "/history" },
-        { title: "客户端下载" },
-        { title: "Java 下载" },
+        { title: '历史文件', link: '/history' },
+        { title: '客户端下载' },
+        { title: 'Java 下载' },
       ],
-      user_game_id: "",
+      user_game_id: '',
     };
   },
   mounted() {
     this.getUserInfo();
   },
   methods: {
-    toggleClass: function() {
+    toggleClass: function () {
       this.isActive = !this.isActive;
     },
     async getUserInfo() {
-      await this.$store.dispatch("getUserInfo");
+      await this.$store.dispatch('getUserInfo');
     },
   },
 };

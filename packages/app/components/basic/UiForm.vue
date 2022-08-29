@@ -10,8 +10,8 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Form</h2>
               <p>
-                Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &
-                dashboard in No-time.
+                Here you can check Demos we created based on WrapKit. Its quite
+                easy to Create your own dream website & dashboard in No-time.
               </p>
             </div>
           </v-col>
@@ -28,8 +28,17 @@
           <v-col cols="12" sm="10" md="9" lg="7">
             <v-card>
               <v-card-text>
-                <v-text-field v-model="uname" label="User Name" placeholder="Enter username"></v-text-field>
-                <v-text-field v-model="email" label="Email" type="email" placeholder="Email address"></v-text-field>
+                <v-text-field
+                  v-model="uname"
+                  label="User Name"
+                  placeholder="Enter username"
+                ></v-text-field>
+                <v-text-field
+                  v-model="email"
+                  label="Email"
+                  type="email"
+                  placeholder="Email address"
+                ></v-text-field>
                 <v-text-field
                   v-model="password"
                   :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
@@ -52,7 +61,12 @@
                   counter
                   @click:append="show1 = !show1"
                 ></v-text-field>
-                <v-checkbox v-model="checkbox2" class="mt-2" label="Remember me" hide-details></v-checkbox>
+                <v-checkbox
+                  v-model="checkbox2"
+                  class="mt-2"
+                  label="Remember me"
+                  hide-details
+                ></v-checkbox>
                 <div class="mt-10">
                   <v-btn color="success" elevation="0" class="mr-2">Save</v-btn>
                   <v-btn color="black" elevation="0" dark>Cancel</v-btn>
@@ -67,19 +81,19 @@
 </template>
 <script>
 export default {
-  name: "UiForm",
+  name: 'UiForm',
   data() {
     return {
-      uname: "",
-      email: "",
-      password: "",
-      cpassword: "",
+      uname: '',
+      email: '',
+      password: '',
+      cpassword: '',
       show1: false,
       show2: false,
       checkbox2: false,
       rules: {
-        required: value => !!value || "Required.",
-        min: v => v.length >= 8 || "Min 8 characters",
+        required: (value) => !!value || 'Required.',
+        min: (v) => v.length >= 8 || 'Min 8 characters',
         emailMatch: () => "The email and password you entered don't match",
       },
     };

@@ -6,11 +6,7 @@
       ----------------------------------------------- -->
       <v-row>
         <v-col cols="12" lg="10">
-          <v-img
-            :src="getImage('banner1')"
-            alt="feature"
-            class="rounded"
-          />
+          <v-img :src="getImage('banner1')" alt="feature" class="rounded" />
         </v-col>
         <v-col cols="12" md="7" lg="5" class="feature3-card">
           <v-card class="card-shadow border-all">
@@ -36,10 +32,10 @@
   </div>
 </template>
 <script>
-import { getImage } from "assets/images/getImg";
+import { getImage } from 'assets/images/getImg';
 
 export default {
-  name: "Feature3",
+  name: 'Feature3',
   data() {
     return {
       getImage,

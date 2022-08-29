@@ -30,13 +30,10 @@
         Third Column
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
-          <h4 class="font-weight-regular font-18">友情链接
-          </h4>
+          <h4 class="font-weight-regular font-18">友情链接</h4>
           <p class="mt-10 mb-0">
             MCNav我的世界导航:
-            <a class="dark-link"
-               target="_blank"
-               href="https://www.mcnav.net/">
+            <a class="dark-link" target="_blank" href="https://www.mcnav.net/">
               mcnav.net
             </a>
           </p>
@@ -75,7 +72,9 @@
       <div class="footer-bottom-bar font-14">
         <div class="d-block d-md-flex justify-space-around">
           <p>
-            <a href="https://beian.miit.gov.cn" class="link">闽ICP备19026932号-3</a>
+            <a href="https://beian.miit.gov.cn" class="link"
+              >闽ICP备19026932号-3</a
+            >
           </p>
           <p class="ml-auto">
             All Rights Reserved by
@@ -98,7 +97,7 @@
 
 <script>
 export default {
-  name: "Footer",
+  name: 'Footer',
   components: {},
   data() {
     return {

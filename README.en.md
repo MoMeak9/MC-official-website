@@ -8,7 +8,7 @@ Minecraft Minecraft international server website based on Vue, Nuxt.js and Vueti
 
 English | [简体中文](https://github.com/MoMeak9/MC-official-website/blob/master/README.md)
 
-As I personally built up more and more players on my world server, I needed a more formal promotional port and wanted a website that could help with things like whitelist publishing audits（I was too lazy to approve the questionnaire manually:smile:） 
+As I personally built up more and more players on my world server, I needed a more formal promotional port and wanted a website that could help with things like whitelist publishing audits（I was too lazy to approve the questionnaire manually:smile:）
 
 ## About the Project
 
@@ -28,7 +28,7 @@ TypeScript + Express [Server Project URL](https://github.com/MoMeak9/MC-official
 
 **Management**
 
-React + antd 
+React + antd
 
 **Follow-up Work**
 

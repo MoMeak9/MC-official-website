@@ -15,7 +15,7 @@
                 1.19【第八周目】已经到来 6月8日正式启动！
               </h2>
               <p class="white--text op-8 font-weight-regular">
-                1.19是荒野更新的首个正式版，也是Java版即将到来的一次主要更新，计划于2022年发布。此次更新将会加入深暗之域和红树林沼泽生物群系及其相关内容。<br>
+                1.19是荒野更新的首个正式版，也是Java版即将到来的一次主要更新，计划于2022年发布。此次更新将会加入深暗之域和红树林沼泽生物群系及其相关内容。<br />
                 这可能是我们服务器第一个长期版本哦！
               </p>
               <div class="mt-16 pt-2">
@@ -53,12 +53,12 @@
   </div>
 </template>
 <script>
-import {getImage} from "assets/images/getImg";
+import { getImage } from 'assets/images/getImg';
 
 export default {
-  name: "Banner1",
+  name: 'Banner1',
   data() {
-    return {getImage};
+    return { getImage };
   },
   methods: {},
 };

@@ -148,7 +148,7 @@ export class WebsiteService {
 
   async updateTeamMember(
     id: number,
-    teamMember: TeamMember,
+    teamMember: TeamMember
   ): Promise<UpdateResult> {
     return await this.teamMemberRepository.update(id, teamMember);
   }

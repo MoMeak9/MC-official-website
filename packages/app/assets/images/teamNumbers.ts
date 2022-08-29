@@ -1,4 +1,4 @@
-const baseUrl = process.env.BASEIMAGE + "/images/users";
+const baseUrl = process.env.BASEIMAGE + '/images/users';
 
 module.exports = {
   MoMeaks: `${baseUrl}/1.jpg`,

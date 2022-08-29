@@ -1,17 +1,13 @@
 <template>
   <v-row justify="center">
-  <v-col>
-
-  </v-col>
+    <v-col> </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  name: "ForgetPassword",
+  name: 'ForgetPassword',
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

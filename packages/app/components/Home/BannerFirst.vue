@@ -44,7 +44,12 @@
           </div>
         </v-col>
         <v-col cols="12" md="5" lg="6">
-          <v-img max-width="100%" max-height="100%" :src="getImage('banner2')" alt="banner" />
+          <v-img
+            max-width="100%"
+            max-height="100%"
+            :src="getImage('banner2')"
+            alt="banner"
+          />
         </v-col>
       </v-row>
 
@@ -55,10 +60,10 @@
   </div>
 </template>
 <script>
-import { getImage } from "assets/images/getImg";
+import { getImage } from 'assets/images/getImg';
 
 export default {
-  name: "Banner",
+  name: 'Banner',
   data() {
     return {
       getImage,

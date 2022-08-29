@@ -25,19 +25,19 @@
 
 <script>
 export default {
-  name: "Select",
+  name: 'Select',
   props: {
     item: {
       default() {
         return {
-          title: "title",
-          subtitle: "subtitle",
+          title: 'title',
+          subtitle: 'subtitle',
           isMultiple: false,
-          content: "",
+          content: '',
           subItem: [
             {
-              value: "",
-              label: "",
+              value: '',
+              label: '',
             },
           ],
         };
@@ -56,7 +56,7 @@ export default {
   },
   watch: {
     content() {
-      this.$emit("change", this.content, this.index);
+      this.$emit('change', this.content, this.index);
     },
   },
 };

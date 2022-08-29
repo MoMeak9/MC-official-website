@@ -34,8 +34,8 @@ export class WebsiteController {
             paper_score: score,
             paper_percent: percentScore,
           },
-          '审核自动通过，请查收邮件',
-        ),
+          '审核自动通过，请查收邮件'
+        )
       );
     } else {
       await this.WebsiteService.sendFailPassEmail(user_game_id, user_email);
@@ -45,8 +45,8 @@ export class WebsiteController {
             paper_score: score,
             paper_percent: percentScore,
           },
-          '审核未通过，请查收邮件',
-        ),
+          '审核未通过，请查收邮件'
+        )
       );
     }
   }

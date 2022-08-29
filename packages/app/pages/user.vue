@@ -6,17 +6,17 @@
 
 <script>
 export default {
-  name: "User",
+  name: 'User',
   components: {
-    userInfo: () => import("../components/userInfo/userInfo.vue"),
+    userInfo: () => import('../components/userInfo/userInfo.vue'),
   },
   data: () => {
     return {};
   },
   methods: {
     loginOut() {
-      this.$store.dispatch("Logout");
-      this.$router.push('/')
+      this.$store.dispatch('Logout');
+      this.$router.push('/');
     },
   },
 };

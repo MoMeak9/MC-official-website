@@ -1,7 +1,10 @@
 <template>
   <div class="message">
     <template v-for="(item, index) in $store.state.msgPool">
-      <div :key="index" class="d-flex justify-center animate__animated animate__backInDown">
+      <div
+        :key="index"
+        class="d-flex justify-center animate__animated animate__backInDown"
+      >
         <template v-if="item.light === false">
           <v-alert dense :type="item.type">{{ item.message }}</v-alert>
         </template>

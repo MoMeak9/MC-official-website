@@ -89,15 +89,15 @@
 
 <script>
 export default {
-  name: "Header2",
+  name: 'Header2',
   data() {
     return {
       isActive: false,
       items: [
-        { title: "历史文件", link: "/history" },
-        { title: "Click Me" },
-        { title: "Click Me" },
-        { title: "Click Me 2" },
+        { title: '历史文件', link: '/history' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' },
       ],
     };
   },

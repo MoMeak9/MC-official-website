@@ -10,8 +10,8 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Chip</h2>
               <p>
-                Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &
-                dashboard in No-time.
+                Here you can check Demos we created based on WrapKit. Its quite
+                easy to Create your own dream website & dashboard in No-time.
               </p>
             </div>
           </v-col>
@@ -30,8 +30,12 @@
           <v-chip class="ma-2" color="accent">accent</v-chip>
           <v-chip class="ma-2" color="secondary">secondary</v-chip>
           <v-chip class="ma-2" color="error" text-color="white">error</v-chip>
-          <v-chip class="ma-2" color="success" text-color="white">success</v-chip>
-          <v-chip class="ma-2" color="warning" text-color="white">warning</v-chip>
+          <v-chip class="ma-2" color="success" text-color="white"
+            >success</v-chip
+          >
+          <v-chip class="ma-2" color="warning" text-color="white"
+            >warning</v-chip
+          >
         </div>
         <div class="text-center mt-12">
           <v-chip class="ma-2" color="primary" label>Label</v-chip>
@@ -57,7 +61,7 @@
 </template>
 <script>
 export default {
-  name: "UiChip",
+  name: 'UiChip',
   data() {
     return {};
   },

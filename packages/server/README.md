@@ -1,10 +1,8 @@
 # MC-official-website-service
 
-原先自个MC服务器官网小试牛刀的demo，已经使用TypeScript + Express 编写，分层为Service,Controller,Routes。ORM 使用 Typeorm  ，默认MySQL，中间件添加了总的错误处理。
+原先自个 MC 服务器官网小试牛刀的 demo，已经使用 TypeScript + Express 编写，分层为 Service,Controller,Routes。ORM 使用 Typeorm ，默认 MySQL，中间件添加了总的错误处理。
 
-Api文档使用ApiPost，见[辉光世界服务端Api]()
-
-
+Api 文档使用 ApiPost，见[辉光世界服务端 Api]()
 
 ## 实现功能
 
@@ -42,7 +40,7 @@ Api文档使用ApiPost，见[辉光世界服务端Api]()
 ## 额外配置项
 
 - COS 密钥
-- MCSM 的api Key（如果附带我的世界面板的相关接口）
+- MCSM 的 api Key（如果附带我的世界面板的相关接口）
 - `DATABASE_URL=""`
 
 ## 使用
@@ -61,7 +59,7 @@ npm run pro
 # set NODE_ENV=production&& nodemon src/app.ts
 ```
 
-发布（tsc转换，未使用webpack哦~）
+发布（tsc 转换，未使用 webpack 哦~）
 
 ```shell
 npm run build
@@ -69,16 +67,11 @@ npm run build
 
 ## 部署
 
-使用serverless，请配置好`scf_bootstrap`
+使用 serverless，请配置好`scf_bootstrap`
 
 ```shell
 #!/usr/bin/env bash
 /var/lang/node12/bin/node ./dist/app.js
 ```
 
-tsc导出位置`dist`
-
-
-
-
-
+tsc 导出位置`dist`

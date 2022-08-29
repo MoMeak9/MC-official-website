@@ -23,4 +23,3 @@ module.exports = {
   // HTML 标签（以及 JSX，Vue 模板等）的反尖括号 > 需要换行
   bracketSameLine: false,
 };
-

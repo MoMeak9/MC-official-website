@@ -4,18 +4,17 @@
       contain
       height="60vh"
       max-width="100%"
-      :src="getImage('developing')" />
-    <h4>
-      工具人一号还在紧锣密鼓滴开发中......
-    </h4>
+      :src="getImage('developing')"
+    />
+    <h4>工具人一号还在紧锣密鼓滴开发中......</h4>
   </div>
 </template>
 
 <script>
-import { getImage } from "assets/images/getImg";
+import { getImage } from 'assets/images/getImg';
 
 export default {
-  name: "Developing",
+  name: 'Developing',
   data() {
     return {
       getImage,

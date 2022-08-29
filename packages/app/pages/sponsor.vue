@@ -51,52 +51,52 @@
 </template>
 
 <script>
-import { getSponsorList } from "~/api/website";
+import { getSponsorList } from '~/api/website';
 
 export default {
-  name: "Sponsor",
+  name: 'Sponsor',
   components: {
-    Developing: () => import("@/layouts/developing"),
+    Developing: () => import('@/layouts/developing'),
   },
   data() {
     return {
       sponsorHeaders: [
         {
-          text: "ID",
-          align: "start",
+          text: 'ID',
+          align: 'start',
           sortable: false,
-          value: "user_game_id",
+          value: 'user_game_id',
         },
-        { text: "赞助额", value: "total_number" },
+        { text: '赞助额', value: 'total_number' },
       ],
       loadingState: true,
       sponsorList: [
         {
-          user_game_id: "lili0",
+          user_game_id: 'lili0',
           total_number: 9239,
         },
         {
-          user_game_id: "lili1",
+          user_game_id: 'lili1',
           total_number: 9239,
         },
         {
-          user_game_id: "lili2",
+          user_game_id: 'lili2',
           total_number: 9239,
         },
         {
-          user_game_id: "lili3",
+          user_game_id: 'lili3',
           total_number: 9239,
         },
         {
-          user_game_id: "lili4",
+          user_game_id: 'lili4',
           total_number: 9239,
         },
         {
-          user_game_id: "lili5",
+          user_game_id: 'lili5',
           total_number: 9239,
         },
         {
-          user_game_id: "lili6",
+          user_game_id: 'lili6',
           total_number: 9239,
         },
       ],
@@ -112,10 +112,10 @@ export default {
   methods: {
     getSponsors() {
       getSponsorList(this.pages)
-        .then(res => {
+        .then((res) => {
           console.log(res);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
     },

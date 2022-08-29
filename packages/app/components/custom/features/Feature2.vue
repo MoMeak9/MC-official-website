@@ -8,11 +8,16 @@
         <v-row justify="center">
           <v-col cols="12" md="10" lg="7">
             <div class="text-center">
-              <v-chip small color="primary" text-color="white">Feature 2</v-chip>
-              <h2 class="section-title font-weight-medium">Awesome with Extra Ordinary Flexibility</h2>
+              <v-chip small color="primary" text-color="white"
+                >Feature 2</v-chip
+              >
+              <h2 class="section-title font-weight-medium">
+                Awesome with Extra Ordinary Flexibility
+              </h2>
               <p>
-                You can relay on our amazing features list and also our customer services will be great experience for
-                you without doubt and in no-time
+                You can relay on our amazing features list and also our customer
+                services will be great experience for you without doubt and in
+                no-time
               </p>
             </div>
           </v-col>
@@ -33,17 +38,32 @@
                     <div class="d-flex align-center">
                       <v-row>
                         <v-col cols="12" md="4">
-                          <img src="@/assets/images/features/2/img1.jpg" class="img-fluid rounded" alt="feature2" />
+                          <img
+                            src="@/assets/images/features/2/img1.jpg"
+                            class="img-fluid rounded"
+                            alt="feature2"
+                          />
                         </v-col>
-                        <v-col cols="12" md="8" class="px-md-0 d-flex align-center">
-                          <h4 class="font-weight-medium font-18">Make your website in no-time with us.</h4>
+                        <v-col
+                          cols="12"
+                          md="8"
+                          class="px-md-0 d-flex align-center"
+                        >
+                          <h4 class="font-weight-medium font-18">
+                            Make your website in no-time with us.
+                          </h4>
                         </v-col>
                       </v-row>
                     </div>
                   </v-card-text>
                 </v-col>
                 <v-col cols="12" md="4" class="py-0">
-                  <v-btn block depressed color="info" class="linking feature2-action-btn">
+                  <v-btn
+                    block
+                    depressed
+                    color="info"
+                    class="linking feature2-action-btn"
+                  >
                     Let's Talk
                     <i class="mdi mdi-arrow-right"></i>
                   </v-btn>
@@ -59,17 +79,32 @@
                     <div class="d-flex align-center">
                       <v-row>
                         <v-col cols="12" md="4">
-                          <img src="@/assets/images/features/2/img2.jpg" class="img-fluid rounded" alt="feature2" />
+                          <img
+                            src="@/assets/images/features/2/img2.jpg"
+                            class="img-fluid rounded"
+                            alt="feature2"
+                          />
                         </v-col>
-                        <v-col cols="12" md="8" class="px-md-0 d-flex align-center">
-                          <h4 class="font-weight-medium font-18">Make your website in no-time with us.</h4>
+                        <v-col
+                          cols="12"
+                          md="8"
+                          class="px-md-0 d-flex align-center"
+                        >
+                          <h4 class="font-weight-medium font-18">
+                            Make your website in no-time with us.
+                          </h4>
                         </v-col>
                       </v-row>
                     </div>
                   </v-card-text>
                 </v-col>
                 <v-col cols="12" md="4" class="py-0">
-                  <v-btn block depressed color="info" class="linking feature2-action-btn">
+                  <v-btn
+                    block
+                    depressed
+                    color="info"
+                    class="linking feature2-action-btn"
+                  >
                     Let's Talk
                     <i class="mdi mdi-arrow-right"></i>
                   </v-btn>
@@ -85,17 +120,32 @@
                     <div class="d-flex align-center">
                       <v-row>
                         <v-col cols="12" md="4">
-                          <img src="@/assets/images/features/2/img3.jpg" class="img-fluid rounded" alt="feature2" />
+                          <img
+                            src="@/assets/images/features/2/img3.jpg"
+                            class="img-fluid rounded"
+                            alt="feature2"
+                          />
                         </v-col>
-                        <v-col cols="12" md="8" class="px-md-0 d-flex align-center">
-                          <h4 class="font-weight-medium font-18">Make your website in no-time with us.</h4>
+                        <v-col
+                          cols="12"
+                          md="8"
+                          class="px-md-0 d-flex align-center"
+                        >
+                          <h4 class="font-weight-medium font-18">
+                            Make your website in no-time with us.
+                          </h4>
                         </v-col>
                       </v-row>
                     </div>
                   </v-card-text>
                 </v-col>
                 <v-col cols="12" md="4" class="py-0">
-                  <v-btn block depressed color="info" class="linking feature2-action-btn">
+                  <v-btn
+                    block
+                    depressed
+                    color="info"
+                    class="linking feature2-action-btn"
+                  >
                     Let's Talk
                     <i class="mdi mdi-arrow-right"></i>
                   </v-btn>
@@ -111,17 +161,32 @@
                     <div class="d-flex align-center">
                       <v-row>
                         <v-col cols="12" md="4">
-                          <img src="@/assets/images/features/2/img4.jpg" class="img-fluid rounded" alt="feature2" />
+                          <img
+                            src="@/assets/images/features/2/img4.jpg"
+                            class="img-fluid rounded"
+                            alt="feature2"
+                          />
                         </v-col>
-                        <v-col cols="12" md="8" class="px-md-0 d-flex align-center">
-                          <h4 class="font-weight-medium font-18">Make your website in no-time with us.</h4>
+                        <v-col
+                          cols="12"
+                          md="8"
+                          class="px-md-0 d-flex align-center"
+                        >
+                          <h4 class="font-weight-medium font-18">
+                            Make your website in no-time with us.
+                          </h4>
                         </v-col>
                       </v-row>
                     </div>
                   </v-card-text>
                 </v-col>
                 <v-col cols="12" md="4" class="py-0">
-                  <v-btn block depressed color="info" class="linking feature2-action-btn">
+                  <v-btn
+                    block
+                    depressed
+                    color="info"
+                    class="linking feature2-action-btn"
+                  >
                     Let's Talk
                     <i class="mdi mdi-arrow-right"></i>
                   </v-btn>
@@ -140,7 +205,7 @@
 </template>
 <script>
 export default {
-  name: "Feature2",
+  name: 'Feature2',
   data() {
     return {};
   },

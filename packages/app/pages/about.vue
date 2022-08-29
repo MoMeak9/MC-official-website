@@ -1,12 +1,12 @@
 <template>
-    <developing></developing>
+  <developing></developing>
 </template>
 
 <script>
 export default {
-  name: "About",
+  name: 'About',
   components: {
-    Developing: () => import("@/layouts/developing"),
+    Developing: () => import('@/layouts/developing'),
   },
 };
 </script>

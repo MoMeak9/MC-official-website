@@ -10,8 +10,9 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Pricing</h2>
               <p>
-                Here you can check Demos we created you can easily use it. Its quite easy to Create your own dream
-                website & dashboard in No-time.
+                Here you can check Demos we created you can easily use it. Its
+                quite easy to Create your own dream website & dashboard in
+                No-time.
               </p>
             </div>
           </v-col>
@@ -26,7 +27,7 @@
 </template>
 <script>
 export default {
-  name: "PricingText",
+  name: 'PricingText',
   data() {
     return {};
   },

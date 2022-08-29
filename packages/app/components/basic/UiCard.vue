@@ -10,8 +10,8 @@
             <div class="text-center">
               <h2 class="ui-title font-weight-bold">Card</h2>
               <p>
-                Here you can check Demos we created based on WrapKit. Its quite easy to Create your own dream website &
-                dashboard in No-time.
+                Here you can check Demos we created based on WrapKit. Its quite
+                easy to Create your own dream website & dashboard in No-time.
               </p>
             </div>
           </v-col>
@@ -52,7 +52,11 @@
           </v-col>
           <v-col cols="12" sm="10" md="6" lg="4">
             <v-card class="card-shadow">
-              <v-img class="white--text align-end" height="200px" src="https://cdn.vuetifyjs.com/images/cards/road.jpg">
+              <v-img
+                class="white--text align-end"
+                height="200px"
+                src="https://cdn.vuetifyjs.com/images/cards/road.jpg"
+              >
                 <v-card-title>Special Title Treatment</v-card-title>
               </v-img>
 
@@ -103,7 +107,7 @@
 </template>
 <script>
 export default {
-  name: "UiCard",
+  name: 'UiCard',
   data() {
     return {};
   },

@@ -13,14 +13,14 @@
 
 <script>
 export default {
-  name: "Input",
+  name: 'Input',
   props: {
     item: {
       default() {
         return {
-          title: "title",
-          subtitle: "subtitle",
-          content: "content",
+          title: 'title',
+          subtitle: 'subtitle',
+          content: 'content',
         };
       },
       type: Object,

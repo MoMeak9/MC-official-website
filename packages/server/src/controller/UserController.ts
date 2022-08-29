@@ -19,7 +19,7 @@ export class UserController {
     }
     const result = await this.UserService.checkPassword(
       user_password,
-      user_email,
+      user_email
     );
     if (result.length !== 0) {
       const token = await this.UserService.signToken(result[0]);
@@ -32,7 +32,7 @@ export class UserController {
   async register(
     req: Request,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const { user_email, user_game_id, user_password, user_QQ, code } = req.body;
     if (!user_email || !user_game_id || !user_password || !user_QQ || !code) {
@@ -60,7 +60,7 @@ export class UserController {
   async sendCode(
     req: Request,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const { user_email } = req.body;
     if (!user_email) {
@@ -84,7 +84,7 @@ export class UserController {
   async getUserInfo(
     req: Request,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const { user_uuid } = req.auth;
     if (!user_uuid) {
@@ -93,7 +93,7 @@ export class UserController {
     next(
       new Success({
         userBean: (await this.UserService.getUserByUUID(user_uuid))[0],
-      }),
+      })
     );
   }
 
@@ -101,7 +101,7 @@ export class UserController {
   static async checkAuth(
     req: Request,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     console.log(req.auth);
     const { user_uuid } = req.auth;

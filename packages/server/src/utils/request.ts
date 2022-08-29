@@ -15,7 +15,7 @@ service.interceptors.request.use(
   (error) => {
     // do something with request error
     return Promise.reject(error);
-  },
+  }
 );
 
 // response interceptor
@@ -25,7 +25,7 @@ service.interceptors.response.use(
   },
   (error) => {
     console.log(error);
-  },
+  }
 );
 
 export default service;

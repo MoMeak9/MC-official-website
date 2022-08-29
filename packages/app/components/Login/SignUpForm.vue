@@ -72,47 +72,47 @@
 </template>
 
 <script>
-import { register, sendCode } from "~/api/user";
-import sentMessage from "~/utils/sentMessage";
+import { register, sendCode } from '~/api/user';
+import sentMessage from '~/utils/sentMessage';
 
 export default {
-  name: "SignUpForm",
+  name: 'SignUpForm',
   data: () => ({
     valid: true,
     registerForm: {
-      user_game_id: "",
-      user_QQ: "",
-      code: "",
-      user_email: "",
-      user_password: "",
-      checkPassword: "",
+      user_game_id: '',
+      user_QQ: '',
+      code: '',
+      user_email: '',
+      user_password: '',
+      checkPassword: '',
     },
-    nameRules: [v => !!v || "请输入您的正版ID"],
+    nameRules: [(v) => !!v || '请输入您的正版ID'],
     emailRules: [
-      v => !!v || "必须留下您的邮箱",
-      v => /.+@.+\..+/.test(v) || "无效邮箱格式",
+      (v) => !!v || '必须留下您的邮箱',
+      (v) => /.+@.+\..+/.test(v) || '无效邮箱格式',
     ],
     QQNumber: [
-      v => !!v || "留下您的QQ",
-      v => /^[0-9]*$/.test(v) || "无效QQ格式",
+      (v) => !!v || '留下您的QQ',
+      (v) => /^[0-9]*$/.test(v) || '无效QQ格式',
     ],
     codeRules: [
-      v => !!v || "请填写四位数验证码",
-      v => /^[0-9]{4}$/.test(v) || "无效验证码格式",
+      (v) => !!v || '请填写四位数验证码',
+      (v) => /^[0-9]{4}$/.test(v) || '无效验证码格式',
     ],
-    passwordRules: [v => !!v || "请填写您的密码"],
+    passwordRules: [(v) => !!v || '请填写您的密码'],
   }),
   methods: {
     validate() {
       if (this.$refs.form.validate()) {
         register(this.registerForm)
-          .then(res => {
+          .then((res) => {
             sentMessage.success(this.$store, {
               message: res.message,
             });
             this.changeType();
           })
-          .catch(err => {
+          .catch((err) => {
             sentMessage.error(this.$store, {
               message: err.message,
             });
@@ -123,11 +123,11 @@ export default {
       this.$refs.form.reset();
     },
     changeType() {
-      this.$emit("change-type", "SIGN_IN");
+      this.$emit('change-type', 'SIGN_IN');
     },
     checkTwoPassword(val) {
       if (val !== this.registerForm.user_password) {
-        return "两次密码不一致";
+        return '两次密码不一致';
       } else {
         return true;
       }
@@ -136,12 +136,12 @@ export default {
       sendCode({
         user_email: this.registerForm.user_email,
       })
-        .then(res => {
+        .then((res) => {
           sentMessage.success(this.$store, {
             message: res.message,
           });
         })
-        .catch(err => {
+        .catch((err) => {
           sentMessage.error(this.$store, {
             message: err.message,
           });
@@ -152,5 +152,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/index";
+@import 'assets/scss/index';
 </style>

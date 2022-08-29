@@ -22,7 +22,11 @@
                     </v-list-item-content>
                   </v-list-item>
 
-                  <v-divider v-if="n !== 6" :key="`divider-${n}`" inset></v-divider>
+                  <v-divider
+                    v-if="n !== 6"
+                    :key="`divider-${n}`"
+                    inset
+                  ></v-divider>
                 </template>
               </v-list>
             </v-card>
@@ -36,11 +40,11 @@
 
 <script>
 export default {
-  name: "",
+  name: '',
   components: {},
   data: () => {
     return {
-      cards: ["Today", "Yesterday"],
+      cards: ['Today', 'Yesterday'],
     };
   },
   methods: {},

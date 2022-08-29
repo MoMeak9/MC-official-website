@@ -27,15 +27,15 @@
 </template>
 
 <script>
-import questionList from "@/utils/questionList";
-import { submitPaper } from "~/api/paper";
-import sentMessage from "~/utils/sentMessage";
+import questionList from '@/utils/questionList';
+import { submitPaper } from '~/api/paper';
+import sentMessage from '~/utils/sentMessage';
 
 export default {
-  name: "Apply",
+  name: 'Apply',
   components: {
-    Select: () => import("../components/questionnaire/Select"),
-    Input: () => import("../components/questionnaire/Input"),
+    Select: () => import('../components/questionnaire/Select'),
+    Input: () => import('../components/questionnaire/Input'),
   },
   data() {
     return {
@@ -49,17 +49,19 @@ export default {
     submitAnswer() {
       submitPaper({
         paper_content: this.questionList,
-      }).then(res => {
-        sentMessage.success(this.$store, {
-          message: res.message,
+      })
+        .then((res) => {
+          sentMessage.success(this.$store, {
+            message: res.message,
+          });
+          this.$router.push('/');
+        })
+        .catch((err) => {
+          sentMessage.error(this.$store, {
+            message: err.message,
+          });
+          this.$router.back();
         });
-        this.$router.push("/");
-      }).catch(err => {
-        sentMessage.error(this.$store, {
-          message: err.message,
-        });
-        this.$router.back();
-      });
     },
   },
 };

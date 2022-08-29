@@ -69,7 +69,6 @@
             </nuxt-link>
           </v-list-item-content>
         </v-list-item>
-
       </v-list>
     </v-navigation-drawer>
 
@@ -78,21 +77,20 @@
         <nuxt-child />
       </v-container>
     </v-main>
-
   </v-app>
 </template>
 
 <script>
 export default {
   data: () => ({
-    cards: ["Today", "Yesterday"],
+    cards: ['Today', 'Yesterday'],
     drawer: null,
     links: [
-      ["mdi-account-circle", "个人信息", "detail"],
-      ["mdi-account-edit", "修改个人详情"],
-      ["mdi-panorama", "画廊上传", "upload"],
-      ["mdi-chat", "给腐竹留言"],
-      ["mdi-logout", "退出登录"],
+      ['mdi-account-circle', '个人信息', 'detail'],
+      ['mdi-account-edit', '修改个人详情'],
+      ['mdi-panorama', '画廊上传', 'upload'],
+      ['mdi-chat', '给腐竹留言'],
+      ['mdi-logout', '退出登录'],
     ],
   }),
 };

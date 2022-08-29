@@ -1,4 +1,4 @@
-const term = process.env.BASEIMAGE + "/images/term";
+const term = process.env.BASEIMAGE + '/images/term';
 
 module.exports = {
   term1: `${term}/1.jpg`,

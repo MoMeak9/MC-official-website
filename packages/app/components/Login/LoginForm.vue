@@ -42,52 +42,55 @@
 </template>
 
 <script>
-import sentMessage from "~/utils/sentMessage";
+import sentMessage from '~/utils/sentMessage';
 
 export default {
-  name: "LoginForm",
+  name: 'LoginForm',
   data: () => ({
     valid: true,
     nameRules: [
-      v => !!v || "Name is required",
-      v => (v && v.length <= 10) || "Name must be less than 10 characters",
+      (v) => !!v || 'Name is required',
+      (v) => (v && v.length <= 10) || 'Name must be less than 10 characters',
     ],
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     emailRules: [
-      v => !!v || "E-mail is required",
-      v => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      (v) => !!v || 'E-mail is required',
+      (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
     ],
   }),
   methods: {
     validate() {
       if (this.$refs.form.validate()) {
-        this.$store.dispatch("Login", {
-          user_email: this.email,
-          user_password: this.password,
-        }).then(res => {
-          sentMessage.success(this.$store, {
-            message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`,
+        this.$store
+          .dispatch('Login', {
+            user_email: this.email,
+            user_password: this.password,
+          })
+          .then((res) => {
+            sentMessage.success(this.$store, {
+              message: `欢迎你，旅行者：${res.data.userBean.user_game_id}`,
+            });
+            this.$router.push('/');
+            this.$store.dispatch('getUserInfo');
+          })
+          .catch((err) => {
+            sentMessage.error(this.$store, {
+              message: err.message,
+            });
           });
-          this.$router.push("/");
-          this.$store.dispatch("getUserInfo");
-        }).catch(err => {
-          sentMessage.error(this.$store, {
-            message: err.message,
-          });
-        });
       }
     },
     reset() {
       this.$refs.form.reset();
     },
     changeType() {
-      this.$emit("change-type", "sign");
+      this.$emit('change-type', 'sign');
     },
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/index";
+@import 'assets/scss/index';
 </style>

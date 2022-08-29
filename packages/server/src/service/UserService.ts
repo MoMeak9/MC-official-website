@@ -23,7 +23,7 @@ export class UserService {
 
   async checkPassword(
     user_password: string,
-    user_email: string,
+    user_email: string
   ): Promise<Array<User>> {
     user_password = md5(user_password + PWD_SALT);
 
@@ -55,7 +55,7 @@ export class UserService {
     });
   }
 
-  async getUserById(id: number):Promise<User> {
+  async getUserById(id: number): Promise<User> {
     return await this.userRepository.findOne({
       where: {
         id,
@@ -79,7 +79,7 @@ export class UserService {
       },
       {
         user_score,
-      },
+      }
     );
   }
 

@@ -5,7 +5,7 @@
         <v-col cols="12" sm="10" md="9" lg="7">
           <div class="text-center">
             <h2 class="ui-title font-weight-bold">
-              {{ type === "SIGN_IN" ? "Sign In" : "Sign Up" }}
+              {{ type === 'SIGN_IN' ? 'Sign In' : 'Sign Up' }}
             </h2>
             <p></p>
           </div>
@@ -19,14 +19,14 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   components: {
-    LoginForm: () => import("../components/Login/LoginForm.vue"),
-    SignUpForm: () => import("../components/Login/SignUpForm.vue"),
+    LoginForm: () => import('../components/Login/LoginForm.vue'),
+    SignUpForm: () => import('../components/Login/SignUpForm.vue'),
   },
   data() {
     return {
-      type: "SIGN_IN",
+      type: 'SIGN_IN',
     };
   },
   methods: {

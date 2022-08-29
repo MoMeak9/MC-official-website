@@ -3,10 +3,11 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn, OneToMany,
+  UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
-import {Gallery} from './Gallery';
-import {SponsorRecord} from './SponsorRecord';
+import { Gallery } from './Gallery';
+import { SponsorRecord } from './SponsorRecord';
 
 @Entity()
 export class User {
@@ -41,10 +42,10 @@ export class User {
   @Column({ length: 128, default: '' })
   user_QQ: string;
 
-  @OneToMany(() => Gallery, galleries => galleries.user)
+  @OneToMany(() => Gallery, (galleries) => galleries.user)
   galleries?: Gallery[];
 
-  @OneToMany(() => SponsorRecord, sponsorRecords => sponsorRecords.user)
+  @OneToMany(() => SponsorRecord, (sponsorRecords) => sponsorRecords.user)
   sponsorRecords?: SponsorRecord[];
 
   @CreateDateColumn({

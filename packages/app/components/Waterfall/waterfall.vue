@@ -65,7 +65,7 @@
                 height: item._height ? item._height + 'px' : false,
               }"
             >
-              <v-img :src="item[srcKey]"/>
+              <v-img :src="item[srcKey]" />
             </component>
             <div v-if="hasFooterSlot" class="img-box-footer">
               <slot name="footer" :data="item" />
@@ -78,11 +78,11 @@
 </template>
 
 <script>
-import { isMobile } from "./util";
-import Link from "./link.vue";
+import { isMobile } from './util';
+import Link from './link.vue';
 
 export default {
-  name: "PtVueWaterfall",
+  name: 'PtVueWaterfall',
   components: {
     Link,
   },
@@ -105,7 +105,7 @@ export default {
     },
     srcKey: {
       type: String,
-      default: "src",
+      default: 'src',
     },
     imgWidth: {
       type: Number,
@@ -130,11 +130,11 @@ export default {
     },
     cardAnimationClass: {
       type: [String],
-      default: "default-card-animation",
+      default: 'default-card-animation',
     },
     cardClass: {
       type: [String],
-      default: "",
+      default: '',
     },
     enablePullDownEvent: {
       type: Boolean,
@@ -157,7 +157,7 @@ export default {
       imgBoxEls: null, // 所有的.img-box元素
       beginIndex: 0, // 开始要排列的图片索引,首次为第二列的第一张图片，后续加载则为已经排列图片的下一个索引
       colsHeightArr: [],
-      linkName: "Link",
+      linkName: 'Link',
     };
   },
   computed: {
@@ -198,7 +198,7 @@ export default {
 
     this.preload();
     this.cols = this.calcuCols();
-    this.$on("preloaded", () => {
+    this.$on('preloaded', () => {
       this.isFirstLoad = false;
       this.imgsArr_c = this.imgsArr.concat([]); // 预加载完成，这时才开始渲染
       this.$nextTick(() => {
@@ -207,7 +207,7 @@ export default {
       });
     });
     if (!this.isMobile && !this.width)
-      window.addEventListener("resize", this.response);
+      window.addEventListener('resize', this.response);
     if (this.isMobile && this.enablePullDownEvent) this.pullDown();
     this.scroll();
   },
@@ -218,11 +218,11 @@ export default {
         if (imgIndex < this.loadedCount) return; // 只对新加载图片进行预加载
         // 无图时
         if (!imgItem[this.srcKey]) {
-          this.imgsArr[imgIndex]._height = "0";
+          this.imgsArr[imgIndex]._height = '0';
           this.loadedCount++;
           // 支持无图模式
           if (this.loadedCount == this.imgsArr.length) {
-            this.$emit("preloaded");
+            this.$emit('preloaded');
           }
           return;
         }
@@ -233,16 +233,16 @@ export default {
 
           // 预加载图片，计算图片容器的高
           this.imgsArr[imgIndex]._height =
-            e.type == "load"
+            e.type == 'load'
               ? Math.round(this.imgWidth_c * (oImg.height / oImg.width))
               : this.imgWidth_c;
 
-          if (e.type == "error") {
+          if (e.type == 'error') {
             this.imgsArr[imgIndex]._error = true;
-            this.$emit("imgError", this.imgsArr[imgIndex]);
+            this.$emit('imgError', this.imgsArr[imgIndex]);
           }
           if (this.loadedCount === this.imgsArr.length) {
-            this.$emit("preloaded");
+            this.$emit('preloaded');
           }
         };
       });
@@ -256,7 +256,7 @@ export default {
     },
     // ==3== waterfall布局
     waterfall() {
-      this.imgBoxEls = this.$el.getElementsByClassName("img-box");
+      this.imgBoxEls = this.$el.getElementsByClassName('img-box');
       if (!this.imgBoxEls) return;
       let top;
       let left;
@@ -281,13 +281,13 @@ export default {
           // 更新colsHeightArr
           this.colsHeightArr[minIndex] = minHeight + height;
         }
-        this.imgBoxEls[i].style.left = left + "px";
-        this.imgBoxEls[i].style.top = top + "px";
+        this.imgBoxEls[i].style.left = left + 'px';
+        this.imgBoxEls[i].style.top = top + 'px';
       }
       this.beginIndex = this.imgsArr.length; // 排列完之后，新增图片从这个索引开始预加载图片和排列
     },
     // ==4== resize 响应式
-    response: function() {
+    response: function () {
       const old = this.cols;
       this.cols = this.calcuCols();
       if (old === this.cols) return; // 列数不变直接退出
@@ -305,20 +305,20 @@ export default {
         minHeight - this.reachBottomDistance
       ) {
         this.isPreloading = true;
-        this.$emit("scrollReachBottom");
+        this.$emit('scrollReachBottom');
       }
     },
     scroll() {
-      this.$refs.scrollEl.addEventListener("scroll", this.scrollFn);
+      this.$refs.scrollEl.addEventListener('scroll', this.scrollFn);
     },
     handleClickImage(e, value) {
-      this.$emit("click", e, value);
+      this.$emit('click', e, value);
     },
     // ==7== 下拉事件
     pullDown() {
-      const scrollEl = this.$el.querySelector(".vue-waterfall-scroll");
+      const scrollEl = this.$el.querySelector('.vue-waterfall-scroll');
       let startY;
-      scrollEl.addEventListener("touchmove", (e) => {
+      scrollEl.addEventListener('touchmove', (e) => {
         if (scrollEl.scrollTop === 0) {
           const t = e.changedTouches[0];
           if (!startY) startY = t.pageY;
@@ -326,20 +326,19 @@ export default {
           if (pullDownDistance > 0) {
             e.preventDefault();
           }
-          this.$emit("pullDownMove", pullDownDistance);
+          this.$emit('pullDownMove', pullDownDistance);
         }
       });
-      scrollEl.addEventListener("touchend", (e) => {
+      scrollEl.addEventListener('touchend', (e) => {
         if (scrollEl.scrollTop === 0) {
           startY = NaN;
-          this.$emit("pullDownEnd");
+          this.$emit('pullDownEnd');
         }
       });
     },
     // 计算插槽的高度
-    footerHeight: function() {
-    },
-    reset: function() {
+    footerHeight: function () {},
+    reset: function () {
       this.imgsArr_c = [];
       this.beginIndex = 0;
       this.loadedCount = 0;
@@ -453,7 +452,7 @@ export default {
         background-color: #8c9295;
         width: 20px;
         height: 20px;
-        border: 0.5px solid #FFFFFF;
+        border: 0.5px solid #ffffff;
         border-radius: 50%;
         margin: 3px;
         animation-fill-mode: both;

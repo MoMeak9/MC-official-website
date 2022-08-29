@@ -5,8 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:app": "cd packages/app && npm run dev",
-    "deploy:app":  "cd packages/app && npm run deploy",
-    "eslint": "eslint src/** --ext .js, .jsx, .ts, .tsx --cache",
+    "deploy:app": "cd packages/app && npm run deploy",
+    "start:server": "cd packages/server && npm run dev",
+    "deploy:server": "cd packages/app && npm run deploy",
+    "eslint": "eslint packages/** --ext .js, .jsx, .ts, .tsx --cache",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",

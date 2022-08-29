@@ -32,11 +32,7 @@
           >
             <v-card class="portfolio-card overflow-hidden">
               <div class="portfolio-img">
-                <img
-                  :src="item.image_url"
-                  class="img-fluid"
-                  alt="portfolio"
-                />
+                <img :src="item.image_url" class="img-fluid" alt="portfolio" />
               </div>
               <v-card-text>
                 <h5 class="font-weight-medium font-18">
@@ -58,13 +54,12 @@
   </div>
 </template>
 <script>
-
 export default {
-  name: "Portfolio",
+  name: 'Portfolio',
   props: {
     historyList: {
       type: Array,
-      default: ()=>[],
+      default: () => [],
     },
   },
 };

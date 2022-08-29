@@ -1,5 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import storage from "store2";
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import storage from 'store2';
 
 // create an axios instance
 const service = axios.create({
@@ -12,18 +12,18 @@ const service = axios.create({
 // request interceptor
 service.interceptors.request.use(
   (config: AxiosRequestConfig) => {
-    if (storage.get("token")) {
+    if (storage.get('token')) {
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation
-      config.headers = { Authorization: `Bearer ${storage.get("token")}` };
+      config.headers = { Authorization: `Bearer ${storage.get('token')}` };
     }
     return config;
   },
-  error => {
+  (error) => {
     // do something with request error
     return Promise.reject(error);
-  },
+  }
 );
 
 // response interceptor
@@ -31,9 +31,9 @@ service.interceptors.response.use(
   (response: AxiosResponse) => {
     return response.data;
   },
-  error => {
+  (error) => {
     return Promise.reject(error.response.data);
-  },
+  }
 );
 
 export default service;

@@ -6,8 +6,7 @@
 
 <script>
 export default {
-  name: "Link",
-  props: ["to"],
+  name: 'Link',
+  props: ['to'],
 };
 </script>
-

@@ -1,14 +1,14 @@
-import { AxiosPromise } from "axios";
-import request from "@/utils/requires";
+import { AxiosPromise } from 'axios';
+import request from '@/utils/requires';
 
 export const api = {
-  submitPaper: "/api/paper/submitPaper",
+  submitPaper: '/api/paper/submitPaper',
 };
 
 export function submitPaper(param: object): AxiosPromise {
   return request({
     url: api.submitPaper,
-    method: "post",
+    method: 'post',
     data: param,
   });
 }

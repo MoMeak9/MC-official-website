@@ -1,17 +1,19 @@
 <template>
-  <waterfall :imgs-arr="imgsArr"
-             :img-width="480"
-             height="100vh"
-             @scrollReachBottom="handleReachBottom">
+  <waterfall
+    :imgs-arr="imgsArr"
+    :img-width="480"
+    height="100vh"
+    @scrollReachBottom="handleReachBottom"
+  >
   </waterfall>
 </template>
 
 <script>
-import waterfall from "@/components/Waterfall/waterfall";
-import { getGallery } from "@/api/website";
+import waterfall from '@/components/Waterfall/waterfall';
+import { getGallery } from '@/api/website';
 
 export default {
-  name: "Gallery",
+  name: 'Gallery',
   components: {
     waterfall,
   },
@@ -41,7 +43,7 @@ export default {
         page: ++this.page,
         pageSize: 10,
       });
-      if(data.length===0){
+      if (data.length === 0) {
         this.imgsArr = this.imgsArr.concat(this.imgsArr);
       }
       this.imgsArr = this.imgsArr.concat(data);
@@ -50,6 +52,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -6,15 +6,12 @@
 
 <script>
 export default {
-  name: "",
-  components: {
-  },
+  name: '',
+  components: {},
   data: () => {
     return {};
   },
-  methods: {
-
-  },
+  methods: {},
 };
 </script>
 

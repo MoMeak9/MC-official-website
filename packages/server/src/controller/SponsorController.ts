@@ -15,7 +15,7 @@ export class SponsorController {
   async getSponsors(
     req: Req,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const page =
       typeof req.query.page === 'string' ? parseInt(req.query.page) : 1;
@@ -25,7 +25,7 @@ export class SponsorController {
         : 10;
     const sponsorRecords = await this.sponsorService.getSponsors(
       page,
-      pageSize,
+      pageSize
     );
     if (!sponsorRecords) {
       next(new ParameterException('没有查询到数据'));
@@ -36,7 +36,7 @@ export class SponsorController {
   async createSponsor(
     req: Req,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     try {
       const { user_id, number } = req.body;
@@ -57,7 +57,7 @@ export class SponsorController {
   async updateSponsor(
     req: Req,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const id = parseInt(req.params.id);
     const { number, userId } = req.body;
@@ -75,7 +75,7 @@ export class SponsorController {
   async deleteSponsor(
     req: Req,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const id = parseInt(req.params['id']);
     const { affected } = await this.sponsorService.deleteSponsorById(id);
@@ -88,7 +88,7 @@ export class SponsorController {
   async getSponsorList(
     req: Req,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ): Promise<void> {
     const page =
       typeof req.query.page === 'string' ? parseInt(req.query.page) : 1;
@@ -98,7 +98,7 @@ export class SponsorController {
         : 10;
     const sponsorRecords = await this.sponsorService.getSponsorList(
       page,
-      pageSize,
+      pageSize
     );
     // await UserController.checkAuth(req, res, next);
     if (!sponsorRecords) {
@@ -112,8 +112,8 @@ export class SponsorController {
           pageSize,
           total: sponsorRecords.length,
         },
-        '查询成功',
-      ),
+        '查询成功'
+      )
     );
   }
 }
