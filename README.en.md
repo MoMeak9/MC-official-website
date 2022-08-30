@@ -40,18 +40,6 @@ There is still a lot of work to do, oh, will continue to improve learning. :goat
 
 ## Start
 
-Run locally:
-
-```shell
-yarn run dev
-```
-
-build:
-
-```shell
-yarn run build
-```
-
 ## Deploy
 
 When your project is packaged and built, upload the following files to the server and start:

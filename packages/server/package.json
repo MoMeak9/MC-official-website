@@ -7,7 +7,7 @@
     "pro": "set NODE_ENV=production && nodemon src/app.ts",
     "dev": "set NODE_ENV=development && nodemon src/app.ts",
     "build": "tsc && node build/app.js",
-    "deploy": "tsc && yarn install --production && serverless deploy && yarn install",
+    "deploy": "tsc && pnpm install --production && serverless deploy && pnpm install",
     "typeorm": "typeorm-ts-node-commonjs"
   },
   "license": "MIT",

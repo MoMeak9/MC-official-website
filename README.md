@@ -42,24 +42,6 @@ Nuxt 3 还处于 beta 阶段，而且有着更加优异的用户交互体验的 
 
 ## 使用
 
-本地运行
-
-```shell
-yarn run dev
-```
-
-打包构建
-
-```shell
-yarn run build
-```
-
-启动
-
-```shell
-yarn run start
-```
-
 ## 部署
 
 当你将项目打包构建完成之后，上传以下文件至服务器并启动：
