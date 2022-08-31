@@ -12,6 +12,8 @@ As I personally built up more and more players on my world server, I needed a mo
 
 ## About the Project
 
+This project is more likely a demo of several frontend technology stacks. It also provides basical website arrangement and tool configurations. Meanwhile, Eslint and TypeScript are used in this project as well.
+
 **About Nuxt and statics**
 
 Due to the use of Vuetify component library, due to some of its components in the IMPLEMENTATION of THE SSR is not suitable for Nuxt, resulting in the problem of nodes are not worth one, so the static rendering export is used.
@@ -24,11 +26,13 @@ Nuxt 3 is still in beta, and the Vue3 version of Vuetify is still in beta with a
 
 **Server**
 
-TypeScript + Express [Server Project URL](https://github.com/MoMeak9/MC-official-website-service)
+TypeScript + Express [Server Project URL](https://github.com/MoMeak9/MC-official-website-service). The server is still under construction and it is coming soon~.
 
 **Management**
 
-React + antd
+developed base on React + antd
+
+[Click here to access management system](https://github.com/MoMeak9/MC-official-website-CMS)
 
 **Follow-up Work**
 
