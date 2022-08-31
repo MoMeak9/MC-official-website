@@ -14,7 +14,8 @@
     "prettier:fix": "prettier --write .",
     "lint": "npm run eslint && npm run prettier",
     "lint:fix": "npm run eslint:fix && npm run prettier:fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git pull && git add -A && git-cz && git push"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
@@ -37,6 +38,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "git-cz": "^4.9.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "nodemon": "^2.0.19",
@@ -55,5 +57,10 @@
     "*.{json,md,html,css,scss,sass,less,styl}": [
       "prettier --write --list-different"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }

@@ -9,10 +9,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 13,
-  },
   plugins: ['@typescript-eslint'],
   rules: {
     curly: ['error', 'all'],
